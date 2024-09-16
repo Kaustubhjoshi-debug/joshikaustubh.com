@@ -1,12 +1,14 @@
 import { AiFillExperiment } from "react-icons/ai";
+import { LuPipette } from "react-icons/lu";
 import {
   FaBacteria,
   FaLinkedin,
   FaNewspaper,
 } from "react-icons/fa";
 import { GiSkullWithSyringe, GiSoapExperiment, GiVirus } from "react-icons/gi";
+import { TiPipette } from "react-icons/ti";
 
-import { TbCell } from "react-icons/tb";
+import { TbAlertHexagon, TbCell } from "react-icons/tb";
 import { IMe, ITheme } from "./me.interface";
 
 // Warning: Don't use "black" or "white" values
@@ -133,9 +135,11 @@ export const me = {
   skills: [
     {
       name: "Mammalian Cell Culture",
+      icon: LuPipette
     },
     {
       name: "Assay Development",
+      icon: TiPipette
     },
     {
       name: "High Throughput Screening",
@@ -150,6 +154,7 @@ export const me = {
     },
     {
       name: "LC-MS",
+      icon: TbAlertHexagon
     },
     {
       name: "LNP Synthesis",

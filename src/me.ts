@@ -61,7 +61,7 @@ export const me = {
   about:
     "I am currently pursuing a Master’s in Pharmaceutical Sciences at the University of Maryland, specializing in bioanalytical methods, lipidomics, and drug development. My experiences range from drug discovery research at GSK to analyzing molecular markers at the Ministry of Defence.",
   location: "Amherst, MA",
-  image: "/assets/arhammusheer.jpeg",
+  image: "/assets/kaustubh-joshi.jpg",
   education: [
     {
       degree: "Master of Science",

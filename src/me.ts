@@ -60,7 +60,7 @@ export const me = {
   },
   about:
     "I am currently pursuing a Master’s in Pharmaceutical Sciences at the University of Maryland, specializing in bioanalytical methods, lipidomics, and drug development. My experiences range from drug discovery research at GSK to analyzing molecular markers at the Ministry of Defence.",
-  location: "Amherst, MA",
+  location: "Upper Providence, PA",
   image: "/assets/kaustubh-joshi.jpg",
   education: [
     {
@@ -118,30 +118,15 @@ export const me = {
   ],
   projects: [
     {
-      name: "AudioShelf",
+      name: "Lipidomic Analysis Pipeline",
       description:
-        "A mobile app with over 2k users to discover audiobooks in 30 languages and summarize them in 5 minutes.",
+        "Developed a lipidomic analysis pipeline for identifying and quantifying lipid species from plasma samples.",
       contribution:
-        "I built the backend infrastructure for the app, including authentication systems, OAuth scope, and a REST API. I also built an internal CMS dashboard to manage content publishing and translations.",
-      technologies: [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Google Cloud",
-        "Docker",
-        "OAuth2",
-      ],
-      links: [
-        {
-          name: "Website",
-          uri: "https://getaudioshelf.com",
-        },
-        {
-          name: "Play Store",
-          uri: "https://play.google.com/store/apps/details?id=com.audioshelfapp",
-        },
-      ],
-      image: "https://content.getaudioshelf.com/logo.png",
+        "Utilized LC-MS/MS and solid-phase extraction (SPE) methods to streamline lipid extraction and analysis. Processed data using Tracefinder and Xcalibur to interpret results for comprehensive lipid profiling.",
+      technologies: ["LC-MS/MS", "SPE", "Tracefinder", "Xcalibur"],
+      image: "",
+      links: [],
+      
     },
     {
       name: "Bus Tracker IoT",

@@ -1,6 +1,6 @@
 import { DiScrum } from "react-icons/di";
 import {
-  FaDocker,
+  FaBacteria,
   FaGit,
   FaLinkedin,
   FaNewspaper,
@@ -16,13 +16,13 @@ import {
   SiGooglecloud,
   SiJavascript,
   SiKubernetes,
-  SiMongodb,
   SiPostgresql,
-  SiPython,
-  SiTypescript,
 } from "react-icons/si";
+import { GiSkullWithSyringe, GiSoapExperiment, GiVirus } from "react-icons/gi"; 
+import { AiFillExperiment } from "react-icons/ai";
 
 import { IMe, ITheme } from "./me.interface";
+import { TbCell } from "react-icons/tb";
 
 // Warning: Don't use "black" or "white" values
 export const themeColor: ITheme = "purple";
@@ -77,7 +77,6 @@ export const me = {
       major: "Pharmacy",
       school: "D Y Patil University, Pune, India",
       graduation: "June 2023",
-      awards: [],
     },
   ],
   experience: [
@@ -235,71 +234,70 @@ export const me = {
   ],
   skills: [
     {
-      name: "TypeScript",
-      icon: SiTypescript,
+      name: "Mammalian Cell Culture",
     },
     {
-      name: "JavaScript",
+      name: "Assay Development",
       icon: SiJavascript,
     },
     {
-      name: "Python",
-      icon: SiPython,
+      name: "High Throughput Screening",
+      icon: GiSkullWithSyringe,
     },
     {
-      name: "Golang",
+      name: "ADME Assays",
       icon: SiGo,
     },
     {
-      name: "Bash/Shell",
-      icon: SiGnubash,
+      name: "ELISA",
+      icon: FaBacteria,
     },
     {
-      name: "Embedded Systems",
+      name: "LC-MS",
       icon: HiChip,
     },
     {
-      name: "C",
+      name: "LNP Synthesis",
       icon: SiC,
     },
     {
-      name: "React",
-      icon: FaReact,
+      name: "In-Vitro Studies",
+      icon: GiSoapExperiment,
     },
     {
-      name: "Node.js",
-      icon: FaNode,
+      name: "In-Vivo Studies",
+      icon: AiFillExperiment,
     },
     {
-      name: "Docker",
-      icon: FaDocker,
+      name: "Immunohistochemistry",
+      icon: GiVirus,
     },
     {
-      name: "Google Cloud",
+      name: "Western Blotting",
       icon: SiGooglecloud,
     },
     {
-      name: "Kubernetes",
+      name: "TIBCO Spotfire",
       icon: SiKubernetes,
     },
     {
-      name: "MongoDB",
-      icon: SiMongodb,
+      name: "PyMOL",
+      icon: TbCell,
     },
     {
-      name: "PostgreSQL",
+      name: "Xcalibur",
       icon: SiPostgresql,
     },
     {
-      name: "AWS",
+      name: "ADMET Predictor",
       icon: SiAmazonaws,
     },
     {
-      name: "Git",
+      name: "GraphPad Prism",
       icon: FaGit,
     },
     {
-      name: "Agile/Scrum",
+      name: "TraceFinder",
       icon: DiScrum,
     },
   ],

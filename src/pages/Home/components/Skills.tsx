@@ -45,25 +45,8 @@ export const Skills = () => {
             <SingleSkill {...skill} key={skill.name} index={index} />
           ))}
         </Stack>
-        <TryDraggingMe />
       </Stack>
     </Flex>
-  );
-};
-
-const TryDraggingMe = () => {
-  return (
-    <Stack
-      p={2}
-      justify={"flex-end"}
-      direction={"row"}
-      align={"center"}
-    >
-      <Icon as={TbArrowWaveLeftUp} h={12} w={12} />
-      <Text fontSize={"xl"} fontWeight={"bold"} fontFamily={"Short Stack"}>
-        Try dragging me!
-      </Text>
-    </Stack>
   );
 };
 

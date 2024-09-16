@@ -15,7 +15,7 @@ import {
   SiKubernetes,
   SiPostgresql,
 } from "react-icons/si";
-import { GiSkullWithSyringe, GiSoapExperiment, GiVirus } from "react-icons/gi"; 
+import { GiSkullWithSyringe, GiSoapExperiment, GiVirus } from "react-icons/gi";
 import { AiFillExperiment } from "react-icons/ai";
 
 import { IMe, ITheme } from "./me.interface";
@@ -120,113 +120,26 @@ export const me = {
       contribution:
         "Utilized LC-MS/MS and solid-phase extraction (SPE) methods to streamline lipid extraction and analysis. Processed data using Tracefinder and Xcalibur to interpret results for comprehensive lipid profiling.",
       technologies: ["LC-MS/MS", "SPE", "Tracefinder", "Xcalibur"],
-      image: "",
       links: [],
 
     },
     {
-      name: "Bus Tracker IoT",
+      name: "Oligonucleotide Characterization",
       description:
-        "An always-connected IoT device which lets me track when the next bus will leave my stop, helping me save time and plan better every morning.",
+        "Method development for oligonucleotide analysis using advanced techniques.",
       contribution:
-        "I built the entire IoT device from scratch using an ESP32, Arduino, and wrote a relay server in Node.js, and pulled data from the UMass Transit API to display the next bus time.",
-      technologies: [
-        "Node.js",
-        "TypeScript",
-        "ESP32",
-        "Arduino",
-        "C++",
-        "Google Cloud",
-      ],
-      links: [
-        { name: "Image", uri: "/assets/bus-tracker.png" },
-        {
-          name: "Write Up",
-          uri: "https://github.com/arhammusheer/bus-tracker",
-        },
-      ],
-      image: "/assets/bus-tracker.png",
-      backgroundImage: "/assets/bus-tracker.png",
+        "Refined methods for oligonucleotide purification and analysis using buffer exchange, MALDI-TOF, LC-MS, and nanodrop spectroscopy.",
+      technologies: ["MALDI-TOF", "LC-MS", "Nanodrop Spectroscopy"],
+      links: []
     },
     {
-      name: "Croissant Paste It",
+      name: "Radio-Wave Exposure Research",
       description:
-        "Ever wanted a place to dump some text and share it with someone or yourself on another device? Me too! So I built an app for your pasting needs.",
+        "Studied the effects of radio-wave exposure on biochemical markers in rats.",
       contribution:
-        "I designed and wrote the app in TypeScript with backend in Node.js and Express and the frontend in React.js. I also deployed the app on railway.app.",
-      technologies: ["Node.js", "Express", "React", "TypeScript", "Railway"],
-      links: [
-        {
-          name: "Website",
-          uri: "https://paste.croissant.one",
-        },
-        {
-          name: "Github",
-          uri: "https://github.com/arhammusheer/paste.croissant.one",
-        },
-      ],
-      image: "/assets/croissant-paste-it.png",
-    },
-    {
-      name: "Lord of the Lunchroom",
-      description:
-        "A project for HackUMass which lets 2 people in a cowboy duel smart hats to see who wins the table in the Worcester dining hall. The project won the 'Funnest Hack' award.",
-      contribution:
-        "I wrote the code for the matchmaking server and the Arduino smart hats, which used infrared technology as guns and detectors, and displays to show the match status.",
-      image: "/assets/lord-of-the-lunchroom.jpg",
-      backgroundImage: "/assets/lord-of-the-lunchroom.jpg",
-      technologies: ["Node.js", "JavaScript", "ESP8266", "Arduino", "C++"],
-      links: [
-        {
-          name: "Devpost",
-          uri: "https://devpost.com/software/lord-of-the-lunchroom",
-        },
-        { name: "Image", uri: "/assets/lord-of-the-lunchroom.jpg" },
-      ],
-    },
-    {
-      name: "Croissant.one (This Website)",
-      description: "A website to showcase my projects and resume.",
-      contribution:
-        "I built the entire website from scratch using React.js, TypeScript, and Chakra UI and deployed it on Vercel.",
-      technologies: ["React", "Typescript", "Chakra-UI", "Vercel"],
-      links: [
-        {
-          name: "Website",
-          uri: "https://croissant.one",
-        },
-        {
-          name: "Github",
-          uri: "https://github.com/arhammusheer/croissant.one",
-        },
-      ],
-      image: "/assets/drug.png",
-    },
-    {
-      name: "Dad API",
-      description: "A REST API to get dad jokes and pickup lines.",
-      contribution:
-        "I built the entire API from scratch using Node.js and Express and deployed it on Google Cloud Run.",
-      technologies: ["Node.js", "Express", "Google Cloud", "Docker"],
-      links: [
-        {
-          name: "Try It Out",
-          uri: "https://dad.croissant.one",
-        },
-        {
-          name: "Joke Endpoint",
-          uri: "https://dad.croissant.one/api/joke",
-        },
-        {
-          name: "Pickup Line Endpoint",
-          uri: "https://dad.croissant.one/api/pickup",
-        },
-        {
-          name: "Github",
-          uri: "https://github.com/arhammusheer/dad-api",
-        },
-      ],
-      image: "/assets/dad.png",
+        "Performed Western Blotting, ELISAs, and enzymatic assays to identify molecular markers linked to inflammation, metabolism, and cell survival.",
+      technologies: ["Western Blot", "ELISA", "Enzymatic Assays"],
+      links: []
     },
   ],
   skills: [

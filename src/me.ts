@@ -25,7 +25,7 @@ import {
 import { IMe, ITheme } from "./me.interface";
 
 // Warning: Don't use "black" or "white" values
-export const themeColor: ITheme = "orange";
+export const themeColor: ITheme = "purple";
 
 // Multiple theme options
 export const multiThemeOptions: ITheme[] = [

@@ -2,7 +2,6 @@ import { DiScrum } from "react-icons/di";
 import {
   FaDocker,
   FaGit,
-  FaGithub,
   FaLinkedin,
   FaNewspaper,
   FaNode,

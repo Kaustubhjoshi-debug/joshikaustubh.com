@@ -3,13 +3,11 @@ import {
   Heading,
   Icon,
   Stack,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { IconType } from "react-icons";
-import { TbArrowWaveLeftUp } from "react-icons/tb";
 import { useInView } from "react-intersection-observer";
 import { me } from "../../../me";
 

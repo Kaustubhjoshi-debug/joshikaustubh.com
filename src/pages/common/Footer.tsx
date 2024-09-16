@@ -19,9 +19,8 @@ export const Footer = () => {
         direction={"column"}
       >
         <BrandedDivider />
-        <Text fontWeight={"bold"}>Made with ❤️ by arhammusheer</Text>
         <Text>
-          All rights reserved © Mohammad Arham {new Date().getFullYear()}
+          All rights reserved © Kaustubh Joshi {new Date().getFullYear()}
         </Text>
       </Stack>
     </Container>

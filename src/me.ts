@@ -1,19 +1,10 @@
-import { DiScrum } from "react-icons/di";
 import {
   FaBacteria,
-  FaGit,
   FaLinkedin,
   FaNewspaper,
 } from "react-icons/fa";
-import { HiChip } from "react-icons/hi";
 import {
-  SiAmazonaws,
-  SiC,
-  SiGo,
-  SiGooglecloud,
   SiJavascript,
-  SiKubernetes,
-  SiPostgresql,
 } from "react-icons/si";
 import { GiSkullWithSyringe, GiSoapExperiment, GiVirus } from "react-icons/gi";
 import { AiFillExperiment } from "react-icons/ai";

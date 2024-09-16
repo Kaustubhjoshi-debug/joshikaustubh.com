@@ -4,14 +4,11 @@ import {
   FaGit,
   FaLinkedin,
   FaNewspaper,
-  FaNode,
-  FaReact,
 } from "react-icons/fa";
 import { HiChip } from "react-icons/hi";
 import {
   SiAmazonaws,
   SiC,
-  SiGnubash,
   SiGo,
   SiGooglecloud,
   SiJavascript,

@@ -156,7 +156,6 @@ export const me = {
     },
     {
       name: "ADME Assays",
-      icon: SiGo,
     },
     {
       name: "ELISA",
@@ -164,11 +163,9 @@ export const me = {
     },
     {
       name: "LC-MS",
-      icon: HiChip,
     },
     {
       name: "LNP Synthesis",
-      icon: SiC,
     },
     {
       name: "In-Vitro Studies",
@@ -184,11 +181,9 @@ export const me = {
     },
     {
       name: "Western Blotting",
-      icon: SiGooglecloud,
     },
     {
       name: "TIBCO Spotfire",
-      icon: SiKubernetes,
     },
     {
       name: "PyMOL",
@@ -196,19 +191,15 @@ export const me = {
     },
     {
       name: "Xcalibur",
-      icon: SiPostgresql,
     },
     {
       name: "ADMET Predictor",
-      icon: SiAmazonaws,
     },
     {
       name: "GraphPad Prism",
-      icon: FaGit,
     },
     {
       name: "TraceFinder",
-      icon: DiScrum,
     },
   ],
   social: [

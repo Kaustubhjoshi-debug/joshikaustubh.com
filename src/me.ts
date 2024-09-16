@@ -126,7 +126,7 @@ export const me = {
       technologies: ["LC-MS/MS", "SPE", "Tracefinder", "Xcalibur"],
       image: "",
       links: [],
-      
+
     },
     {
       name: "Bus Tracker IoT",
@@ -204,7 +204,7 @@ export const me = {
           uri: "https://github.com/arhammusheer/croissant.one",
         },
       ],
-      image: "/assets/croissant.svg",
+      image: "/assets/drug.png",
     },
     {
       name: "Dad API",

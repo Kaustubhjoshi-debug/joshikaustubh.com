@@ -63,7 +63,7 @@ export const Navbar = () => {
           borderColor={borderColor}
         >
           <Image
-            src={"/assets/croissant.svg"}
+            src={"/assets/drug.png"}
             alt={`${me.name} profile picture`}
             boxSize={10}
             as={motion.img}
@@ -177,7 +177,7 @@ const BottomSheet = ({
         <DrawerHeader>
           <Stack direction={"row"} justify={"space-between"} align={"center"}>
             <Image
-              src={"/assets/croissant.svg"}
+              src={"/assets/drug.png"}
               alt={`${me.name} profile picture`}
               boxSize={10}
               as={motion.img}

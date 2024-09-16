@@ -41,7 +41,7 @@ const BrandedDivider = () => {
     >
       <Box w={"full"} h={"1px"} bg={borderColor} />
       <Image
-        src={"/assets/croissant.svg"}
+        src={"/assets/drug.png"}
         alt={`${me.name} profile picture`}
         boxSize={8}
       />

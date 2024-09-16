@@ -139,7 +139,6 @@ export const me = {
     },
     {
       name: "Assay Development",
-      icon: SiJavascript,
     },
     {
       name: "High Throughput Screening",

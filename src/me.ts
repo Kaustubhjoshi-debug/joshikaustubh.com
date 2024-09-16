@@ -1,16 +1,13 @@
+import { AiFillExperiment } from "react-icons/ai";
 import {
   FaBacteria,
   FaLinkedin,
   FaNewspaper,
 } from "react-icons/fa";
-import {
-  SiJavascript,
-} from "react-icons/si";
 import { GiSkullWithSyringe, GiSoapExperiment, GiVirus } from "react-icons/gi";
-import { AiFillExperiment } from "react-icons/ai";
 
-import { IMe, ITheme } from "./me.interface";
 import { TbCell } from "react-icons/tb";
+import { IMe, ITheme } from "./me.interface";
 
 // Warning: Don't use "black" or "white" values
 export const themeColor: ITheme = "purple";

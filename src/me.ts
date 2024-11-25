@@ -46,7 +46,7 @@ export const me = {
     blue: "Pharma Sciences",
   },
   about:
-    "I am currently pursuing a Master’s in Pharmaceutical Sciences at the University of Maryland, specializing in bioanalytical methods, lipidomics, and drug development. My experiences range from drug discovery research at GSK to analyzing molecular markers at the Ministry of Defence.",
+    "I am currently working at GlaxoSmithKline (GSK), where I focus on drug discovery and metabolism, leveraging cellular models for transporter-driven drug research. I recently completed my Master’s in Pharmaceutical Sciences at the University of Maryland School of Pharmacy specializing in bioanalytical methods, lipidomics, and drug development. My professional journey has taken me from studying lipidomic profiles in academic research to analyzing molecular markers at the Ministry of Defence, providing me with a diverse set of skills in both drug metabolism and pharmacokinetics (DMPK).",
   location: "Upper Providence, PA",
   image: "/assets/kaustubh-joshi.jpg",
   education: [
@@ -60,10 +60,13 @@ export const me = {
       ],
     },
     {
-      degree: "Bachelor of Science",
-      major: "Pharmacy",
-      school: "D Y Patil University, Pune, India",
+      degree: "Bachelor of Pharmacy",
+      major: "Pharmaceutical Sciences",
+      school: "D Y Patil University, Pune",
       graduation: "June 2023",
+      awards: [
+        "Relevant Coursework: Medicinal Chemistry, Pharmaceutics, Pharmacology, Molecular Biology, Instrumental Analysis, Pathophysiology, Novel Drug Delivery Systems, Pharmaceutical Biotechnology, Organic Chemistry, "
+      ]
     },
   ],
   experience: [
@@ -73,10 +76,10 @@ export const me = {
       position: "Scientific Student Researcher (Discovery DMPK In-Vitro)",
       duration: "June 2024 - Present",
       bullets: [
-        "Developing a novel transporter-mediated hepatic uptake assay using the oil spin method to predict in vivo behavior from in vitro data.",
-        "Screening investigational compounds using bidirectional Caco-2, MDCK-MDR1, and BCRP assays to assess membrane permeability and efflux.",
-        "Culturing MDCK-MDR1 and BCRP-MDCK cells to predict CNS penetration.",
-        "Performing metabolic stability assays to determine the intrinsic clearance of test compounds.",
+        "Cross validating a transporter-mediated hepatic uptake assay using suspension and plateable hepatocytes to accurately predict in vivo behavior from in vitro data.",
+        "Supporting GSK's efforts in screening investigational compounds using bidirectional MDCK-MDR1, and BCRP assays to assess membrane permeability and efflux",
+        "Culturing MDCK-MDR1 and BCRP-MDCK cells to predict CNS penetration, preparing buffers and media for determining apical and basolateral uptake for evaluating the role of P-gp and other transporters in NCEs.",
+        "Contributing to Tier-1 and Standard in vitro early drug discovery studies using automated liquid handlers (Tecan), including hepatocyte clearance and uptake, microsomal clearance and binding, and MDCK permeability.",
       ],
     },
     {
@@ -85,8 +88,8 @@ export const me = {
       position: "Research Intern (Jace Jones Lab, Mass Spectrometry Center)",
       duration: "Oct 2023 - June 2024",
       bullets: [
-        "Optimized methods for analyzing oligonucleotides using buffer exchange, MALDI-TOF, LC-MS, and nanodrop.",
-        "Characterized lipid composition using solid phase extraction and LC-MS.",
+        "Characterized diastereomeric separation of phosphorothioated oligonucleotides utilizing Ion Pair Reverse Phase (IPRP), Metal Ion Complexation Chromatography (MICC), and Reverse Phase Strong Anion Exchange (RP-SAX).",
+        "Observed and compared Hydrophilic Interaction Liquid Chromatography (HILIC) in negative and positive ionization modes with RPLC to assess optimal resolution in lipid analysis.",
         "Processed lipidomic analysis data from MS and UPLC systems using Tracefinder and Xcalibur.",
       ],
     },
@@ -103,6 +106,15 @@ export const me = {
     },
   ],
   projects: [
+    {
+      name: "Novel Transporter-Mediated Hepatic Uptake Assay",
+      description:
+        "Cross-Validating a transporter-mediated hepatic uptake assay using suspension and plateable hepatocytes to accurately predict in vivo behavior from in vitro data.",
+      contribution:
+        "Designed and executed transporter assays for hepatic uptake, supported screening investigational compounds for membrane permeability using MDCK-MDR1 and BCRP assays, and performed metabolic stability studies on various species’ hepatocytes.",
+      technologies: ["Suspension Hepatocytes", "MDCK-MDR1/BCRP Assays", "Metabolic Stability", "Tecan Fluent Control", "TIBCO Spotfire"],
+      links: [],
+    },
     {
       name: "Lipidomic Analysis Pipeline",
       description:
@@ -147,6 +159,7 @@ export const me = {
     },
     {
       name: "ADME Assays",
+      icon: GiSoapExperiment,
     },
     {
       name: "ELISA",
@@ -158,6 +171,7 @@ export const me = {
     },
     {
       name: "LNP Synthesis",
+      icon: TbCell
     },
     {
       name: "In-Vitro Studies",
@@ -173,13 +187,13 @@ export const me = {
     },
     {
       name: "Western Blotting",
+      icon: AiFillExperiment,
     },
     {
       name: "TIBCO Spotfire",
     },
     {
       name: "PyMOL",
-      icon: TbCell,
     },
     {
       name: "Xcalibur",

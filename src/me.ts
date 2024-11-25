@@ -38,9 +38,9 @@ export const me = {
     "Previously worked at the Ministry of Defence researching molecular markers from radio-wave exposure.",
     "Proficient in mammalian cell culture, LC-MS/MS, SPE, and a range of bioanalytical techniques.",
   ],
-  subtitle: "Pharmaceutical Sciences Student",
+  subtitle: "Pharmaceutical Sciences Graduate Student",
   tagline:
-    "Driven by a passion for pharmaceutical innovation and analytical science.",
+    "Driven by a passion for pharmaceutical innovation and discovery science.",
   bigHeading: {
     black: "Advancing",
     blue: "Pharma Sciences",
@@ -65,7 +65,7 @@ export const me = {
       school: "D Y Patil University, Pune",
       graduation: "June 2023",
       awards: [
-        "Relevant Coursework: Medicinal Chemistry, Pharmaceutics, Pharmacology, Molecular Biology, Instrumental Analysis, Pathophysiology, Novel Drug Delivery Systems, Pharmaceutical Biotechnology, Organic Chemistry, "
+        "Relevant Coursework: Medicinal Chemistry, Pharmaceutics, Pharmacology, Molecular Biology, Instrumental Analysis, Pathophysiology, Novel Drug Delivery Systems, Pharmaceutical Biotechnology, Organic Chemistry"
       ]
     },
   ],
@@ -73,11 +73,11 @@ export const me = {
     {
       company: "GlaxoSmithKline (GSK)",
       location: "Upper Providence, PA",
-      position: "Scientific Student Researcher (Discovery DMPK In-Vitro)",
+      position: "Scientific Student Researcher (Discovery DMPK In Vitro)",
       duration: "June 2024 - Present",
       bullets: [
-        "Cross validating a transporter-mediated hepatic uptake assay using suspension and plateable hepatocytes to accurately predict in vivo behavior from in vitro data.",
-        "Supporting GSK's efforts in screening investigational compounds using bidirectional MDCK-MDR1, and BCRP assays to assess membrane permeability and efflux",
+        "Cross validating transporter-mediated hepatic uptake assay using suspension and plateable hepatocytes to accurately predict in vivo behavior from in vitro data.",
+        "Supporting GSK's efforts in screening investigational compounds using bidirectional MDCK-MDR1, and BCRP assays to assess drug permeability and efflux.",
         "Culturing MDCK-MDR1 and BCRP-MDCK cells to predict CNS penetration, preparing buffers and media for determining apical and basolateral uptake for evaluating the role of P-gp and other transporters in NCEs.",
         "Contributing to Tier-1 and Standard in vitro early drug discovery studies using automated liquid handlers (Tecan), including hepatocyte clearance and uptake, microsomal clearance and binding, and MDCK permeability.",
       ],
@@ -107,7 +107,7 @@ export const me = {
   ],
   projects: [
     {
-      name: "Assessing TMPK In-Vitro Parameters",
+      name: "Assessing DMPK In Vitro Parameters",
       description:
         "Cross-validating transporter-mediated hepatic uptake assay using suspension and plateable hepatocytes to accurately predict in vivo behavior from in vitro data.",
       contribution:

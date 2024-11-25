@@ -85,7 +85,7 @@ export const me = {
     {
       company: "University of Maryland School of Pharmacy",
       location: "Baltimore, MD",
-      position: "Research Intern (Jace Jones Lab, Mass Spectrometry Center)",
+      position: "Research Intern (Jace Jones Lab)",
       duration: "Oct 2023 - June 2024",
       bullets: [
         "Characterized diastereomeric separation of phosphorothioated oligonucleotides utilizing Ion Pair Reverse Phase (IPRP), Metal Ion Complexation Chromatography (MICC), and Reverse Phase Strong Anion Exchange (RP-SAX).",
@@ -96,7 +96,7 @@ export const me = {
     {
       company: "Defence Research and Development Organisation, Ministry of Defence",
       location: "New Delhi, India",
-      position: "Research Assistant Intern",
+      position: "Research Assistant Intern (Department of Occupational Health and Safety)",
       duration: "Aug 2022 - Oct 2022",
       bullets: [
         "Researched molecular markers from radio-wave exposure on inflammation, metabolism, and cell survival in Sprague Dawley rats.",
@@ -107,12 +107,12 @@ export const me = {
   ],
   projects: [
     {
-      name: "Novel Transporter-Mediated Hepatic Uptake Assay",
+      name: "Assessing TMPK In-Vitro Parameters",
       description:
-        "Cross-Validating a transporter-mediated hepatic uptake assay using suspension and plateable hepatocytes to accurately predict in vivo behavior from in vitro data.",
+        "Cross-validating transporter-mediated hepatic uptake assay using suspension and plateable hepatocytes to accurately predict in vivo behavior from in vitro data.",
       contribution:
         "Designed and executed transporter assays for hepatic uptake, supported screening investigational compounds for membrane permeability using MDCK-MDR1 and BCRP assays, and performed metabolic stability studies on various species’ hepatocytes.",
-      technologies: ["Suspension Hepatocytes", "MDCK-MDR1/BCRP Assays", "Metabolic Stability", "Tecan Fluent Control", "TIBCO Spotfire"],
+      technologies: ["Drug Transporters", "MDCK-MDR1/BCRP Assays", "Intrinsic Clearance"],
       links: [],
     },
     {

@@ -152,7 +152,7 @@ const PublicationCard = ({
         )}
         {!doi && !pmid && url && (
           <Link href={url} isExternal color={useColorModeValue("brand.700", "brand.200")}>
-            Source
+            {status === "Preprint" ? "Preprint" : "Link"}
           </Link>
         )}
       </Stack>

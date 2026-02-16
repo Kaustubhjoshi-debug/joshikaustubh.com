@@ -192,7 +192,7 @@ export const me = {
       title:
         "Dual transcriptomic and epigenomic signatures of THC exposure in human prefrontal cortex development.",
       journal: "Genome Medicine",
-      url: "https://europepmc.org/article/PPR/PPR1042207",
+      url: "https://www.biorxiv.org/content/10.64898/2026.01.08.698442v1",
       status: "Preprint",
       details: "Under review; preprint available",
     },

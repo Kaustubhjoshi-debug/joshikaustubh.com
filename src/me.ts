@@ -39,6 +39,7 @@ export const me = {
   // Facts are optional
   facts: [
     "Research Technologist at Johns Hopkins Medicine building multi-region human organoid and assembloid models.",
+    "Incoming PhD student in Mechanical Engineering (Regenerative Medicine and Mechanobiology) at The University of Texas at Austin, starting August 2026.",
     "Completed an M.S. in Pharmaceutical Sciences at the University of Maryland School of Pharmacy.",
     "Experienced across discovery DMPK, organoid disease modeling, and translational preclinical assay development.",
     "Contributor to multi-institution collaborations spanning academia, industry, and U.S. government research groups.",
@@ -47,7 +48,7 @@ export const me = {
   ],
   subtitle: "Research Technologist | Translational Tissue Engineering",
   tagline:
-    "Building human-relevant brain and tumor models for translational neuroscience and drug discovery.",
+    "Building human-relevant brain and tumor models for translational neuroscience and drug discovery; incoming PhD student at UT Austin (August 2026).",
   bigHeading: {
     black: "Advancing",
     blue: "Pharma Sciences",
@@ -57,6 +58,12 @@ export const me = {
   location: "Baltimore, MD",
   image: "/assets/kaustubh-joshi.jpg",
   education: [
+    {
+      degree: "Doctor of Philosophy (Ph.D.)",
+      major: "Mechanical Engineering (Regenerative Medicine and Mechanobiology)",
+      school: "The University of Texas at Austin",
+      graduation: "Starting Aug 2026",
+    },
     {
       degree: "Master of Science",
       major: "Pharmaceutical Sciences",

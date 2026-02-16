@@ -21,14 +21,24 @@ export const Experience = () => {
       align={"center"}
       justify={"center"}
       direction={"column"}
-      p={8}
+      p={{ base: 8, md: 16 }}
       tabIndex={-1}
     >
-      <Box>
-        <Heading as={"h2"} fontSize={"3xl"} px={{ base: 0, md: 8 }}>
+      <Box w={"full"}>
+        <Text
+          fontSize={"sm"}
+          fontWeight={"semibold"}
+          textTransform={"uppercase"}
+          letterSpacing={"0.1em"}
+          color={useColorModeValue("brand.700", "brand.300")}
+          px={{ base: 0, md: 2 }}
+        >
+          Professional Journey
+        </Text>
+        <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }} px={{ base: 0, md: 2 }}>
           Experience
         </Heading>
-        <Stack direction={"column"} spacing={4} rowGap={4} mt={8} wrap={"wrap"}>
+        <Stack direction={"column"} spacing={5} mt={6} wrap={"wrap"}>
           {me.experience.map((experience, index) => (
             <SingleExperience
               {...experience}
@@ -87,36 +97,42 @@ const SingleExperience = ({
       variants={variants}
       direction={"column"}
       justify={"center"}
-      pb={8}
-      px={{ base: 0, md: 8 }}
-      borderRadius={"xl"}
-      spacing={4}
+      p={{ base: 5, md: 6 }}
+      borderRadius={"2xl"}
+      border={"1px"}
+      borderColor={useColorModeValue("brand.200", "brand.700")}
+      bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+      backdropFilter={"blur(6px)"}
+      spacing={3}
       tabIndex={0}
     >
       <Stack spacing={0}>
         <Text
-          fontSize={{ base: "md", md: "xl" }}
-          color={useColorModeValue("brand.800", "brand.100")}
-          mb={2}
+          fontSize={"sm"}
+          fontWeight={"semibold"}
+          textTransform={"uppercase"}
+          letterSpacing={"0.08em"}
+          color={useColorModeValue("brand.700", "brand.300")}
+          mb={1}
         >
           {duration}
         </Text>
-        <Heading as={"h3"} fontSize={{ base: "3xl", md: "4xl" }}>
+        <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }}>
           {company}
         </Heading>
-        <Text as={"h4"} fontSize={{ base: "2xl", md: "3xl" }}>
+        <Text as={"h4"} fontSize={{ base: "lg", md: "xl" }} fontWeight={"medium"}>
           {position}
         </Text>
       </Stack>
-      <Heading as={"span"} fontSize={"xl"} fontWeight={"normal"} mr={2}>
+      <Heading as={"span"} fontSize={{ base: "md", md: "lg" }} fontWeight={"normal"} mr={2}>
         {location}
       </Heading>
 
-      <Stack direction={"column"} spacing={2}>
+      <Stack direction={"column"} spacing={1.5}>
         {bullets.map((bullet) => (
-          <Heading as={"h5"} fontSize={"lg"} fontWeight={"normal"} key={bullet}>
-            - {bullet}
-          </Heading>
+          <Text as={"p"} fontSize={{ base: "md", md: "lg" }} key={bullet}>
+            {bullet}
+          </Text>
         ))}
       </Stack>
     </Stack>

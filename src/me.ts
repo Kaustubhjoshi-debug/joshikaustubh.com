@@ -19,7 +19,7 @@ import { TbCell, TbMicroscope } from "react-icons/tb";
 import { IMe, ITheme } from "./me.interface";
 
 // Warning: Don't use "black" or "white" values
-export const themeColor: ITheme = "purple";
+export const themeColor: ITheme = "blue";
 
 // Multiple theme options
 export const multiThemeOptions: ITheme[] = [
@@ -32,7 +32,7 @@ export const multiThemeOptions: ITheme[] = [
 ];
 
 // To disable support for multiple themes, set this value to `false`;
-export const enableMultiTheme: boolean = true;
+export const enableMultiTheme: boolean = false;
 
 export const me = {
   name: "Kaustubh Joshi",

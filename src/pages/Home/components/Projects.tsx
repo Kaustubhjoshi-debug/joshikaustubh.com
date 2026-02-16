@@ -33,11 +33,20 @@ export const Projects = () => {
       tabIndex={-1}
     >
       <Box w={"full"}>
-        <Heading as={"h2"} fontSize={"3xl"}>
+        <Text
+          fontSize={"sm"}
+          fontWeight={"semibold"}
+          textTransform={"uppercase"}
+          letterSpacing={"0.1em"}
+          color={useColorModeValue("brand.700", "brand.300")}
+        >
+          Research Work
+        </Text>
+        <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }}>
           Projects
         </Heading>
         <Grid
-          mt={4}
+          mt={6}
           templateColumns={{
             base: "repeat(1, 1fr)",
             md: me.projects.length > 2 ? "repeat(2, 1fr)" : "repeat(1, 1fr)",
@@ -79,7 +88,7 @@ const SingleProject = ({
     "linear(to-r, brand.50, whiteAlpha.700)",
     "linear(to-r, brand.900, blackAlpha.700)"
   );
-  const bg = useColorModeValue("white", "brand.900");
+  const bg = useColorModeValue("whiteAlpha.900", "blackAlpha.300");
   return (
     <Stack
       direction={"column"}
@@ -91,6 +100,7 @@ const SingleProject = ({
       borderColor={useColorModeValue("brand.200", "brand.700")}
       as={motion.div}
       justify={"center"}
+      backdropFilter={"blur(6px)"}
       whileTap={{
         scale: 0.99,
         transition: {
@@ -107,13 +117,13 @@ const SingleProject = ({
         h={"full"}
         w={"full"}
         bgGradient={overlay}
-        p={4}
+        p={5}
         borderRadius={"2xl"}
       >
         <Flex align={"center"} justify={"space-between"} w={"full"}>
           <Heading
             as={"h3"}
-            fontSize={"2xl"}
+            fontSize={{ base: "xl", md: "2xl" }}
             color={useColorModeValue("brand.800", "white")}
           >
             {name}
@@ -135,16 +145,16 @@ const SingleProject = ({
             </OutLink>
           ))}
         </Stack>
-        <Text>{description}</Text>
+        <Text fontSize={{ base: "md", md: "lg" }}>{description}</Text>
         <Box h={2} />
         <Heading
           as={"h4"}
-          fontSize={"lg"}
+          fontSize={{ base: "md", md: "lg" }}
           color={useColorModeValue("brand.800", "white")}
         >
           What I did
         </Heading>
-        <Text>{contribution}</Text>
+        <Text fontSize={{ base: "md", md: "lg" }}>{contribution}</Text>
         <Box h={5} />
         <Stack direction={"row"} wrap={"wrap"} rowGap={3}>
           {technologies.map((technology) => (

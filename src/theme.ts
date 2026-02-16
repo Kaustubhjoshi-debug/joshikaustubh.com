@@ -12,6 +12,10 @@ const config = {
 // 3. extend the theme
 const theme = extendTheme({
   config,
+  fonts: {
+    heading: "'Source Serif 4', Georgia, serif",
+    body: "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+  },
   colors: {
     gray: {
       950: "#0f0f12",
@@ -42,6 +46,31 @@ const theme = extendTheme({
     },
     orange: {
       950: "#220a04",
+    },
+  },
+  styles: {
+    global: {
+      body: {
+        color: "brand.900",
+        bg: "brand.50",
+      },
+      "::selection": {
+        bg: "brand.200",
+        color: "brand.900",
+      },
+    },
+  },
+  components: {
+    Heading: {
+      baseStyle: {
+        letterSpacing: "-0.02em",
+        fontWeight: 600,
+      },
+    },
+    Text: {
+      baseStyle: {
+        lineHeight: 1.75,
+      },
     },
   },
 });

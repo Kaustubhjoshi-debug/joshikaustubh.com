@@ -1,4 +1,4 @@
-import { Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { me } from "../../../me";
@@ -25,42 +25,54 @@ const FunFact: React.FC = () => {
 
   return (
     <Stack
-      direction={{
-        base: "column",
-        md: "row",
-      }}
-      wrap={"wrap"}
-      spacing={2}
+      direction={{ base: "column", md: "row" }}
+      spacing={4}
       w={"full"}
+      maxW={"container.xl"}
       justify={"center"}
+      align={"center"}
       px={4}
+      py={2}
     >
         <Text
           maxW={"fit-content"}
-          fontSize={"lg"}
-          color={useColorModeValue("brand.600", "brand.300")}
-          fontWeight={"bold"}
-          bg={useColorModeValue("brand.100", "brand.900")}
-          borderRadius={"xl"}
-          px={2}
+          fontSize={"sm"}
+          textTransform={"uppercase"}
+          letterSpacing={"0.1em"}
+          color={useColorModeValue("brand.700", "brand.300")}
+          fontWeight={"semibold"}
+          bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+          borderRadius={"full"}
+          px={4}
+          py={1}
           border={"1px"}
           borderColor={useColorModeValue("brand.200", "brand.600")}
         >
-          Fun Fact
+          Research Snapshot
         </Text>
-      <AnimatePresence mode={"wait"}>
-        <motion.div
-          key={currentFact}
-          initial={{ opacity: 0, y: "50%" }} // Starting position and opacity
-          animate={{ opacity: 1, y: 0 }} // Final position and opacity
-          exit={{ opacity: 0, y: "-50%" }} // Exit animation
-          transition={{ duration: 0.5 }} // Animation duration
-        >
-          <Text fontSize={"lg"} color={funFactColor}>
-            {randomFacts[currentFact]}
-          </Text>
-        </motion.div>
-      </AnimatePresence>
+      <Box
+        border={"1px"}
+        borderColor={useColorModeValue("brand.200", "brand.700")}
+        bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+        backdropFilter={"blur(6px)"}
+        borderRadius={"xl"}
+        px={4}
+        py={2}
+      >
+        <AnimatePresence mode={"wait"}>
+          <motion.div
+            key={currentFact}
+            initial={{ opacity: 0, y: "50%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-50%" }}
+            transition={{ duration: 0.5 }}
+          >
+            <Text fontSize={"md"} color={funFactColor}>
+              {randomFacts[currentFact]}
+            </Text>
+          </motion.div>
+        </AnimatePresence>
+      </Box>
     </Stack>
   );
 };

@@ -37,14 +37,23 @@ export const Publications = () => {
       tabIndex={-1}
     >
       <Box w={"full"}>
-        <Heading as={"h2"} fontSize={"3xl"}>
+        <Text
+          fontSize={"sm"}
+          fontWeight={"semibold"}
+          textTransform={"uppercase"}
+          letterSpacing={"0.1em"}
+          color={useColorModeValue("brand.700", "brand.300")}
+        >
+          Scholarship
+        </Text>
+        <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }}>
           Publications
         </Heading>
         <Text mt={2} color={useColorModeValue("brand.700", "brand.200")}>
           Selected manuscripts in Vancouver-style citation format.
         </Text>
 
-        <Stack direction={"column"} spacing={6} mt={8}>
+        <Stack direction={"column"} spacing={6} mt={6}>
           {groupOrder.map((group) => {
             const publications = indexedPublications.filter((publication) =>
               group.statuses.includes(publication.status)
@@ -56,7 +65,7 @@ export const Publications = () => {
 
             return (
               <Box key={group.heading}>
-                <Heading as={"h3"} fontSize={"2xl"} mb={4}>
+                <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }} mb={3}>
                   {group.heading}
                 </Heading>
                 <Stack direction={"column"} spacing={4}>
@@ -96,18 +105,19 @@ const PublicationCard = ({
   status: "Published" | "In Press" | "Under Review" | "Preprint" | "In Preparation";
   url?: string;
 }) => {
-  const cardBg = useColorModeValue("white", "brand.900");
+  const cardBg = useColorModeValue("whiteAlpha.900", "blackAlpha.300");
   const borderColor = useColorModeValue("brand.200", "brand.700");
 
   return (
     <Stack
       direction={"column"}
       spacing={3}
-      p={4}
+      p={{ base: 5, md: 6 }}
       border={"1px"}
       borderColor={borderColor}
-      borderRadius={"xl"}
+      borderRadius={"2xl"}
       bg={cardBg}
+      backdropFilter={"blur(6px)"}
     >
       <Flex align={"center"} justify={"space-between"} gap={4} wrap={"wrap"}>
         <Text
@@ -119,7 +129,7 @@ const PublicationCard = ({
         </Text>
         <StatusBadge status={status} />
       </Flex>
-      <Text lineHeight={1.8}>
+      <Text lineHeight={1.9} fontSize={{ base: "md", md: "lg" }}>
         {authors}. <Text as={"span"} fontWeight={"semibold"}>{title}</Text>
         {journal ? (
           <>
@@ -137,7 +147,7 @@ const PublicationCard = ({
       </Text>
       <Stack direction={"row"} spacing={4} wrap={"wrap"}>
         {doi && (
-          <Link href={`https://doi.org/${doi}`} isExternal color={useColorModeValue("brand.700", "brand.200")}>
+          <Link href={`https://doi.org/${doi}`} isExternal color={useColorModeValue("brand.700", "brand.200")} fontWeight={"medium"}>
             DOI: {doi}
           </Link>
         )}
@@ -146,12 +156,13 @@ const PublicationCard = ({
             href={`https://pubmed.ncbi.nlm.nih.gov/${pmid}/`}
             isExternal
             color={useColorModeValue("brand.700", "brand.200")}
+            fontWeight={"medium"}
           >
             PMID: {pmid}
           </Link>
         )}
         {!doi && !pmid && url && (
-          <Link href={url} isExternal color={useColorModeValue("brand.700", "brand.200")}>
+          <Link href={url} isExternal color={useColorModeValue("brand.700", "brand.200")} fontWeight={"medium"}>
             {status === "Preprint" ? "Preprint" : "Link"}
           </Link>
         )}

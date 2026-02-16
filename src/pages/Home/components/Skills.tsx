@@ -26,17 +26,27 @@ export const Skills = () => {
       }}
       tabIndex={-1}
     >
-      <Stack spacing={4}>
-        <Heading as={"h2"} fontSize={"3xl"}>
+      <Stack spacing={4} w={"full"}>
+        <Heading
+          as={"p"}
+          fontSize={"sm"}
+          fontWeight={"semibold"}
+          textTransform={"uppercase"}
+          letterSpacing={"0.1em"}
+          color={useColorModeValue("brand.700", "brand.300")}
+        >
+          Tools and Methods
+        </Heading>
+        <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }}>
           Skills/Technologies
         </Heading>
         <Stack
           direction={"row"}
           spacing={0}
-          rowGap={2}
-          mt={8}
+          rowGap={3}
+          mt={6}
           wrap={"wrap"}
-          columnGap={2}
+          columnGap={3}
           tabIndex={0}
         >
           {me.skills.map((skill, index) => (
@@ -88,24 +98,20 @@ const SingleSkill = ({
       animate={controls}
       initial="hidden"
       variants={variants}
-      drag
-      dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-      dragElastic={0.4}
-      // Drag Spring
-      dragTransition={{ bounceStiffness: 1000, bounceDamping: 20 }}
     >
       <Stack
         direction={"row"}
         align={"center"}
-        bg={useColorModeValue("brand.100", "brand.900")}
+        bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+        backdropFilter={"blur(6px)"}
         px={4}
-        py={1}
+        py={2}
         borderRadius={"xl"}
-        border={"2px"}
-        borderColor={useColorModeValue("brand.200", "brand.800")}
+        border={"1px"}
+        borderColor={useColorModeValue("brand.200", "brand.700")}
       >
-        {icon && <Icon as={icon} />}
-        <Heading as={"h3"} fontSize={"2xl"}>
+        {icon && <Icon as={icon} boxSize={4} color={useColorModeValue("brand.700", "brand.300")} />}
+        <Heading as={"h3"} fontSize={{ base: "md", md: "lg" }}>
           {name}
         </Heading>
       </Stack>

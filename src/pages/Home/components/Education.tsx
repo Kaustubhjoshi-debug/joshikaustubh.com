@@ -20,17 +20,23 @@ export const Education = () => {
       direction={"column"}
       maxW={"container.xl"}
       w={"full"}
-      p={{
-        base: 8,
-        md: 16,
-      }}
+      p={{ base: 8, md: 16 }}
       tabIndex={-1}
     >
       <Box w={"full"}>
-        <Heading as={"h2"} fontSize={"3xl"}>
+        <Text
+          fontSize={"sm"}
+          fontWeight={"semibold"}
+          textTransform={"uppercase"}
+          letterSpacing={"0.1em"}
+          color={useColorModeValue("brand.700", "brand.300")}
+        >
+          Background
+        </Text>
+        <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }}>
           Education
         </Heading>
-        <Stack direction={"column"} spacing={4} mt={8}>
+        <Stack direction={"column"} spacing={5} mt={6}>
           {me.education.map((education) => (
             <SingleEducation key={education.school} {...education} />
           ))}
@@ -76,19 +82,31 @@ const SingleEducation = ({
       initial="hidden"
       variants={variants}
     >
-      <Stack direction={"column"} tabIndex={0}>
+      <Stack
+        direction={"column"}
+        tabIndex={0}
+        border={"1px"}
+        borderColor={useColorModeValue("brand.200", "brand.700")}
+        borderRadius={"2xl"}
+        bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+        backdropFilter={"blur(6px)"}
+        p={{ base: 5, md: 6 }}
+        spacing={2}
+      >
         <Text
           as={"h5"}
-          fontSize={"xl"}
-          color={useColorModeValue("brand.800", "brand.100")}
-          mb={2}
+          fontSize={"sm"}
+          fontWeight={"semibold"}
+          letterSpacing={"0.08em"}
+          textTransform={"uppercase"}
+          color={useColorModeValue("brand.700", "brand.300")}
         >
           {graduation}
         </Text>
-        <Heading as={"h3"} fontSize={{ base: "3xl", md: "4xl" }}>
+        <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }}>
           {school}
         </Heading>
-        <Text as={"h4"} fontSize={{ base: "2xl", md: "3xl" }}>
+        <Text as={"h4"} fontSize={{ base: "lg", md: "xl" }} fontWeight={"medium"}>
           {degree} in {major}
         </Text>
 
@@ -96,14 +114,9 @@ const SingleEducation = ({
         {awards &&
           awards.length > 0 &&
           awards.map((award) => (
-            <Heading
-              as={"h5"}
-              fontSize={"xl"}
-              fontWeight={"normal"}
-              key={award}
-            >
+            <Text as={"p"} fontSize={{ base: "md", md: "lg" }} key={award}>
               {award}
-            </Heading>
+            </Text>
           ))}
       </Stack>
     </motion.div>

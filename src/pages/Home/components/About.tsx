@@ -1,9 +1,8 @@
 import {
   Box,
   Flex,
-  Grid,
-  GridItem,
   Heading,
+  Stack,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -43,69 +42,57 @@ export const About = () => {
     >
       <Flex
         id="about"
-        minH={"500px"}
         w={"full"}
-        maxW={"100vw"}
-        bgGradient={useColorModeValue(
-          "linear(to-b, brand.50, brand.200, brand.50)",
-          "linear(to-b, brand.950, brand.800, brand.950)",
-        )}
+        maxW={"container.xl"}
         align={"center"}
         justify={"center"}
+        p={{ base: 8, md: 16 }}
         tabIndex={-1}
       >
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
-          }}
-          maxW={"container.xl"}
-          gap={{
-            base: 12,
-            md: 6,
-          }}
+        <Stack
           w={"full"}
-          p={{
-            base: 8,
-            md: 16,
-          }}
+          spacing={6}
+          border={"1px"}
+          borderColor={useColorModeValue("brand.200", "brand.700")}
+          borderRadius={"2xl"}
+          bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+          backdropFilter={"blur(6px)"}
+          p={{ base: 6, md: 10 }}
         >
-          <GridItem tabIndex={0}>
+          <Stack tabIndex={0} spacing={3}>
+            <Text
+              fontSize={"sm"}
+              fontWeight={"semibold"}
+              letterSpacing={"0.1em"}
+              textTransform={"uppercase"}
+              color={useColorModeValue("brand.700", "brand.300")}
+            >
+              About
+            </Text>
             <Heading
-              fontWeight={"normal"}
               as={"h1"}
-              size={{
-                base: "3xl",
-                md: "4xl",
-              }}
-              color={useColorModeValue("brand.950", "brand.50")}
+              size={{ base: "2xl", md: "3xl" }}
+              color={useColorModeValue("brand.900", "brand.100")}
             >
               {me.bigHeading.black}{" "}
               <Text
                 as={"span"}
-                color={useColorModeValue("brand.600", "brand.300")}
+                color={useColorModeValue("brand.700", "brand.300")}
               >
                 {me.bigHeading.blue}
               </Text>
             </Heading>
-          </GridItem>
-          <GridItem tabIndex={0}>
-            <Flex w={"full"} h={"full"} maxW={"600px"}>
-              <Box>
-                <Heading as={"h2"} fontSize={"4xl"}>
-                  About
-                </Heading>
-                <Text
-                  fontSize={"xl"}
-                  mt={4}
-                  align={{ base: "left", md: "justify" }}
-                >
-                  {me.about}
-                </Text>
-              </Box>
-            </Flex>
-          </GridItem>
-        </Grid>
+          </Stack>
+          <Box tabIndex={0} maxW={"900px"}>
+            <Text
+              fontSize={{ base: "lg", md: "xl" }}
+              color={useColorModeValue("brand.800", "brand.100")}
+              align={{ base: "left", md: "justify" }}
+            >
+              {me.about}
+            </Text>
+          </Box>
+        </Stack>
       </Flex>
     </motion.div>
   );

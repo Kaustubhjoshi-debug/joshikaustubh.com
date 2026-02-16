@@ -54,7 +54,8 @@ export const Navbar = () => {
       >
         <Flex
           justify={"space-between"}
-          bg={useColorModeValue("brand.100", "brand.900")}
+          bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+          backdropFilter={"blur(6px)"}
           height={"64px"}
           px={3}
           w={"full"}
@@ -68,8 +69,8 @@ export const Navbar = () => {
             alt={`${me.name} profile picture`}
             boxSize={10}
             as={motion.img}
-            whileHover={{ rotate: -120, scale: 1.1 }}
-            whileTap={{ rotate: 120, scale: 1.05 }}
+            whileHover={{ rotate: -8, scale: 1.04 }}
+            whileTap={{ rotate: 8, scale: 1.02 }}
             onContextMenu={preventRightClick}
           />
           {isMobile ? (
@@ -182,8 +183,8 @@ const BottomSheet = ({
               alt={`${me.name} profile picture`}
               boxSize={10}
               as={motion.img}
-              whileHover={{ rotate: -120, scale: 1.1 }}
-              whileTap={{ rotate: 120, scale: 1.05 }}
+              whileHover={{ rotate: -8, scale: 1.04 }}
+              whileTap={{ rotate: 8, scale: 1.02 }}
             />
             <IconButton
               aria-label="Close menu"

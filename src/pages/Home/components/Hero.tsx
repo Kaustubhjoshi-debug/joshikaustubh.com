@@ -1,9 +1,9 @@
 import {
-  Box,
   chakra,
   Heading,
   Icon,
   Image,
+  SimpleGrid,
   shouldForwardProp,
   Stack,
   Text,
@@ -24,16 +24,15 @@ export const Hero = () => {
     <Stack
       id={"home"}
       w={"full"}
-      height={{ base: "100%", md: "80vh" }}
+      minH={{ base: "auto", md: "72vh" }}
       spacing={0}
       justifyContent={"center"}
       alignItems={"center"}
-      bg={useColorModeValue("brand.50", "brand.950")}
       zIndex={1}
       px={4}
       py={{
-        base: 4,
-        md: 8,
+        base: 6,
+        md: 10,
       }}
       as={motion.div}
       initial="hidden"
@@ -45,63 +44,73 @@ export const Hero = () => {
       <Stack
         h={"full"}
         w={"full"}
-        bg={useColorModeValue("brand.100", "brand.900")}
+        bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+        backdropFilter={"blur(6px)"}
         rounded={"3xl"}
         border={"1px"}
-        borderColor={useColorModeValue("brand.200", "brand.700")}
+        borderColor={useColorModeValue("brand.200", "whiteAlpha.300")}
         p={{
-          base: 4,
+          base: 6,
           md: 12,
         }}
-        justify={"center"}
-        spacing={8}
+        justify={"space-between"}
+        spacing={{ base: 8, md: 10 }}
       >
-        <Image
-          rounded={"full"}
-          boxSize={{
-            base: "180px",
-            md: "150px",
-          }}
-          src={me.image}
-          border={"2px"}
-          borderColor={useColorModeValue("brand.400", "brand.600")}
-          alt-text={"Profile picture"}
-          alignSelf={{
-            base: "center",
-            md: "flex-start",
-          }}
-        />
-        <Stack direction={"column"}>
-          <Heading
-            fontWeight={"normal"}
-            as={"h1"}
-            size={{
-              base: "3xl",
-              md: "4xl",
-            }}
-            color={useColorModeValue("brand.600", "gray.100")}
-          >
-            Hi, I'm{" "}
-            <Box
-              as={"span"}
-              color={useColorModeValue("brand.900", "brand.100")}
+        <SimpleGrid
+          columns={{ base: 1, md: 2 }}
+          spacing={{ base: 8, md: 10 }}
+          alignItems={"center"}
+        >
+          <Stack direction={"column"} spacing={4}>
+            <Text
+              fontSize={"sm"}
+              fontWeight={"semibold"}
+              letterSpacing={"0.12em"}
+              textTransform={"uppercase"}
+              color={useColorModeValue("brand.700", "brand.200")}
+            >
+              Research Portfolio
+            </Text>
+            <Heading
+              as={"h1"}
+              size={{ base: "2xl", md: "3xl" }}
+              color={useColorModeValue("brand.900", "brand.50")}
             >
               {me.name}
-            </Box>
-          </Heading>
-          <Heading as={"h3"} fontSize={"2xl"}>
-            {me.subtitle}
-          </Heading>
-          <Text fontSize={"xl"} mt={4} maxW={"600px"}>
-            {me.tagline}
-          </Text>
-        </Stack>
+            </Heading>
+            <Heading
+              as={"h2"}
+              fontSize={{ base: "xl", md: "2xl" }}
+              color={useColorModeValue("brand.700", "brand.200")}
+            >
+              {me.subtitle}
+            </Heading>
+            <Text
+              fontSize={{ base: "lg", md: "xl" }}
+              color={useColorModeValue("brand.800", "brand.100")}
+              maxW={"640px"}
+            >
+              {me.tagline}
+            </Text>
+          </Stack>
+          <Image
+            rounded={"2xl"}
+            boxSize={{ base: "220px", md: "280px" }}
+            src={me.image}
+            border={"1px"}
+            borderColor={useColorModeValue("brand.200", "brand.500")}
+            objectFit={"cover"}
+            alt={"Profile picture"}
+            justifySelf={{ base: "center", md: "end" }}
+            boxShadow={useColorModeValue("xl", "dark-lg")}
+          />
+        </SimpleGrid>
         <Stack
           direction={"row"}
           spacing={0}
           wrap={"wrap"}
-          rowGap={2}
-          columnGap={2}
+          rowGap={3}
+          columnGap={3}
         >
           {me.social.map((social) => (
             <Social
@@ -161,18 +170,19 @@ const Social = ({
         border={"1px"}
         borderColor={useColorModeValue("brand.200", "brand.700")}
         px={4}
-        py={1}
+        py={2}
         rounded={"full"}
         textDecoration={"none"}
         _hover={{
           bg: useColorModeValue(hover.bg[0], hover.bg[1]),
           color: hover.color,
+          borderColor: useColorModeValue("brand.300", "brand.500"),
         }}
         tabIndex={0}
         onClick={onClick}
       >
         <Icon as={icon} />
-        <Text fontWeight={"bold"} fontSize={"lg"}>
+        <Text fontWeight={"semibold"} fontSize={"md"}>
           {name}
         </Text>
       </Stack>

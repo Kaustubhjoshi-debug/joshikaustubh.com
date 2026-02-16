@@ -12,14 +12,18 @@ export const Footer = () => {
   return (
     <Container maxW={"container.xl"}>
       <Stack
-        minH={"20vh"}
+        minH={"16vh"}
         w={"full"}
         align={"center"}
         justify={"center"}
         direction={"column"}
+        spacing={3}
       >
         <BrandedDivider />
-        <Text>
+        <Text
+          color={useColorModeValue("brand.700", "brand.300")}
+          fontSize={{ base: "sm", md: "md" }}
+        >
           All rights reserved © Kaustubh Joshi {new Date().getFullYear()}
         </Text>
       </Stack>
@@ -36,7 +40,7 @@ const BrandedDivider = () => {
       align={"center"}
       justify={"center"}
       spacing={4}
-      py={4}
+      py={2}
     >
       <Box w={"full"} h={"1px"} bg={borderColor} />
       <Image

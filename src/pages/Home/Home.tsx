@@ -21,6 +21,10 @@ export const Home = () => {
       <Flex
         scrollBehavior={"smooth"}
         bg={useColorModeValue("brand.50", "brand.950")}
+        bgImage={useColorModeValue(
+          "radial-gradient(circle at 15% 15%, rgba(190, 227, 248, 0.35), transparent 40%), radial-gradient(circle at 85% 30%, rgba(144, 205, 244, 0.22), transparent 35%)",
+          "radial-gradient(circle at 15% 15%, rgba(44, 82, 130, 0.35), transparent 40%), radial-gradient(circle at 85% 30%, rgba(49, 130, 206, 0.22), transparent 35%)"
+        )}
         direction={"column"}
         align={"center"}
       >

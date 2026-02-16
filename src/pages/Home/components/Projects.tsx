@@ -1,23 +1,22 @@
 import {
+  Badge,
   Box,
+  Divider,
   Flex,
   Grid,
-  GridItem,
   Heading,
+  HStack,
   Icon,
-  Image,
+  Link,
   Stack,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { me } from "../../../me";
 
 export const Projects = () => {
-  const [projects] = useState(me.projects);
-
   return (
     <Flex
       id="projects"
@@ -45,18 +44,25 @@ export const Projects = () => {
         <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }}>
           Projects
         </Heading>
+        <Text
+          mt={2}
+          maxW={"760px"}
+          color={useColorModeValue("brand.700", "brand.200")}
+          fontSize={{ base: "md", md: "lg" }}
+        >
+          Selected translational and preclinical projects, presented as concise
+          case studies with methods, execution scope, and technical stack.
+        </Text>
         <Grid
           mt={6}
           templateColumns={{
             base: "repeat(1, 1fr)",
-            md: me.projects.length > 2 ? "repeat(2, 1fr)" : "repeat(1, 1fr)",
+            lg: me.projects.length > 1 ? "repeat(2, 1fr)" : "repeat(1, 1fr)",
           }}
           gap={6}
         >
-          {projects.map((project, i) => (
-            <GridItem key={`project-${i}`}>
-              <SingleProject {...project} />
-            </GridItem>
+          {me.projects.map((project, i) => (
+            <SingleProject key={`project-${i}`} {...project} index={i + 1} />
           ))}
         </Grid>
       </Box>
@@ -65,14 +71,14 @@ export const Projects = () => {
 };
 
 const SingleProject = ({
+  index,
   name,
   description,
   contribution,
   technologies,
   links,
-  image,
-  backgroundImage,
 }: {
+  index: number;
   name: string;
   description: string;
   contribution: string;
@@ -81,101 +87,123 @@ const SingleProject = ({
     name: string;
     uri: string;
   }[];
-  image?: string;
-  backgroundImage?: string;
 }) => {
-  const overlay = useColorModeValue(
-    "linear(to-r, brand.50, whiteAlpha.700)",
-    "linear(to-r, brand.900, blackAlpha.700)"
-  );
-  const bg = useColorModeValue("whiteAlpha.900", "blackAlpha.300");
+  const bg = useColorModeValue("white", "brand.900");
+  const borderColor = useColorModeValue("brand.200", "brand.700");
+  const subtleText = useColorModeValue("brand.700", "brand.300");
+
   return (
     <Stack
-      direction={"column"}
+      as={motion.article}
       w={"full"}
       h={"full"}
-      borderRadius={"2xl"}
+      direction={"column"}
+      spacing={5}
+      p={{ base: 5, md: 6 }}
+      borderRadius={"xl"}
       border={"1px"}
       bg={bg}
-      borderColor={useColorModeValue("brand.200", "brand.700")}
-      as={motion.div}
-      justify={"center"}
-      backdropFilter={"blur(6px)"}
-      whileTap={{
-        scale: 0.99,
-        transition: {
-          duration: 0.2,
-        },
+      borderColor={borderColor}
+      boxShadow={useColorModeValue("sm", "none")}
+      whileHover={{
+        y: -3,
+        borderColor: useColorModeValue("brand.300", "brand.500"),
+        boxShadow: useColorModeValue("md", "dark-lg"),
       }}
-      // Image background
-      bgImage={`url(${backgroundImage})`}
-      bgSize={"cover"}
-      bgPosition={"center"}
-      bgRepeat={"no-repeat"}
+      transition={"all 0.2s ease"}
     >
-      <Box
-        h={"full"}
-        w={"full"}
-        bgGradient={overlay}
-        p={5}
-        borderRadius={"2xl"}
-      >
-        <Flex align={"center"} justify={"space-between"} w={"full"}>
-          <Heading
-            as={"h3"}
-            fontSize={{ base: "xl", md: "2xl" }}
-            color={useColorModeValue("brand.800", "white")}
+      <HStack justify={"space-between"} align={"flex-start"}>
+        <Stack spacing={1}>
+          <Text
+            fontSize={"xs"}
+            fontWeight={"semibold"}
+            letterSpacing={"0.12em"}
+            textTransform={"uppercase"}
+            color={subtleText}
           >
+            Project {index}
+          </Text>
+          <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }}>
             {name}
           </Heading>
-          {image && (
-            <Image
-              src={image}
-              h={"50px"}
-              w={"50px"}
-              borderRadius={"xl"}
-              objectFit={"cover"}
-            />
-          )}
+        </Stack>
+        <Badge
+          borderRadius={"full"}
+          px={3}
+          py={1}
+          fontSize={"xs"}
+          colorScheme={useColorModeValue("blue", "cyan")}
+        >
+          Case Study
+        </Badge>
+      </HStack>
+
+      <Divider borderColor={borderColor} />
+
+      <Stack spacing={4}>
+        <ContentBlock title={"Overview"} text={description} />
+        <ContentBlock title={"Execution"} text={contribution} />
+      </Stack>
+
+      <Stack spacing={2}>
+        <Text
+          fontSize={"sm"}
+          fontWeight={"semibold"}
+          letterSpacing={"0.08em"}
+          textTransform={"uppercase"}
+          color={subtleText}
+        >
+          Methods and Technologies
+        </Text>
+        <Flex wrap={"wrap"} gap={2}>
+          {technologies.map((technology) => (
+            <Pill key={technology}>{technology}</Pill>
+          ))}
         </Flex>
-        <Stack direction={"row"} spacing={2} my={2} wrap={"wrap"}>
+      </Stack>
+
+      {links.length > 0 && (
+        <Flex gap={2} wrap={"wrap"}>
           {links.map((link) => (
             <OutLink href={link.uri} key={link.name}>
               {link.name}
             </OutLink>
           ))}
-        </Stack>
-        <Text fontSize={{ base: "md", md: "lg" }}>{description}</Text>
-        <Box h={2} />
-        <Heading
-          as={"h4"}
-          fontSize={{ base: "md", md: "lg" }}
-          color={useColorModeValue("brand.800", "white")}
-        >
-          What I did
-        </Heading>
-        <Text fontSize={{ base: "md", md: "lg" }}>{contribution}</Text>
-        <Box h={5} />
-        <Stack direction={"row"} wrap={"wrap"} rowGap={3}>
-          {technologies.map((technology) => (
-            <Pill key={technology}>{technology}</Pill>
-          ))}
-        </Stack>
-      </Box>
+        </Flex>
+      )}
     </Stack>
   );
 };
 
+const ContentBlock = ({ title, text }: { title: string; text: string }) => (
+  <Stack spacing={1.5}>
+    <Text
+      fontSize={"sm"}
+      fontWeight={"semibold"}
+      letterSpacing={"0.08em"}
+      textTransform={"uppercase"}
+      color={useColorModeValue("brand.700", "brand.300")}
+    >
+      {title}
+    </Text>
+    <Text fontSize={{ base: "md", md: "lg" }}>{text}</Text>
+  </Stack>
+);
+
 const Pill = ({ children }: { children: string }) => {
   return (
     <Box
-      bg={"brand.100"}
-      color={"brand.800"}
-      px={2}
-      py={0.5}
-      borderRadius={"2xl"}
-      fontSize={"sm"}
-      fontWeight={"bold"}
+      border={"1px"}
+      borderColor={useColorModeValue("brand.200", "brand.600")}
+      bg={useColorModeValue("brand.50", "brand.800")}
+      color={useColorModeValue("brand.800", "brand.100")}
+      px={2.5}
+      py={1}
+      borderRadius={"full"}
+      fontSize={"xs"}
+      fontWeight={"semibold"}
+      letterSpacing={"0.04em"}
+      textTransform={"uppercase"}
     >
       {children}
     </Box>
@@ -184,21 +212,31 @@ const Pill = ({ children }: { children: string }) => {
 
 const OutLink = ({ children, href }: { children: string; href: string }) => {
   return (
-    <Flex
-      as={"a"}
+    <Link
       href={href}
       target={"_blank"}
       rel={"noreferrer"}
-      align={"center"}
-      color={useColorModeValue("brand.700", "brand.100")}
+      display={"inline-flex"}
+      alignItems={"center"}
+      gap={1.5}
+      fontSize={"sm"}
+      fontWeight={"semibold"}
+      border={"1px"}
+      borderColor={useColorModeValue("brand.200", "brand.600")}
+      borderRadius={"md"}
+      px={3}
+      py={1.5}
+      color={useColorModeValue("brand.700", "brand.200")}
+      bg={useColorModeValue("white", "brand.800")}
       _hover={{
-        color: useColorModeValue("brand.600", "brand.300"),
-        textDecoration: "underline",
+        textDecoration: "none",
+        borderColor: useColorModeValue("brand.400", "brand.400"),
+        bg: useColorModeValue("brand.50", "brand.700"),
       }}
     >
       {children}
-      <Icon as={FiExternalLink} ml={1} />
-    </Flex>
+      <Icon as={FiExternalLink} />
+    </Link>
   );
 };
 

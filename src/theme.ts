@@ -49,16 +49,16 @@ const theme = extendTheme({
     },
   },
   styles: {
-    global: {
+    global: (props: { colorMode: "light" | "dark" }) => ({
       body: {
-        color: "brand.900",
-        bg: "brand.50",
+        color: props.colorMode === "light" ? "brand.900" : "brand.100",
+        bg: props.colorMode === "light" ? "brand.50" : "brand.950",
       },
       "::selection": {
-        bg: "brand.200",
-        color: "brand.900",
+        bg: props.colorMode === "light" ? "brand.200" : "brand.700",
+        color: props.colorMode === "light" ? "brand.900" : "brand.50",
       },
-    },
+    }),
   },
   components: {
     Heading: {

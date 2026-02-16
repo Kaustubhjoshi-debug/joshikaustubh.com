@@ -2,6 +2,7 @@ import {
   Box,
   Flex,
   IconButton,
+  Portal,
   Popover,
   PopoverBody,
   PopoverContent,
@@ -64,6 +65,7 @@ export const ThemeSwitcher = () => {
       onOpen={onOpen}
       onClose={onClose}
       offset={[0, 16]}
+      strategy="fixed"
     >
       <PopoverTrigger>
         <motion.div
@@ -106,27 +108,30 @@ export const ThemeSwitcher = () => {
           )}
         </motion.div>
       </PopoverTrigger>
-      <PopoverContent
-        w={"auto"}
-        rounded={"full"}
-        bg={popoverBg}
-        border={"1px"}
-        borderColor={popoverBorder}
-        shadow={"lg"}
-      >
-        <PopoverBody py={3}>
-          <Stack direction={"column"} spacing={1} align={"center"}>
-            {multiThemeOptions.map((theme) => (
-              <ThemeOption
-                key={theme}
-                color={theme}
-                colorScheme={colorScheme}
-                setColorScheme={setColorScheme}
-              />
-            ))}
-          </Stack>
-        </PopoverBody>
-      </PopoverContent>
+      <Portal>
+        <PopoverContent
+          w={"auto"}
+          rounded={"full"}
+          bg={popoverBg}
+          border={"1px"}
+          borderColor={popoverBorder}
+          shadow={"lg"}
+          zIndex={1700}
+        >
+          <PopoverBody py={3}>
+            <Stack direction={"column"} spacing={1} align={"center"}>
+              {multiThemeOptions.map((theme) => (
+                <ThemeOption
+                  key={theme}
+                  color={theme}
+                  colorScheme={colorScheme}
+                  setColorScheme={setColorScheme}
+                />
+              ))}
+            </Stack>
+          </PopoverBody>
+        </PopoverContent>
+      </Portal>
     </Popover>
   );
 };

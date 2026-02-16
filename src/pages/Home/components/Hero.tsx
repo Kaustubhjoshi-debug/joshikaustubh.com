@@ -95,11 +95,13 @@ export const Hero = () => {
           </Stack>
           <Image
             rounded={"2xl"}
-            boxSize={{ base: "220px", md: "280px" }}
+            w={{ base: "220px", md: "280px" }}
+            h={{ base: "294px", md: "374px" }}
             src={me.image}
             border={"1px"}
             borderColor={useColorModeValue("brand.200", "brand.500")}
             objectFit={"cover"}
+            objectPosition={"center top"}
             alt={"Profile picture"}
             justifySelf={{ base: "center", md: "end" }}
             boxShadow={useColorModeValue("xl", "dark-lg")}

@@ -111,8 +111,8 @@ const SingleExperience = ({
       animate={controls}
       initial="hidden"
       variants={variants}
-      templateColumns={{ base: "40px 1fr", md: "240px 1fr" }}
-      columnGap={{ base: 4, md: 8 }}
+      templateColumns={{ base: "1fr", md: "240px 1fr" }}
+      columnGap={{ base: 0, md: 8 }}
       alignItems={"start"}
       position={"relative"}
     >
@@ -132,6 +132,7 @@ const SingleExperience = ({
 
       <Stack
         display={{ base: "none", md: "flex" }}
+        gridColumn={{ md: 1 }}
         align={"flex-end"}
         textAlign={"right"}
         pt={5}
@@ -153,6 +154,8 @@ const SingleExperience = ({
       </Stack>
 
       <Stack
+        gridColumn={{ base: 1, md: 2 }}
+        ml={{ base: 8, md: 0 }}
         direction={"column"}
         justify={"center"}
         p={{ base: 5, md: 6 }}

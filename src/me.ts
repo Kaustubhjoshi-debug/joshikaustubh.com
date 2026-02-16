@@ -32,7 +32,7 @@ export const multiThemeOptions: ITheme[] = [
 ];
 
 // To disable support for multiple themes, set this value to `false`;
-export const enableMultiTheme: boolean = false;
+export const enableMultiTheme: boolean = true;
 
 export const me = {
   name: "Kaustubh Joshi",

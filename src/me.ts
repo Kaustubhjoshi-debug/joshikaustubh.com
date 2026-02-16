@@ -1,14 +1,21 @@
 import { AiFillExperiment } from "react-icons/ai";
-import { LuPipette } from "react-icons/lu";
 import {
-  FaBacteria,
+  FaAtom,
+  FaBalanceScale,
+  FaBarcode,
+  FaChartBar,
+  FaChartLine,
+  FaCube,
+  FaFlask,
   FaLinkedin,
   FaNewspaper,
+  FaProjectDiagram,
+  FaSearch,
+  FaVials,
+  FaWaveSquare,
 } from "react-icons/fa";
-import { GiSkullWithSyringe, GiSoapExperiment, GiVirus } from "react-icons/gi";
-import { TiPipette } from "react-icons/ti";
-
-import { TbAlertHexagon, TbCell } from "react-icons/tb";
+import { MdScience } from "react-icons/md";
+import { TbCell, TbMicroscope } from "react-icons/tb";
 import { IMe, ITheme } from "./me.interface";
 
 // Warning: Don't use "black" or "white" values
@@ -260,35 +267,35 @@ export const me = {
   skills: [
     {
       name: "Mammalian Cell Culture",
-      icon: LuPipette
+      icon: TbCell,
     },
     {
       name: "Assay Development",
-      icon: TiPipette
+      icon: FaVials,
     },
     {
       name: "High Throughput Screening",
-      icon: GiSkullWithSyringe,
+      icon: FaProjectDiagram,
     },
     {
       name: "ADME Assays",
-      icon: GiSoapExperiment,
+      icon: FaBalanceScale,
     },
     {
       name: "ELISA",
-      icon: FaBacteria,
+      icon: FaFlask,
     },
     {
       name: "LC-MS",
-      icon: TbAlertHexagon
+      icon: FaWaveSquare,
     },
     {
       name: "LNP Synthesis",
-      icon: TbCell
+      icon: FaAtom,
     },
     {
       name: "In-Vitro Studies",
-      icon: GiSoapExperiment,
+      icon: MdScience,
     },
     {
       name: "In-Vivo Studies",
@@ -296,29 +303,35 @@ export const me = {
     },
     {
       name: "Immunohistochemistry",
-      icon: GiVirus,
+      icon: TbMicroscope,
     },
     {
       name: "Western Blotting",
-      icon: AiFillExperiment,
+      icon: FaBarcode,
     },
     {
       name: "TIBCO Spotfire",
+      icon: FaChartLine,
     },
     {
       name: "PyMOL",
+      icon: FaCube,
     },
     {
       name: "Xcalibur",
+      icon: FaWaveSquare,
     },
     {
       name: "ADMET Predictor",
+      icon: FaBalanceScale,
     },
     {
       name: "GraphPad Prism",
+      icon: FaChartBar,
     },
     {
       name: "TraceFinder",
+      icon: FaSearch,
     },
   ],
   social: [

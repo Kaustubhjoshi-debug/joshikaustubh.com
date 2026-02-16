@@ -52,7 +52,7 @@ export const Contact = () => {
           I am open to research collaborations, speaking invitations, and translational neuroscience opportunities.
         </Text>
         <Text
-          fontSize={{ base: "xl", md: "2xl" }}
+          fontSize={{ base: "lg", md: "2xl" }}
           color={useColorModeValue("brand.700", "brand.200")}
           as={Link}
           href={`mailto:${me.contact.email}`}

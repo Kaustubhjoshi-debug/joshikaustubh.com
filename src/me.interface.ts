@@ -14,6 +14,7 @@ export interface IMe {
   image: string;
   education: IEducation[];
   experience: IExperience[];
+  publications: IPublication[];
   projects: IProject[];
   skills: ISkill[];
   social: ISocial[];
@@ -34,6 +35,18 @@ interface IExperience {
   position: string;
   duration: string;
   bullets: string[];
+}
+
+interface IPublication {
+  authors: string;
+  title: string;
+  journal?: string;
+  year?: string;
+  details?: string;
+  doi?: string;
+  pmid?: string;
+  url?: string;
+  status: "Published" | "In Press" | "Under Review" | "Preprint" | "In Preparation";
 }
 
 interface IProject {

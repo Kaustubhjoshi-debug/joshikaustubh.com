@@ -18,6 +18,7 @@ import {
 import { motion } from "framer-motion";
 import ReactGA from "react-ga4";
 import {
+  FaBook,
   FaBriefcase,
   FaHamburger,
   FaHardHat,
@@ -255,6 +256,7 @@ const options = [
   { name: "About", href: "about", icon: FaUser },
   { name: "Education", href: "education", icon: FaSchool },
   { name: "Experience", href: "experience", icon: FaBriefcase },
+  { name: "Publications", href: "publications", icon: FaBook },
   { name: "Projects", href: "projects", icon: FaHardHat },
   { name: "Skills", href: "skills", icon: FaToolbox },
   { name: "Contact", href: "contact", icon: FaMailBulk },

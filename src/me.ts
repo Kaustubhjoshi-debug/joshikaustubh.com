@@ -147,29 +147,6 @@ export const me = {
         "Processed MS and UPLC output in TraceFinder, Xcalibur, and Excel for quantitative lipidomic interpretation.",
       ],
     },
-    {
-      company: "Department of Occupational Health and Safety, Department of Defense",
-      location: "New Delhi, India",
-      position: "Research Intern",
-      duration: "Aug 2022 - Oct 2022",
-      bullets: [
-        "Investigated radio-wave exposure effects on inflammatory, metabolic, and apoptosis-related molecular markers in Sprague Dawley rats.",
-        "Performed tissue collection, homogenization, immunoblotting, and ELISA workflows for brain, blood, and skin analyses.",
-        "Quantified oxidative stress biomarkers and metabolic enzymes across exposure groups using validated biochemical assays.",
-        "Operated RF signal generation systems in anechoic chambers to maintain controlled exposure conditions.",
-      ],
-    },
-    {
-      company: "Department of Chemotherapy, The Haffkine Institute for Training, Research, and Testing",
-      location: "Mumbai, India",
-      position: "Research Intern",
-      duration: "Jan 2022 - March 2022",
-      bullets: [
-        "Performed derivatization workflows for GC-MS and supported HPLC/GC-MS investigations for neonatal disease biomarkers.",
-        "Contributed to development and validation of bioanalytical methods for zidovudine estimation.",
-        "Used HPLC, GC-MS, and FTIR to evaluate drug-sample purity and processed outputs in Chromeleon CDS and Excel.",
-      ],
-    },
   ],
   publications: [
     {

@@ -96,7 +96,7 @@ export const me = {
       ],
     },
     {
-      company: "Discovery DMPK In Vitro, GlaxoSmithKline (GSK)",
+      company: "Discovery DMPK In Vitro, GlaxoSmithKline",
       location: "Collegeville, PA",
       position: "Research Associate Co-op",
       duration: "June 2024 - April 2025",

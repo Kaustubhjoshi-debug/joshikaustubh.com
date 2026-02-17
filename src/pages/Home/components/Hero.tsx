@@ -96,12 +96,10 @@ export const Hero = () => {
             boxShadow={useColorModeValue("xl", "dark-lg")}
           />
         </SimpleGrid>
-        <Stack
-          direction={"row"}
-          spacing={0}
-          wrap={"wrap"}
-          rowGap={3}
-          columnGap={3}
+        <SimpleGrid
+          w={"full"}
+          columns={{ base: 1, sm: 2, md: 2, lg: 4 }}
+          spacing={3}
         >
           {me.social.map((social) => (
             <Social
@@ -112,7 +110,7 @@ export const Hero = () => {
               hover={social.hover}
             />
           ))}
-        </Stack>
+        </SimpleGrid>
       </Stack>
     </Stack>
   );
@@ -144,6 +142,7 @@ const Social = ({
 
   return (
     <ChakraBox
+      w={"full"}
       whileHover={isDisabled ? undefined : { scale: 1.05 }}
       whileTap={isDisabled ? undefined : { scale: 0.95 }}
       tabIndex={-1}
@@ -159,6 +158,9 @@ const Social = ({
         bg={useColorModeValue("brand.50", "brand.950")}
         border={"1px"}
         borderColor={useColorModeValue("brand.200", "brand.700")}
+        w={"full"}
+        h={"52px"}
+        justify={"center"}
         px={4}
         py={2}
         rounded={"full"}
@@ -178,7 +180,11 @@ const Social = ({
         onClick={isDisabled ? undefined : onClick}
       >
         <Icon as={icon} />
-        <Text fontWeight={"semibold"} fontSize={"md"}>
+        <Text
+          fontWeight={"semibold"}
+          fontSize={{ base: "sm", md: "md" }}
+          whiteSpace={"nowrap"}
+        >
           {name}
         </Text>
       </Stack>

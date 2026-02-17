@@ -47,7 +47,7 @@ export const me = {
     "Active in peer review and scientific mentoring through Elsevier, ISSCR, and Johns Hopkins research communities.",
     "Proficient in stem cell culture, organoid engineering, transcriptomics prep, electrophysiology, and advanced bioanalytics.",
   ],
-  subtitle: "Research Technologist | Translational Tissue Engineering",
+  subtitle: "Bone, Aging, and Cancer Biology",
   tagline:
     "Pursuing musculoskeletal tissue engineering through 3D biomanufacturing and mechanobiology, with research interests in bone biology, aging biology, and bone cancers as an incoming PhD student at UT Austin.",
   bigHeading: {
@@ -154,16 +154,16 @@ export const me = {
     },
     {
       authors:
-        "Joshi K, Pantula A, Cheng K, Kathuria A",
+        "Pantula A, Joshi K, Kathuria A",
       title:
-        "Multi-region human brain organoids enable phenotypic screening for neurodegenerative therapies.",
+        "Multi-region human brain organoids enable phenotypic screening for neurodegenerative therapies",
       status: "In Preparation",
     },
     {
       authors:
-        "Kaustubh Joshi1, Aishwarya Pantula1, Annie Kathuria1,2",
+        "Joshi K, Pantula A, Kathuria A",
       title:
-        "Comprehensive characterization of human iPSC-derived olfactory organoids reveals transcriptomic and functional maturity for neurodegenerative disease modeling.",
+        "Comprehensive characterization of human iPSC-derived olfactory organoids reveals transcriptomic and functional maturity for neurodegenerative disease modeling",
       status: "In Preparation",
     },
   ],

@@ -50,11 +50,11 @@ export const me = {
   tagline:
     "Building human-relevant brain and tumor models for translational neuroscience and drug discovery; incoming PhD student at UT Austin (August 2026).",
   bigHeading: {
-    black: "Advancing",
-    blue: "Pharma Sciences",
+    black: "Engineering",
+    blue: "Bone & Aging Biology",
   },
   about:
-    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore (Dec 2024), and a Bachelor of Pharmacy (B. Pharm) in Pharmaceutical Sciences from D Y Patil University, Pune (June 2023). My training spans translational stem cell biology, electrophysiology, RNA-seq sample preparation, and discovery DMPK, with research experience across Johns Hopkins Medicine, GSK, and the University of Maryland. I maintain a list of my publications under the Publications section.",
+    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore, and a Bachelor of Pharmacy (B. Pharm) in Pharmaceutical Sciences from D Y Patil University, Pune. My work sits at the intersection of living model engineering and translational drug development, where I turn complex biological questions into reproducible experimental systems for discovery and decision-making. I bring research experience from Johns Hopkins Medicine, GSK, and the University of Maryland, and I maintain a list of my publications under the Publications section.",
   location: "Baltimore, MD",
   image: "/assets/kaustubh-joshi.jpg",
   education: [
@@ -89,38 +89,6 @@ export const me = {
         "Developed first-in-kind multi-region human brain assembloids and DIPG co-culture assays; used live-cell imaging and multielectrode arrays to quantify invasion, viability, and network function.",
         "Prepared samples for scRNA-seq and bulk RNA-seq, ran cell-toxicity studies, and integrated structural and electrophysiologic readouts for preclinical screening.",
         "Collaborated across academic, industry, and U.S. Department of Defense partners; trained new lab members and supported grant strategy from ideation through submission.",
-      ],
-    },
-    {
-      company: "Analytical Biochemistry, Elsevier",
-      location: "Remote",
-      position: "Peer Reviewer",
-      duration: "Nov 2025 - Present",
-      bullets: [
-        "Invited reviewer assessing manuscript rigor, data quality, and methodological validity for publication decisions.",
-        "Provide structured editorial recommendations and constructive author feedback to strengthen scientific reporting standards.",
-      ],
-    },
-    {
-      company: "Johns Hopkins University",
-      location: "Baltimore, MD",
-      position: "Research Advisor and Mentor",
-      duration: "Oct 2025 - Present",
-      bullets: [
-        "Mentor undergraduates on research pathways, graduate applications, and professional development in biomedical science.",
-        "Guide trainees in literature review, experimental design, data analysis, and research communication.",
-        "Co-organize symposia and workshops that expand equitable undergraduate access to research opportunities.",
-      ],
-    },
-    {
-      company: "International Society for Stem Cell Research (ISSCR)",
-      location: "Remote",
-      position: "Affiliate Reviewer and Program Ambassador",
-      duration: "June 2025 - Present",
-      bullets: [
-        "Reviewed 20+ abstracts for the AI and Digital Biology Symposium and delivered confidential, criteria-based evaluations.",
-        "Promote conference sessions, abstract deadlines, and scientific programming across global stem-cell networks.",
-        "Curate concise scientific previews and post-event recaps to support cross-institutional engagement.",
       ],
     },
     {

@@ -24,7 +24,6 @@ export const Hero = () => {
     <Stack
       id={"home"}
       w={"full"}
-      minH={{ base: "auto", md: "72vh" }}
       spacing={0}
       justifyContent={"center"}
       alignItems={"center"}
@@ -32,7 +31,7 @@ export const Hero = () => {
       px={4}
       py={{
         base: 6,
-        md: 10,
+        md: 8,
       }}
       as={motion.div}
       initial="hidden"
@@ -42,7 +41,6 @@ export const Hero = () => {
       maxW={"container.xl"}
     >
       <Stack
-        h={"full"}
         w={"full"}
         bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
         backdropFilter={"blur(6px)"}

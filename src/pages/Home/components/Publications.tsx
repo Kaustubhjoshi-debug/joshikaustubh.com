@@ -33,10 +33,11 @@ export const Publications = () => {
       align={"center"}
       justify={"center"}
       direction={"column"}
-      p={{ base: 8, md: 16 }}
+      px={4}
+      py={{ base: 8, md: 12 }}
       tabIndex={-1}
     >
-      <Box w={"full"}>
+      <Box w={"full"} maxW={"980px"}>
         <Text
           fontSize={"sm"}
           fontWeight={"semibold"}

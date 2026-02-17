@@ -12,12 +12,12 @@ export const Footer = () => {
   return (
     <Container maxW={"container.xl"}>
       <Stack
-        minH={"16vh"}
         w={"full"}
         align={"center"}
         justify={"center"}
         direction={"column"}
         spacing={3}
+        py={{ base: 6, md: 8 }}
       >
         <BrandedDivider />
         <Text

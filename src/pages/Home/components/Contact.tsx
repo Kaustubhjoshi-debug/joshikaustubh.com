@@ -18,13 +18,11 @@ export const Contact = () => {
       justify={"center"}
       direction={"column"}
       maxW={"container.xl"}
-      p={{
-        base: 8,
-        md: 16,
-      }}
+      px={4}
+      py={{ base: 8, md: 12 }}
       tabIndex={-1}
     >
-      <Box w={"full"}>
+      <Box w={"full"} maxW={"980px"}>
         <Text
           fontSize={"sm"}
           fontWeight={"semibold"}
@@ -40,6 +38,7 @@ export const Contact = () => {
       </Box>
       <Stack
         w={"full"}
+        maxW={"980px"}
         mt={6}
         border={"1px"}
         borderColor={useColorModeValue("brand.200", "brand.700")}

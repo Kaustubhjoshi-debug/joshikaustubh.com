@@ -48,13 +48,13 @@ export const me = {
   ],
   subtitle: "Research Technologist | Translational Tissue Engineering",
   tagline:
-    "Building human-relevant brain and tumor models for translational neuroscience and drug discovery; incoming PhD student at UT Austin (August 2026).",
+    "Pursuing musculoskeletal tissue engineering through 3D biomanufacturing and mechanobiology, with research interests in bone biology, aging biology, and bone cancers as an incoming PhD student at UT Austin.",
   bigHeading: {
     black: "Engineering",
     blue: "Bone & Aging Biology",
   },
   about:
-    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore, and a Bachelor of Pharmacy (B. Pharm) in Pharmaceutical Sciences from D Y Patil University, Pune. My work sits at the intersection of living model engineering and translational drug development, where I turn complex biological questions into reproducible experimental systems for discovery and decision-making. I bring research experience from Johns Hopkins Medicine, GSK, and the University of Maryland, and I maintain a list of my publications under the Publications section.",
+    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore, and a Bachelor of Pharmacy (B. Pharm) in Pharmaceutical Sciences from D Y Patil University, India. My work sits at the intersection of living model engineering and translational drug development, where I turn complex biological questions into reproducible experimental systems for discovery and decision-making. I bring research experience from Johns Hopkins Medicine, GSK, and the University of Maryland, and I maintain a list of my publications under the Publications section.",
   location: "Baltimore, MD",
   image: "/assets/kaustubh-joshi.jpg",
   education: [
@@ -63,18 +63,19 @@ export const me = {
       major: "Mechanical Engineering (Regenerative Medicine and Mechanobiology)",
       school: "The University of Texas at Austin",
       graduation: "Starting Aug 2026",
+      awards: ["Cockrell Graduate Fellow"],
     },
     {
       degree: "Master of Science (MS)",
       major: "Pharmaceutical Sciences",
       school: "University of Maryland, Baltimore",
-      graduation: "Dec 2024",
+      graduation: "July 2023 to May 2025",
     },
     {
       degree: "Bachelor of Pharmacy (B. Pharm)",
       major: "Pharmaceutical Sciences",
-      school: "D Y Patil University, Pune",
-      graduation: "June 2023",
+      school: "D Y Patil University, India",
+      graduation: "June 2019 to June 2023",
     },
   ],
   experience: [
@@ -84,6 +85,7 @@ export const me = {
       position: "Research Technologist",
       duration: "April 2025 - Present",
       bullets: [
+        "Recognized as a Johns Hopkins Translational Tissue Engineering Rising Star (2025).",
         "Built and maintained a stem cell bank of 30+ patient-derived iPSC lines, optimizing media formulations, inhibitors, and matrix coatings for pluripotency and viability.",
         "Generated cerebral, retinal, brainstem, olfactory placode, spinal, and vascular endothelial organoids, including long-term differentiation and maturation workflows.",
         "Developed first-in-kind multi-region human brain assembloids and DIPG co-culture assays; used live-cell imaging and multielectrode arrays to quantify invasion, viability, and network function.",

@@ -26,7 +26,6 @@ import {
   FaMailBulk,
   FaSchool,
   FaTimes,
-  FaToolbox,
   FaUser,
 } from "react-icons/fa";
 import { Link } from "react-scroll";
@@ -259,7 +258,6 @@ const options = [
   { name: "Experience", href: "experience", icon: FaBriefcase },
   { name: "Publications", href: "publications", icon: FaBook },
   { name: "Projects", href: "projects", icon: FaHardHat },
-  { name: "Skills", href: "skills", icon: FaToolbox },
   { name: "Contact", href: "contact", icon: FaMailBulk },
 ];
 

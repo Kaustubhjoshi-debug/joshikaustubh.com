@@ -7,7 +7,6 @@ import {
   FaChartLine,
   FaCube,
   FaFlask,
-  FaLinkedin,
   FaNewspaper,
   FaProjectDiagram,
   FaSearch,
@@ -15,6 +14,7 @@ import {
   FaWaveSquare,
 } from "react-icons/fa";
 import { MdScience } from "react-icons/md";
+import { SiGooglescholar, SiResearchgate } from "react-icons/si";
 import { TbCell, TbMicroscope } from "react-icons/tb";
 import { IMe, ITheme } from "./me.interface";
 
@@ -59,28 +59,22 @@ export const me = {
   image: "/assets/kaustubh-joshi.jpg",
   education: [
     {
-      degree: "Doctor of Philosophy (Ph.D.)",
+      degree: "Doctor of Philosophy (Ph.D)",
       major: "Mechanical Engineering (Regenerative Medicine and Mechanobiology)",
       school: "The University of Texas at Austin",
       graduation: "Starting Aug 2026",
     },
     {
-      degree: "Master of Science",
+      degree: "Master of Science (MS)",
       major: "Pharmaceutical Sciences",
       school: "University of Maryland, Baltimore",
       graduation: "Dec 2024",
-      awards: [
-        "Relevant Coursework: Bioanalytical and Pharmacological Methods, Principles of Drug Discovery, Principles of Drug Development, Technical Writing, Experimental Success, Spectrometric Methods, Process Analytical Technologies"
-      ],
     },
     {
-      degree: "Bachelor of Pharmacy",
+      degree: "Bachelor of Pharmacy (B. Pharm)",
       major: "Pharmaceutical Sciences",
       school: "D Y Patil University, Pune",
       graduation: "June 2023",
-      awards: [
-        "Relevant Coursework: Medicinal Chemistry, Pharmaceutics, Pharmacology, Molecular Biology, Instrumental Analysis, Pathophysiology, Novel Drug Delivery Systems, Pharmaceutical Biotechnology, Organic Chemistry"
-      ]
     },
   ],
   experience: [
@@ -329,11 +323,20 @@ export const me = {
       },
     },
     {
-      name: "LinkedIn",
-      icon: FaLinkedin,
-      uri: "https://www.linkedin.com/in/kaustubh-joshipsar",
+      name: "Google Scholar",
+      icon: SiGooglescholar,
+      uri: "https://scholar.google.com/citations?hl=en&user=S_cVEdwAAAAJ",
       hover: {
-        bg: ["linkedin.500", "linkedin.700"],
+        bg: ["blue.500", "blue.300"],
+        color: "white",
+      },
+    },
+    {
+      name: "ResearchGate",
+      icon: SiResearchgate,
+      uri: "https://www.researchgate.net/profile/Kaustubh-Joshi-12",
+      hover: {
+        bg: ["cyan.500", "cyan.300"],
         color: "white",
       },
     },

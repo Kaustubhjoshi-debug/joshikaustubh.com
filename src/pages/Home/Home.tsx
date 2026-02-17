@@ -1,7 +1,6 @@
 import { Flex, useColorModeValue } from "@chakra-ui/react";
 import { lazy, Suspense } from "react";
 import { Loader } from "../loading/Loader";
-import FunFact from "./components/FunFact";
 
 // Lazy Import
 const Navbar = lazy(() => import("../common/Navbar"));
@@ -30,7 +29,6 @@ export const Home = () => {
       >
         <Navbar />
         <Hero />
-        <FunFact />
         <About />
         <Education />
         <Experience />

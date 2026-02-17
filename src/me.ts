@@ -47,7 +47,7 @@ export const me = {
     "Active in peer review and scientific mentoring through Elsevier, ISSCR, and Johns Hopkins research communities.",
     "Proficient in stem cell culture, organoid engineering, transcriptomics prep, electrophysiology, and advanced bioanalytics.",
   ],
-  subtitle: "Bone, Aging, and Cancer Biology",
+  subtitle: "Cancer Biology",
   tagline:
     "Pursuing musculoskeletal tissue engineering through 3D biomanufacturing and mechanobiology, with research interests in bone biology, aging biology, and bone cancers as an incoming PhD student at UT Austin.",
   bigHeading: {

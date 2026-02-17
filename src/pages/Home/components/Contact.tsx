@@ -55,7 +55,6 @@ export const Contact = () => {
           color={useColorModeValue("brand.700", "brand.200")}
           as={Link}
           href={`mailto:${me.contact.email}`}
-          target="_blank"
           fontWeight={"semibold"}
           _hover={{ textDecoration: "underline", color: useColorModeValue("brand.600", "brand.300") }}
         >

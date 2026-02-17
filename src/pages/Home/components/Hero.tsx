@@ -87,6 +87,8 @@ export const Hero = () => {
             w={{ base: "220px", md: "280px" }}
             h={{ base: "294px", md: "374px" }}
             src={me.image}
+            loading={"eager"}
+            decoding={"async"}
             border={"1px"}
             borderColor={useColorModeValue("brand.200", "brand.500")}
             objectFit={"cover"}

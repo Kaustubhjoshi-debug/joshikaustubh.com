@@ -1,22 +1,5 @@
-import { AiFillExperiment } from "react-icons/ai";
-import {
-  FaAtom,
-  FaBalanceScale,
-  FaBarcode,
-  FaChartBar,
-  FaChartLine,
-  FaCube,
-  FaFlask,
-  FaLinkedin,
-  FaNewspaper,
-  FaProjectDiagram,
-  FaSearch,
-  FaVials,
-  FaWaveSquare,
-} from "react-icons/fa";
-import { MdScience } from "react-icons/md";
+import { FaLinkedin, FaNewspaper } from "react-icons/fa";
 import { SiGooglescholar, SiOrcid, SiResearchgate } from "react-icons/si";
-import { TbCell, TbMicroscope } from "react-icons/tb";
 import { IMe, ITheme } from "./me.interface";
 
 // Warning: Don't use "black" or "white" values
@@ -57,7 +40,7 @@ export const me = {
   about:
     "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore. My work sits at the intersection of living model engineering and translational drug development, where I turn complex biological questions into reproducible experimental systems for discovery and decision-making. I bring research experience from Johns Hopkins Medicine, GlaxoSmithKline, and the University of Maryland School of Pharmacy, and I maintain a list of my publications. I also like to explore visual arts, language, and philosophy!",
   location: "Baltimore, MD",
-  image: "/assets/kaustubh-joshi.jpg",
+  image: "/assets/kaustubh-joshi-optimized.jpg",
   education: [
     {
       degree: "Doctor of Philosophy (Ph.D)",
@@ -215,115 +198,8 @@ export const me = {
       details: "Recognized for brain organoid-guided drug discovery in H3K27 gliomas.",
     },
   ],
-  projects: [
-    {
-      name: "Assessing DMPK In Vitro Parameters",
-      description:
-        "Cross-validating transporter-mediated hepatic uptake assay using suspension and plateable hepatocytes to accurately predict in vivo behavior from in vitro data.",
-      contribution:
-        "Designed and executed transporter assays for hepatic uptake, supported screening investigational compounds for membrane permeability using MDCK-MDR1 and BCRP assays, and performed metabolic stability studies on various species’ hepatocytes.",
-      technologies: ["Drug Transporters", "MDCK-MDR1/BCRP Assays", "Intrinsic Clearance"],
-      links: [],
-    },
-    {
-      name: "Lipidomic Analysis Pipeline",
-      description:
-        "Developed a lipidomic analysis pipeline for identifying and quantifying lipid species from plasma samples.",
-      contribution:
-        "Utilized LC-MS/MS and solid-phase extraction (SPE) methods to streamline lipid extraction and analysis. Processed data using Tracefinder and Xcalibur to interpret results for comprehensive lipid profiling.",
-      technologies: ["LC-MS/MS", "SPE", "Tracefinder", "Xcalibur"],
-      links: [],
-
-    },
-    {
-      name: "Oligonucleotide Characterization",
-      description:
-        "Method development for oligonucleotide analysis using advanced techniques.",
-      contribution:
-        "Refined methods for oligonucleotide purification and analysis using buffer exchange, MALDI-TOF, LC-MS, and nanodrop spectroscopy.",
-      technologies: ["MALDI-TOF", "LC-MS", "Nanodrop Spectroscopy"],
-      links: []
-    },
-    {
-      name: "Radio-Wave Exposure Research",
-      description:
-        "Studied the effects of radio-wave exposure on biochemical markers in rats.",
-      contribution:
-        "Performed Western Blotting, ELISAs, and enzymatic assays to identify molecular markers linked to inflammation, metabolism, and cell survival.",
-      technologies: ["Western Blot", "ELISA", "Enzymatic Assays"],
-      links: []
-    },
-  ],
-  skills: [
-    {
-      name: "Mammalian Cell Culture",
-      icon: TbCell,
-    },
-    {
-      name: "Assay Development",
-      icon: FaVials,
-    },
-    {
-      name: "High Throughput Screening",
-      icon: FaProjectDiagram,
-    },
-    {
-      name: "ADME Assays",
-      icon: FaBalanceScale,
-    },
-    {
-      name: "ELISA",
-      icon: FaFlask,
-    },
-    {
-      name: "LC-MS",
-      icon: FaWaveSquare,
-    },
-    {
-      name: "LNP Synthesis",
-      icon: FaAtom,
-    },
-    {
-      name: "In-Vitro Studies",
-      icon: MdScience,
-    },
-    {
-      name: "In-Vivo Studies",
-      icon: AiFillExperiment,
-    },
-    {
-      name: "Immunohistochemistry",
-      icon: TbMicroscope,
-    },
-    {
-      name: "Western Blotting",
-      icon: FaBarcode,
-    },
-    {
-      name: "TIBCO Spotfire",
-      icon: FaChartLine,
-    },
-    {
-      name: "PyMOL",
-      icon: FaCube,
-    },
-    {
-      name: "Xcalibur",
-      icon: FaWaveSquare,
-    },
-    {
-      name: "ADMET Predictor",
-      icon: FaBalanceScale,
-    },
-    {
-      name: "GraphPad Prism",
-      icon: FaChartBar,
-    },
-    {
-      name: "TraceFinder",
-      icon: FaSearch,
-    },
-  ],
+  projects: [],
+  skills: [],
   social: [
     {
       name: "Google Scholar",

@@ -344,20 +344,20 @@ export const me = {
       },
     },
     {
+      name: "ORCID",
+      icon: SiOrcid,
+      uri: "https://orcid.org/0009-0004-2604-4930",
+      hover: {
+        bg: ["green.500", "green.300"],
+        color: "white",
+      },
+    },
+    {
       name: "LinkedIn",
       icon: FaLinkedin,
       uri: "https://www.linkedin.com/in/kaustubh-joshipsar",
       hover: {
         bg: ["linkedin.500", "linkedin.700"],
-        color: "white",
-      },
-    },
-    {
-      name: "ORCID",
-      icon: SiOrcid,
-      uri: "",
-      hover: {
-        bg: ["green.500", "green.300"],
         color: "white",
       },
     },

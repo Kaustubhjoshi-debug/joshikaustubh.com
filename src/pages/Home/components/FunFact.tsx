@@ -34,22 +34,6 @@ const FunFact: React.FC = () => {
       px={4}
       py={2}
     >
-        <Text
-          maxW={"fit-content"}
-          fontSize={"sm"}
-          textTransform={"uppercase"}
-          letterSpacing={"0.1em"}
-          color={useColorModeValue("brand.700", "brand.300")}
-          fontWeight={"semibold"}
-          bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
-          borderRadius={"full"}
-          px={4}
-          py={1}
-          border={"1px"}
-          borderColor={useColorModeValue("brand.200", "brand.600")}
-        >
-          Research Snapshot
-        </Text>
       <Box
         border={"1px"}
         borderColor={useColorModeValue("brand.200", "brand.700")}

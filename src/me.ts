@@ -59,28 +59,22 @@ export const me = {
   image: "/assets/kaustubh-joshi.jpg",
   education: [
     {
-      degree: "Doctor of Philosophy (Ph.D.)",
+      degree: "PhD",
       major: "Mechanical Engineering (Regenerative Medicine and Mechanobiology)",
       school: "The University of Texas at Austin",
       graduation: "Starting Aug 2026",
     },
     {
-      degree: "Master of Science",
+      degree: "MS",
       major: "Pharmaceutical Sciences",
       school: "University of Maryland, Baltimore",
       graduation: "Dec 2024",
-      awards: [
-        "Relevant Coursework: Bioanalytical and Pharmacological Methods, Principles of Drug Discovery, Principles of Drug Development, Technical Writing, Experimental Success, Spectrometric Methods, Process Analytical Technologies"
-      ],
     },
     {
-      degree: "Bachelor of Pharmacy",
+      degree: "BPharm",
       major: "Pharmaceutical Sciences",
-      school: "D Y Patil University, Pune",
+      school: "DY Patil University, India",
       graduation: "June 2023",
-      awards: [
-        "Relevant Coursework: Medicinal Chemistry, Pharmaceutics, Pharmacology, Molecular Biology, Instrumental Analysis, Pathophysiology, Novel Drug Delivery Systems, Pharmaceutical Biotechnology, Organic Chemistry"
-      ]
     },
   ],
   experience: [

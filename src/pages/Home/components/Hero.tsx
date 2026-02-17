@@ -132,6 +132,7 @@ const Social = ({
     color: string;
   };
 }) => {
+  const isDisabled = url.trim().length === 0;
   const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) =>
       isValidMotionProp(prop) || shouldForwardProp(prop),
@@ -143,19 +144,17 @@ const Social = ({
 
   return (
     <ChakraBox
-      whileHover={{
-        scale: 1.05,
-      }}
-      whileTap={{
-        scale: 0.95,
-      }}
+      whileHover={isDisabled ? undefined : { scale: 1.05 }}
+      whileTap={isDisabled ? undefined : { scale: 0.95 }}
       tabIndex={-1}
     >
       <Stack
         direction={"row"}
         as={"a"}
-        href={url}
-        target={"_blank"}
+        href={isDisabled ? undefined : url}
+        target={isDisabled ? undefined : "_blank"}
+        rel={isDisabled ? undefined : "noopener noreferrer"}
+        aria-disabled={isDisabled}
         align={"center"}
         bg={useColorModeValue("brand.50", "brand.950")}
         border={"1px"}
@@ -164,13 +163,19 @@ const Social = ({
         py={2}
         rounded={"full"}
         textDecoration={"none"}
-        _hover={{
-          bg: useColorModeValue(hover.bg[0], hover.bg[1]),
-          color: hover.color,
-          borderColor: useColorModeValue("brand.300", "brand.500"),
-        }}
-        tabIndex={0}
-        onClick={onClick}
+        cursor={isDisabled ? "not-allowed" : "pointer"}
+        opacity={isDisabled ? 0.7 : 1}
+        _hover={
+          isDisabled
+            ? { textDecoration: "none" }
+            : {
+                bg: useColorModeValue(hover.bg[0], hover.bg[1]),
+                color: hover.color,
+                borderColor: useColorModeValue("brand.300", "brand.500"),
+              }
+        }
+        tabIndex={isDisabled ? -1 : 0}
+        onClick={isDisabled ? undefined : onClick}
       >
         <Icon as={icon} />
         <Text fontWeight={"semibold"} fontSize={"md"}>

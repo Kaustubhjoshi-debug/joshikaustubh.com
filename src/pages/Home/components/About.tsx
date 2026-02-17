@@ -12,7 +12,13 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { me } from "../../../me";
 
-const aboutLinks = [
+type AboutLink = {
+  text: string;
+  href: string;
+  isExternal?: boolean;
+};
+
+const aboutLinks: ReadonlyArray<AboutLink> = [
   {
     text: "Department of Mechanical Engineering",
     href: "https://www.me.utexas.edu/",
@@ -25,16 +31,33 @@ const aboutLinks = [
     text: "Maryam Tilton",
     href: "https://www.me.utexas.edu/people/faculty-directory/tilton",
   },
-] as const;
+  {
+    text: "University of Maryland, Baltimore",
+    href: "https://www.umaryland.edu/",
+  },
+  {
+    text: "Johns Hopkins Medicine",
+    href: "https://www.hopkinsmedicine.org/",
+  },
+  {
+    text: "GSK",
+    href: "https://www.gsk.com/",
+  },
+  {
+    text: "Publications section",
+    href: "#publications",
+    isExternal: false,
+  },
+] ;
 
 type AboutSegment =
   | { type: "text"; value: string }
-  | { type: "link"; text: string; href: string };
+  | { type: "link"; text: string; href: string; isExternal?: boolean };
 
 const renderAboutWithLinks = (text: string) => {
   let nodes: AboutSegment[] = [{ type: "text", value: text }];
 
-  aboutLinks.forEach(({ text: linkText, href }) => {
+  aboutLinks.forEach(({ text: linkText, href, isExternal }) => {
     const nextNodes: AboutSegment[] = [];
 
     nodes.forEach((node) => {
@@ -50,7 +73,7 @@ const renderAboutWithLinks = (text: string) => {
         }
 
         if (partIndex < parts.length - 1) {
-          nextNodes.push({ type: "link", text: linkText, href });
+          nextNodes.push({ type: "link", text: linkText, href, isExternal });
         }
       });
     });
@@ -150,7 +173,17 @@ export const About = () => {
                   <Link
                     key={index}
                     href={node.href}
-                    isExternal
+                    isExternal={node.isExternal !== false}
+                    target={node.isExternal === false ? undefined : "_blank"}
+                    rel={node.isExternal === false ? undefined : "noopener noreferrer"}
+                    onClick={(event) => {
+                      if (node.isExternal === false && node.href.startsWith("#")) {
+                        event.preventDefault();
+                        const section = document.getElementById(node.href.slice(1));
+                        section?.scrollIntoView({ behavior: "smooth" });
+                        section?.focus();
+                      }
+                    }}
                     textDecoration={"underline"}
                     color={linkColor}
                     _hover={{ color: linkHoverColor }}

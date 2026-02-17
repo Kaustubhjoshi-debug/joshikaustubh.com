@@ -7,6 +7,7 @@ import {
   FaChartLine,
   FaCube,
   FaFlask,
+  FaLinkedin,
   FaNewspaper,
   FaProjectDiagram,
   FaSearch,
@@ -63,24 +64,27 @@ export const me = {
       major: "Mechanical Engineering (Regenerative Medicine and Mechanobiology)",
       school: "The University of Texas at Austin",
       graduation: "Starting Aug 2026",
-      awards: ["Cockrell Graduate Fellow"],
+      awards: [
+        "Awarded the highly competitive Cockrell Graduate Fellowship.",
+        "Invited to Sigma Xi, The Scientific Research Honor Society, as an Associate Member.",
+      ],
     },
     {
       degree: "Master of Science (MS)",
       major: "Pharmaceutical Sciences",
       school: "University of Maryland, Baltimore",
-      graduation: "July 2023 to May 2025",
+      graduation: "July 2023 - May 2025",
     },
     {
       degree: "Bachelor of Pharmacy (B. Pharm)",
       major: "Pharmaceutical Sciences",
       school: "D Y Patil University, India",
-      graduation: "June 2019 to June 2023",
+      graduation: "June 2019 - June 2023",
     },
   ],
   experience: [
     {
-      company: "Translational Tissue Engineering Center, Wilmer Eye Institute, Johns Hopkins Medicine",
+      company: "Johns Hopkins Biomedical Engineering and Neurosurgery, Johns Hopkins medicine",
       location: "Baltimore, MD",
       position: "Research Technologist",
       duration: "April 2025 - Present",
@@ -112,10 +116,10 @@ export const me = {
       position: "Research Assistant",
       duration: "Oct 2023 - June 2024",
       bullets: [
-        "Optimized oligonucleotide analysis workflows using MALDI-TOF, LC-MS, nanodrop, and buffer-exchange methods.",
-        "Supported multi-step SPE for lipid isolation and oligonucleotide sample preparation.",
-        "Compared HILIC and RPLC performance across ionization modes for lipidomic resolution and method selection.",
-        "Processed MS and UPLC output in TraceFinder, Xcalibur, and Excel for quantitative lipidomic interpretation.",
+        "Developed MALDI-TOF and LC-MS workflows for therapeutic oligonucleotide characterization, including impurity/degradation profiling and sample cleanup optimization.",
+        "Built multi-step prep pipelines for lipidomics and oligonucleotide analyses, combining protein precipitation, SPE cleanup, and buffer-exchange strategies for reproducible recovery.",
+        "Benchmarked HILIC, RPLC, ion-pair reverse-phase (IPRP), and metal-ion complexation chromatography (MICC) conditions to improve separation of structurally similar analytes.",
+        "Established quantitative processing and QA workflows in TraceFinder, Xcalibur, and Excel for peak integration, batch-level comparisons, and report-ready UPLC-MS interpretation.",
       ],
     },
   ],
@@ -270,15 +274,6 @@ export const me = {
   ],
   social: [
     {
-      name: "Resume",
-      icon: FaNewspaper,
-      uri: "Kaustubh-Joshi-Resume.pdf",
-      hover: {
-        bg: ["brand.500", "brand.700"],
-        color: "white",
-      },
-    },
-    {
       name: "Google Scholar",
       icon: SiGooglescholar,
       uri: "https://scholar.google.com/citations?hl=en&user=S_cVEdwAAAAJ",
@@ -293,6 +288,24 @@ export const me = {
       uri: "https://www.researchgate.net/profile/Kaustubh-Joshi-12",
       hover: {
         bg: ["cyan.500", "cyan.300"],
+        color: "white",
+      },
+    },
+    {
+      name: "LinkedIn",
+      icon: FaLinkedin,
+      uri: "https://www.linkedin.com/in/kaustubh-joshipsar",
+      hover: {
+        bg: ["linkedin.500", "linkedin.700"],
+        color: "white",
+      },
+    },
+    {
+      name: "Curriculum Vitae",
+      icon: FaNewspaper,
+      uri: "",
+      hover: {
+        bg: ["brand.500", "brand.700"],
         color: "white",
       },
     },

@@ -48,7 +48,7 @@ export const Contact = () => {
         p={{ base: 5, md: 6 }}
       >
         <Text fontSize={{ base: "md", md: "lg" }}>
-          I am open to research collaborations and speaking invitations in translational neuroscience, bone biology, aging biology, and bone cancers.
+          I welcome research collaborations and speaking invitations at the intersection of translational neuroscience, aging biology, and bone cancers.
         </Text>
         <Text
           fontSize={{ base: "lg", md: "2xl" }}

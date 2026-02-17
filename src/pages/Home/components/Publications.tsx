@@ -14,9 +14,14 @@ const groupOrder: {
   heading: string;
   statuses: readonly ("Published" | "In Press" | "Under Review" | "Preprint" | "In Preparation")[];
 }[] = [
-  { heading: "Published and In Press", statuses: ["Published", "In Press"] },
-  { heading: "Preprints and Under Review", statuses: ["Preprint", "Under Review"] },
-  { heading: "In Preparation", statuses: ["In Preparation"] },
+  {
+    heading: "Peer-Reviewed, Preprints, and Under Review",
+    statuses: ["Published", "In Press", "Preprint", "Under Review"],
+  },
+  {
+    heading: "Selected Ongoing Manuscripts (In Preparation)",
+    statuses: ["In Preparation"],
+  },
 ];
 
 export const Publications = () => {
@@ -69,6 +74,11 @@ export const Publications = () => {
                 <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }} mb={3}>
                   {group.heading}
                 </Heading>
+                {group.heading === "Selected Ongoing Manuscripts (In Preparation)" && (
+                  <Text mb={3} color={useColorModeValue("brand.700", "brand.200")}>
+                    Selected manuscripts currently being prepared for submission.
+                  </Text>
+                )}
                 <Stack direction={"column"} spacing={4}>
                   {publications.map((publication) => (
                     <PublicationCard key={`${publication.title}-${publication.status}`} {...publication} />

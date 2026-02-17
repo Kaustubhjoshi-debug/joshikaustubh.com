@@ -159,6 +159,13 @@ export const me = {
         "Multi-region human brain organoids enable phenotypic screening for neurodegenerative therapies.",
       status: "In Preparation",
     },
+    {
+      authors:
+        "Kaustubh Joshi1, Aishwarya Pantula1, Annie Kathuria1,2",
+      title:
+        "Comprehensive characterization of human iPSC-derived olfactory organoids reveals transcriptomic and functional maturity for neurodegenerative disease modeling.",
+      status: "In Preparation",
+    },
   ],
   projects: [
     {

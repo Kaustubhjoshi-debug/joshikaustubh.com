@@ -84,7 +84,7 @@ export const me = {
   ],
   experience: [
     {
-      company: "Johns Hopkins Biomedical Engineering and Neurosurgery, Johns Hopkins medicine",
+      company: "Biomedical Engineering and Neurosurgery, Johns Hopkins Medicine",
       location: "Baltimore, MD",
       position: "Research Technologist",
       duration: "April 2025 - Present",

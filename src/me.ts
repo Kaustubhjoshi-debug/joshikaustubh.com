@@ -90,11 +90,9 @@ export const me = {
       duration: "April 2025 - Present",
       bullets: [
         "Recognized as a Johns Hopkins Translational Tissue Engineering Rising Star (2025).",
-        "Built and maintained a stem cell bank of 30+ patient-derived iPSC lines, optimizing media formulations, inhibitors, and matrix coatings for pluripotency and viability.",
-        "Generated cerebral, retinal, brainstem, olfactory placode, spinal, and vascular endothelial organoids, including long-term differentiation and maturation workflows.",
-        "Developed first-in-kind multi-region human brain assembloids and DIPG co-culture assays; used live-cell imaging and multielectrode arrays to quantify invasion, viability, and network function.",
-        "Prepared samples for scRNA-seq and bulk RNA-seq, ran cell-toxicity studies, and integrated structural and electrophysiologic readouts for preclinical screening.",
-        "Collaborated across academic, industry, and U.S. Department of Defense partners; trained new lab members and supported grant strategy from ideation through submission.",
+        "Established and managed a biobank of 30+ patient-derived iPSC lines, optimizing media, inhibitor, and matrix conditions to improve pluripotency maintenance, viability, and differentiation consistency.",
+        "Engineered region-specific and multi-region organoid/assembloid platforms (cerebral, retinal, brainstem, olfactory placode, spinal, and endothelial systems) and developed DIPG co-culture assays for translational disease modeling.",
+        "Integrated preclinical screening workflows spanning live-cell imaging, multielectrode-array functional readouts, cell-toxicity studies, and scRNA-seq/bulk RNA-seq sample preparation for cross-functional academic, industry, and U.S. Department of Defense collaborations.",
       ],
     },
     {

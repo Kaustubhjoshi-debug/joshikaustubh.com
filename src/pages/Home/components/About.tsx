@@ -36,15 +36,19 @@ const aboutLinks: ReadonlyArray<AboutLink> = [
     href: "https://www.umaryland.edu/",
   },
   {
+    text: "University of Maryland School of Pharmacy",
+    href: "https://www.pharmacy.umaryland.edu/",
+  },
+  {
     text: "Johns Hopkins Medicine",
     href: "https://www.hopkinsmedicine.org/",
   },
   {
-    text: "GSK",
+    text: "GlaxoSmithKline",
     href: "https://www.gsk.com/",
   },
   {
-    text: "Publications section",
+    text: "publications",
     href: "#publications",
     isExternal: false,
   },

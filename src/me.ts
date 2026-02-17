@@ -55,7 +55,7 @@ export const me = {
     blue: "Bone & Aging Biology",
   },
   about:
-    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore, and a Bachelor of Pharmacy (B. Pharm) in Pharmaceutical Sciences from D Y Patil University, India. My work sits at the intersection of living model engineering and translational drug development, where I turn complex biological questions into reproducible experimental systems for discovery and decision-making. I bring research experience from Johns Hopkins Medicine, GSK, and the University of Maryland, and I maintain a list of my publications under the Publications section.",
+    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore, and a Bachelor of Pharmacy (B. Pharm) in Pharmaceutical Sciences from D Y Patil University, India. My work sits at the intersection of living model engineering and translational drug development, where I turn complex biological questions into reproducible experimental systems for discovery and decision-making. I bring research experience from Johns Hopkins Medicine, GlaxoSmithKline, and the University of Maryland School of Pharmacy, and I maintain a list of my publications under the Publications section.",
   location: "Baltimore, MD",
   image: "/assets/kaustubh-joshi.jpg",
   education: [
@@ -98,16 +98,15 @@ export const me = {
       ],
     },
     {
-      company: "GlaxoSmithKline (GSK)",
+      company: "GlaxoSmithKline (GSK), Discovery DMPK In Vitro",
       location: "Collegeville, PA",
       position: "Research Associate Co-op",
       duration: "June 2024 - April 2025",
       bullets: [
-        "Cross-validated transporter-mediated hepatic uptake assays in suspension and plateable hepatocytes to improve in vitro to in vivo translation.",
-        "Executed MDCK-MDR1 and BCRP permeability/efflux assays and metabolic stability studies across preclinical and human hepatocyte systems.",
-        "Contributed to high-throughput DMPK workflows on Tecan liquid handlers and customized Fluent Control scripts for study throughput.",
-        "Performed microsomal binding and bioanalytical quantification using rapid equilibrium dialysis, BCA assays, and Spotfire-based data analysis.",
-        "Documented studies in ELN, presented project updates, and trained new team members on assay rationale and automation workflows.",
+        "Built and cross-validated transporter-mediated hepatic uptake assays in suspension and plateable hepatocytes, generating uptake-clearance datasets that strengthened in vitro to in vivo translation confidence.",
+        "Executed MDCK-MDR1 and BCRP permeability/efflux studies with matched hepatocyte metabolic-stability assays to separate transporter-driven effects from metabolic liabilities across discovery compounds.",
+        "Scaled high-throughput Discovery DMPK workflows on Tecan Fluent platforms by developing and troubleshooting Fluent Control scripts, improving assay throughput and run-to-run consistency.",
+        "Performed microsomal binding and rapid equilibrium dialysis workflows, then delivered decision-ready analyses in Spotfire and ELN for cross-functional project updates.",
       ],
     },
     {

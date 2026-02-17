@@ -1,29 +1,26 @@
 import {
   Badge,
+  Box,
   Flex,
   Grid,
   Heading,
-  SimpleGrid,
   Stack,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { me } from "../../../me";
 
-const HEADING_MAX_W = "760px";
-const META_BADGE_FONT = "0.72rem";
-const ROW_MIN_H = { base: "auto", md: "132px" };
-const METRIC_MIN_H = { base: "74px", md: "96px" };
-
 export const Talks = () => {
   const sortedTalks = [...me.talks].sort(
     (a, b) => Number(b.date.replace(/\D/g, "")) - Number(a.date.replace(/\D/g, ""))
   );
+
   const invitedCount = sortedTalks.filter((talk) => talk.role === "Invited").length;
   const oralCount = sortedTalks.filter((talk) => talk.role === "Oral").length;
   const posterCount = sortedTalks.filter((talk) => talk.role === "Poster").length;
+
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.200");
-  const subduedText = useColorModeValue("gray.600", "gray.300");
+  const mutedText = useColorModeValue("gray.600", "gray.300");
 
   return (
     <Flex
@@ -48,20 +45,19 @@ export const Talks = () => {
           >
             Scholarly Exchange
           </Text>
-          <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }} maxW={HEADING_MAX_W}>
+          <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }} maxW={"760px"}>
             Talks & Invited Presentations
           </Heading>
-          <Text color={subduedText} fontSize={{ base: "sm", md: "md" }} maxW={HEADING_MAX_W}>
-            Chronological speaking record with venue, role, and presentation title for quick committee review.
+          <Text color={mutedText} fontSize={{ base: "sm", md: "md" }} maxW={"760px"}>
+            Structured speaking record with date, role, talk title, and venue.
           </Text>
+          <Flex wrap={"wrap"} gap={{ base: 2, md: 4 }} color={mutedText} fontSize={{ base: "xs", md: "sm" }}>
+            <StatItem label={"Total"} value={sortedTalks.length} />
+            <StatItem label={"Invited"} value={invitedCount} />
+            <StatItem label={"Oral"} value={oralCount} />
+            <StatItem label={"Poster"} value={posterCount} />
+          </Flex>
         </Stack>
-
-        <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 2, md: 3 }}>
-          <SectionMetric label={"Total"} value={sortedTalks.length} />
-          <SectionMetric label={"Invited"} value={invitedCount} />
-          <SectionMetric label={"Oral"} value={oralCount} />
-          <SectionMetric label={"Poster"} value={posterCount} />
-        </SimpleGrid>
 
         <Stack
           direction={"column"}
@@ -71,36 +67,50 @@ export const Talks = () => {
           borderRadius={"xl"}
           overflow={"hidden"}
         >
+          <Grid
+            display={{ base: "none", md: "grid" }}
+            templateColumns={"112px 112px 1.4fr 1fr"}
+            px={5}
+            py={3}
+            borderBottom={"1px solid"}
+            borderColor={borderColor}
+            bg={useColorModeValue("blackAlpha.50", "whiteAlpha.50")}
+          >
+            <HeaderLabel>Year</HeaderLabel>
+            <HeaderLabel>Role</HeaderLabel>
+            <HeaderLabel>Talk Title</HeaderLabel>
+            <HeaderLabel>Venue</HeaderLabel>
+          </Grid>
+
           {sortedTalks.map((talk, index) => (
             <Grid
               key={`${talk.title}-${talk.date}-${talk.venue}`}
-              templateColumns={{ base: "1fr", md: "112px 112px 1fr" }}
+              templateColumns={{ base: "1fr", md: "112px 112px 1.4fr 1fr" }}
               gap={{ base: 2.5, md: 4 }}
               px={{ base: 4, md: 5 }}
               py={{ base: 4, md: 4.5 }}
-              minH={ROW_MIN_H}
+              minH={{ base: "auto", md: "116px" }}
               alignItems={"start"}
               borderBottom={index === sortedTalks.length - 1 ? "none" : "1px solid"}
               borderColor={borderColor}
             >
-              <Text
-                fontSize={{ base: "xs", md: "sm" }}
-                fontWeight={"semibold"}
-                textTransform={"uppercase"}
-                letterSpacing={"0.06em"}
-                color={subduedText}
-              >
-                {talk.date}
-              </Text>
-              <RoleBadge role={talk.role} />
-              <Stack spacing={1}>
-                <Text fontWeight={"semibold"} fontSize={{ base: "md", md: "lg" }} lineHeight={1.45}>
-                  {talk.title}
+              <RowLabel label={"Year"} value={talk.date} />
+              <Box>
+                <Text
+                  display={{ base: "inline", md: "none" }}
+                  mr={2}
+                  fontSize={"xs"}
+                  fontWeight={"semibold"}
+                  textTransform={"uppercase"}
+                  letterSpacing={"0.06em"}
+                  color={mutedText}
+                >
+                  Role
                 </Text>
-                <Text color={useColorModeValue("gray.700", "gray.200")} fontSize={{ base: "sm", md: "md" }}>
-                  {talk.venue}
-                </Text>
-              </Stack>
+                <RoleBadge role={talk.role} />
+              </Box>
+              <RowLabel label={"Talk Title"} value={talk.title} isStrong />
+              <RowLabel label={"Venue"} value={talk.venue} />
             </Grid>
           ))}
         </Stack>
@@ -109,28 +119,46 @@ export const Talks = () => {
   );
 };
 
-const SectionMetric = ({
+const HeaderLabel = ({ children }: { children: string }) => (
+  <Text
+    fontSize={"xs"}
+    fontWeight={"semibold"}
+    textTransform={"uppercase"}
+    letterSpacing={"0.08em"}
+    color={useColorModeValue("gray.600", "gray.300")}
+  >
+    {children}
+  </Text>
+);
+
+const RowLabel = ({
   label,
   value,
+  isStrong,
 }: {
   label: string;
-  value: number;
+  value: string;
+  isStrong?: boolean;
 }) => (
-  <Stack
-    direction={"column"}
-    spacing={0.5}
-    p={{ base: 2.5, md: 3 }}
-    minH={METRIC_MIN_H}
-    border={"1px solid"}
-    borderColor={useColorModeValue("gray.200", "whiteAlpha.200")}
-    borderRadius={"lg"}
-  >
-    <Text fontSize={{ base: "xs", md: "sm" }} color={useColorModeValue("gray.600", "gray.300")}>
+  <Stack spacing={0.5}>
+    <Text
+      display={{ base: "inline", md: "none" }}
+      fontSize={"xs"}
+      fontWeight={"semibold"}
+      textTransform={"uppercase"}
+      letterSpacing={"0.06em"}
+      color={useColorModeValue("gray.600", "gray.300")}
+    >
       {label}
     </Text>
-    <Heading as={"h3"} fontSize={{ base: "lg", md: "2xl" }}>
+    <Text
+      fontSize={{ base: "sm", md: isStrong ? "md" : "sm" }}
+      fontWeight={isStrong ? "semibold" : "medium"}
+      color={useColorModeValue("gray.700", "gray.200")}
+      lineHeight={1.5}
+    >
       {value}
-    </Heading>
+    </Text>
   </Stack>
 );
 
@@ -139,7 +167,7 @@ const RoleBadge = ({ role }: { role: "Invited" | "Oral" | "Poster" }) => (
     borderRadius={"full"}
     px={3}
     py={1}
-    fontSize={META_BADGE_FONT}
+    fontSize={"0.72rem"}
     w={"fit-content"}
     color={useColorModeValue("gray.600", "gray.200")}
     bg={useColorModeValue("gray.100", "whiteAlpha.100")}
@@ -148,6 +176,15 @@ const RoleBadge = ({ role }: { role: "Invited" | "Oral" | "Poster" }) => (
   >
     {role}
   </Badge>
+);
+
+const StatItem = ({ label, value }: { label: string; value: number }) => (
+  <Flex align={"center"} gap={1.5}>
+    <Text as={"span"} fontWeight={"semibold"} color={useColorModeValue("gray.700", "gray.100")}>
+      {value}
+    </Text>
+    <Text as={"span"}>{label}</Text>
+  </Flex>
 );
 
 export default Talks;

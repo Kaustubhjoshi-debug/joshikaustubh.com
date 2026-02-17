@@ -2,19 +2,14 @@ import {
   Badge,
   Box,
   Flex,
+  Grid,
   Heading,
   Link,
-  SimpleGrid,
   Stack,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { me } from "../../../me";
-
-const HEADING_MAX_W = "760px";
-const META_BADGE_FONT = "0.72rem";
-const ROW_MIN_H = { base: "auto", md: "132px" };
-const METRIC_MIN_H = { base: "74px", md: "96px" };
 
 type PublicationStatus =
   | "Published"
@@ -47,18 +42,20 @@ export const Publications = () => {
     ...publication,
     index: index + 1,
   }));
+
   const total = indexedPublications.length;
   const published = indexedPublications.filter((publication) =>
     ["Published", "In Press"].includes(publication.status)
   ).length;
-  const visibleReview = indexedPublications.filter((publication) =>
+  const underEvaluation = indexedPublications.filter((publication) =>
     ["Preprint", "Under Review"].includes(publication.status)
   ).length;
   const inPreparation = indexedPublications.filter(
     (publication) => publication.status === "In Preparation"
   ).length;
+
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.200");
-  const subduedText = useColorModeValue("gray.600", "gray.300");
+  const mutedText = useColorModeValue("gray.600", "gray.300");
 
   return (
     <Flex
@@ -83,20 +80,19 @@ export const Publications = () => {
           >
             Scholarship
           </Text>
-          <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }} maxW={HEADING_MAX_W}>
+          <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }} maxW={"760px"}>
             Publications
           </Heading>
-          <Text color={subduedText} fontSize={{ base: "sm", md: "md" }} maxW={HEADING_MAX_W}>
-            Curated outputs in Vancouver-style citation format, organized for quick academic review.
+          <Text color={mutedText} fontSize={{ base: "sm", md: "md" }} maxW={"760px"}>
+            Bibliography-style listing with status and verification links.
           </Text>
+          <Flex wrap={"wrap"} gap={{ base: 2, md: 4 }} color={mutedText} fontSize={{ base: "xs", md: "sm" }}>
+            <StatItem label={"Total"} value={total} />
+            <StatItem label={"Published/In Press"} value={published} />
+            <StatItem label={"Preprint/Under Review"} value={underEvaluation} />
+            <StatItem label={"In Preparation"} value={inPreparation} />
+          </Flex>
         </Stack>
-
-        <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 2, md: 3 }}>
-          <SectionMetric label={"Total"} value={total} />
-          <SectionMetric label={"Published/In Press"} value={published} />
-          <SectionMetric label={"Preprint/Under Review"} value={visibleReview} />
-          <SectionMetric label={"In Preparation"} value={inPreparation} />
-        </SimpleGrid>
 
         <Stack direction={"column"} spacing={{ base: 5, md: 6 }}>
           {groupOrder.map((group) => {
@@ -111,15 +107,15 @@ export const Publications = () => {
             return (
               <Stack key={group.heading} spacing={{ base: 3, md: 4 }}>
                 <Flex align={"center"} justify={"space-between"} gap={3} wrap={"wrap"}>
-                  <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }} maxW={HEADING_MAX_W}>
+                  <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }} maxW={"760px"}>
                     {group.heading}
                   </Heading>
                   <Badge
                     borderRadius={"full"}
                     px={3}
                     py={1}
-                    fontSize={META_BADGE_FONT}
-                    color={subduedText}
+                    fontSize={"0.72rem"}
+                    color={mutedText}
                     bg={useColorModeValue("gray.100", "whiteAlpha.100")}
                     border={"1px solid"}
                     borderColor={borderColor}
@@ -127,7 +123,7 @@ export const Publications = () => {
                     {publications.length} item{publications.length > 1 ? "s" : ""}
                   </Badge>
                 </Flex>
-                <Text color={subduedText} fontSize={{ base: "sm", md: "md" }} maxW={HEADING_MAX_W}>
+                <Text color={mutedText} fontSize={{ base: "sm", md: "md" }} maxW={"760px"}>
                   {group.description}
                 </Text>
                 <Stack
@@ -138,10 +134,10 @@ export const Publications = () => {
                   borderRadius={"xl"}
                   overflow={"hidden"}
                 >
-                  {publications.map((publication, index) => (
+                  {publications.map((publication, idx) => (
                     <PublicationRow
                       key={`${publication.title}-${publication.status}`}
-                      isLast={index === publications.length - 1}
+                      isLast={idx === publications.length - 1}
                       {...publication}
                     />
                   ))}
@@ -154,31 +150,6 @@ export const Publications = () => {
     </Flex>
   );
 };
-
-const SectionMetric = ({
-  label,
-  value,
-}: {
-  label: string;
-  value: number;
-}) => (
-  <Stack
-    direction={"column"}
-    spacing={0.5}
-    p={{ base: 2.5, md: 3 }}
-    minH={METRIC_MIN_H}
-    border={"1px solid"}
-    borderColor={useColorModeValue("gray.200", "whiteAlpha.200")}
-    borderRadius={"lg"}
-  >
-    <Text fontSize={{ base: "xs", md: "sm" }} color={useColorModeValue("gray.600", "gray.300")}>
-      {label}
-    </Text>
-    <Heading as={"h3"} fontSize={{ base: "lg", md: "2xl" }}>
-      {value}
-    </Heading>
-  </Stack>
-);
 
 const PublicationRow = ({
   index,
@@ -207,93 +178,105 @@ const PublicationRow = ({
 }) => {
   const hasEvidenceLink = Boolean(doi || pmid || url);
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.200");
-  const subduedText = useColorModeValue("gray.600", "gray.300");
+  const mutedText = useColorModeValue("gray.600", "gray.300");
 
   return (
     <Box
       px={{ base: 4, md: 5 }}
       py={{ base: 4, md: 5 }}
-      minH={ROW_MIN_H}
+      minH={{ base: "auto", md: "128px" }}
       borderBottom={isLast ? "none" : "1px solid"}
       borderColor={borderColor}
     >
-      <Stack spacing={{ base: 2.5, md: 3 }}>
-        <Flex align={"center"} justify={"space-between"} gap={3} wrap={"wrap"}>
-          <Text fontSize={"xs"} color={subduedText}>
-            Citation {index}
-          </Text>
-          <StatusBadge status={status} />
-        </Flex>
-        <Text fontWeight={"semibold"} fontSize={{ base: "md", md: "lg" }} lineHeight={1.45}>
-          {title}
+      <Grid
+        templateColumns={{ base: "1fr", md: "56px 1fr auto" }}
+        gap={{ base: 2.5, md: 4 }}
+        alignItems={"start"}
+      >
+        <Text
+          fontSize={{ base: "xs", md: "sm" }}
+          fontWeight={"semibold"}
+          color={mutedText}
+          letterSpacing={"0.04em"}
+          pt={{ md: 0.5 }}
+        >
+          [{index}]
         </Text>
-        <Text lineHeight={1.7} fontSize={{ base: "sm", md: "md" }} color={useColorModeValue("gray.700", "gray.200")}>
-          {authors}.
-        </Text>
-        {(journal || year || details) && (
-          <Text color={subduedText} fontSize={{ base: "xs", md: "sm" }}>
-            {journal ? `${journal}` : ""}
-            {journal && year ? " · " : ""}
-            {year ? `${year}` : ""}
-            {(journal || year) && details ? " · " : ""}
-            {details ? `${details}` : ""}
+        <Stack spacing={{ base: 2, md: 2.5 }}>
+          <Text fontWeight={"semibold"} fontSize={{ base: "md", md: "lg" }} lineHeight={1.45}>
+            {title}
           </Text>
-        )}
-        <Flex direction={"row"} gap={4} wrap={"wrap"}>
-          {doi && (
-            <Link
-              href={`https://doi.org/${doi}`}
-              isExternal
-              color={useColorModeValue("brand.700", "brand.300")}
-              fontWeight={"medium"}
-              fontSize={{ base: "xs", md: "sm" }}
-            >
-              DOI: {doi}
-            </Link>
-          )}
-          {pmid && (
-            <Link
-              href={`https://pubmed.ncbi.nlm.nih.gov/${pmid}/`}
-              isExternal
-              color={useColorModeValue("brand.700", "brand.300")}
-              fontWeight={"medium"}
-              fontSize={{ base: "xs", md: "sm" }}
-            >
-              PMID: {pmid}
-            </Link>
-          )}
-          {!doi && !pmid && url && (
-            <Link
-              href={url}
-              isExternal
-              color={useColorModeValue("brand.700", "brand.300")}
-              fontWeight={"medium"}
-              fontSize={{ base: "xs", md: "sm" }}
-            >
-              {status === "Preprint" ? "Preprint" : "Link"}
-            </Link>
-          )}
-          {!hasEvidenceLink && (
-            <Text fontSize={{ base: "xs", md: "sm" }} color={subduedText}>
-              Evidence link pending
+          <Text
+            lineHeight={1.7}
+            fontSize={{ base: "sm", md: "md" }}
+            color={useColorModeValue("gray.700", "gray.200")}
+          >
+            {authors}.
+          </Text>
+          {(journal || year || details) && (
+            <Text color={mutedText} fontSize={{ base: "xs", md: "sm" }}>
+              {journal ? `${journal}` : ""}
+              {journal && year ? " · " : ""}
+              {year ? `${year}` : ""}
+              {(journal || year) && details ? " · " : ""}
+              {details ? `${details}` : ""}
             </Text>
           )}
-        </Flex>
-      </Stack>
+          <Flex direction={"row"} gap={4} wrap={"wrap"}>
+            {doi && (
+              <Link
+                href={`https://doi.org/${doi}`}
+                isExternal
+                color={useColorModeValue("brand.700", "brand.300")}
+                fontWeight={"medium"}
+                fontSize={{ base: "xs", md: "sm" }}
+              >
+                DOI: {doi}
+              </Link>
+            )}
+            {pmid && (
+              <Link
+                href={`https://pubmed.ncbi.nlm.nih.gov/${pmid}/`}
+                isExternal
+                color={useColorModeValue("brand.700", "brand.300")}
+                fontWeight={"medium"}
+                fontSize={{ base: "xs", md: "sm" }}
+              >
+                PMID: {pmid}
+              </Link>
+            )}
+            {!doi && !pmid && url && (
+              <Link
+                href={url}
+                isExternal
+                color={useColorModeValue("brand.700", "brand.300")}
+                fontWeight={"medium"}
+                fontSize={{ base: "xs", md: "sm" }}
+              >
+                {status === "Preprint" ? "Preprint" : "Link"}
+              </Link>
+            )}
+            {!hasEvidenceLink && (
+              <Text fontSize={{ base: "xs", md: "sm" }} color={mutedText}>
+                Evidence link pending
+              </Text>
+            )}
+          </Flex>
+        </Stack>
+        <StatusBadge status={status} />
+      </Grid>
     </Box>
   );
 };
 
-const StatusBadge = ({
-  status,
-}: {
-  status: PublicationStatus;
-}) => (
+const StatusBadge = ({ status }: { status: PublicationStatus }) => (
   <Badge
+    mt={{ base: 0, md: 0.5 }}
     borderRadius={"full"}
     px={3}
     py={1}
-    fontSize={META_BADGE_FONT}
+    fontSize={"0.72rem"}
+    w={"fit-content"}
     color={useColorModeValue("gray.600", "gray.200")}
     bg={useColorModeValue("gray.100", "whiteAlpha.100")}
     border={"1px solid"}
@@ -301,6 +284,15 @@ const StatusBadge = ({
   >
     {status}
   </Badge>
+);
+
+const StatItem = ({ label, value }: { label: string; value: number }) => (
+  <Flex align={"center"} gap={1.5}>
+    <Text as={"span"} fontWeight={"semibold"} color={useColorModeValue("gray.700", "gray.100")}>
+      {value}
+    </Text>
+    <Text as={"span"}>{label}</Text>
+  </Flex>
 );
 
 export default Publications;

@@ -2,56 +2,33 @@ import {
   Badge,
   Box,
   Flex,
-  Grid,
   Heading,
-  SimpleGrid,
   Stack,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { me } from "../../../me";
 
-const HEADING_MAX_W = "760px";
-const META_BADGE_FONT = "0.72rem";
-const ROW_MIN_H = { base: "auto", md: "132px" };
-const METRIC_MIN_H = { base: "74px", md: "96px" };
-
 type HonorGroup = "Funding/Fellowship" | "Award/Honor" | "Society Distinction";
 
-const groupOrder: {
-  heading: HonorGroup;
-  description: string;
-}[] = [
-  {
-    heading: "Funding/Fellowship",
-    description:
-      "Competitive support and training awards that signal trajectory and institutional confidence.",
-  },
-  {
-    heading: "Award/Honor",
-    description:
-      "Performance recognitions tied to research outcomes and scholarly contributions.",
-  },
-  {
-    heading: "Society Distinction",
-    description:
-      "Professional-society invitations and memberships that reflect external standing.",
-  },
-];
-
 export const Honors = () => {
-  const groupedHonors = groupOrder.map((group) => ({
-    ...group,
-    entries: me.honors.filter((honor) => classifyHonor(honor.title) === group.heading),
-  }));
-  const fundingCount =
-    groupedHonors.find((group) => group.heading === "Funding/Fellowship")?.entries.length ?? 0;
-  const awardsCount =
-    groupedHonors.find((group) => group.heading === "Award/Honor")?.entries.length ?? 0;
-  const societyCount =
-    groupedHonors.find((group) => group.heading === "Society Distinction")?.entries.length ?? 0;
+  const sortedHonors = [...me.honors].sort(
+    (a, b) => Number(b.year.replace(/\D/g, "")) - Number(a.year.replace(/\D/g, ""))
+  );
+
+  const fundingCount = sortedHonors.filter(
+    (honor) => classifyHonor(honor.title) === "Funding/Fellowship"
+  ).length;
+  const awardCount = sortedHonors.filter((honor) => classifyHonor(honor.title) === "Award/Honor")
+    .length;
+  const societyCount = sortedHonors.filter(
+    (honor) => classifyHonor(honor.title) === "Society Distinction"
+  ).length;
+
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.200");
-  const subduedText = useColorModeValue("gray.600", "gray.300");
+  const mutedText = useColorModeValue("gray.600", "gray.300");
+  const railColor = useColorModeValue("gray.300", "whiteAlpha.300");
+  const dotColor = useColorModeValue("gray.500", "gray.200");
 
   return (
     <Flex
@@ -76,94 +53,110 @@ export const Honors = () => {
           >
             Recognition
           </Text>
-          <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }} maxW={HEADING_MAX_W}>
+          <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }} maxW={"760px"}>
             Funding, Fellowships & Honors
           </Heading>
-          <Text color={subduedText} fontSize={{ base: "sm", md: "md" }} maxW={HEADING_MAX_W}>
-            Key distinctions organized by award type and awarding body for committee-ready review.
+          <Text color={mutedText} fontSize={{ base: "sm", md: "md" }} maxW={"760px"}>
+            Milestone view of distinctions, fellowships, and society recognitions.
           </Text>
+          <Flex wrap={"wrap"} gap={{ base: 2, md: 4 }} color={mutedText} fontSize={{ base: "xs", md: "sm" }}>
+            <StatItem label={"Total"} value={sortedHonors.length} />
+            <StatItem label={"Funding/Fellowship"} value={fundingCount} />
+            <StatItem label={"Awards/Honors"} value={awardCount} />
+            <StatItem label={"Society"} value={societyCount} />
+          </Flex>
         </Stack>
 
-        <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 2, md: 3 }}>
-          <SectionMetric label={"Total"} value={me.honors.length} />
-          <SectionMetric label={"Funding/Fellowship"} value={fundingCount} />
-          <SectionMetric label={"Awards/Honors"} value={awardsCount} />
-          <SectionMetric label={"Society"} value={societyCount} />
-        </SimpleGrid>
-
-        <Stack direction={"column"} spacing={{ base: 5, md: 6 }}>
-          {groupedHonors.map((group) => {
-            if (group.entries.length === 0) {
-              return null;
-            }
+        <Stack
+          direction={"column"}
+          spacing={0}
+          border={"1px solid"}
+          borderColor={borderColor}
+          borderRadius={"xl"}
+          overflow={"hidden"}
+        >
+          {sortedHonors.map((honor, index) => {
+            const group = classifyHonor(honor.title);
+            const isLast = index === sortedHonors.length - 1;
 
             return (
-              <Stack key={group.heading} spacing={{ base: 3, md: 4 }}>
-                <Flex align={"center"} justify={"space-between"} gap={3} wrap={"wrap"}>
-                  <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }} maxW={HEADING_MAX_W}>
-                    {group.heading}
-                  </Heading>
-                  <Badge
-                    borderRadius={"full"}
-                    px={3}
-                    py={1}
-                    fontSize={META_BADGE_FONT}
-                    color={subduedText}
-                    bg={useColorModeValue("gray.100", "whiteAlpha.100")}
-                    border={"1px solid"}
-                    borderColor={borderColor}
+              <Box
+                key={`${honor.title}-${honor.year}`}
+                px={{ base: 4, md: 5 }}
+                py={{ base: 4, md: 5 }}
+                minH={{ base: "auto", md: "132px" }}
+                borderBottom={isLast ? "none" : "1px solid"}
+                borderColor={borderColor}
+              >
+                <Flex gap={{ base: 3, md: 5 }} align={"stretch"}>
+                  <Stack
+                    w={{ base: "74px", md: "112px" }}
+                    flexShrink={0}
+                    align={"center"}
+                    spacing={2}
+                    pt={0.5}
                   >
-                    {group.entries.length} item{group.entries.length > 1 ? "s" : ""}
-                  </Badge>
-                </Flex>
-                <Text color={subduedText} fontSize={{ base: "sm", md: "md" }} maxW={HEADING_MAX_W}>
-                  {group.description}
-                </Text>
-                <Stack
-                  direction={"column"}
-                  spacing={0}
-                  border={"1px solid"}
-                  borderColor={borderColor}
-                  borderRadius={"xl"}
-                  overflow={"hidden"}
-                >
-                  {group.entries.map((honor, index) => (
-                    <Box
-                      key={`${honor.title}-${honor.year}`}
-                      px={{ base: 4, md: 5 }}
-                      py={{ base: 4, md: 4.5 }}
-                      minH={ROW_MIN_H}
-                      borderBottom={index === group.entries.length - 1 ? "none" : "1px solid"}
-                      borderColor={borderColor}
+                    <Text
+                      fontSize={{ base: "xs", md: "sm" }}
+                      fontWeight={"semibold"}
+                      textTransform={"uppercase"}
+                      letterSpacing={"0.06em"}
+                      color={mutedText}
                     >
-                      <Grid templateColumns={{ base: "1fr", md: "112px 1fr" }} gap={{ base: 2.5, md: 4 }}>
-                        <Text
-                          fontSize={{ base: "xs", md: "sm" }}
-                          fontWeight={"semibold"}
-                          textTransform={"uppercase"}
-                          letterSpacing={"0.06em"}
-                          color={subduedText}
-                        >
-                          {honor.year}
-                        </Text>
-                        <Stack spacing={1}>
-                          <Text fontWeight={"semibold"} fontSize={{ base: "md", md: "lg" }} lineHeight={1.45}>
-                            {honor.title}
-                          </Text>
-                          <Text color={useColorModeValue("gray.700", "gray.200")} fontSize={{ base: "sm", md: "md" }}>
-                            {honor.issuer}
-                          </Text>
-                          {honor.details && (
-                            <Text color={subduedText} fontSize={{ base: "sm", md: "md" }}>
-                              {honor.details}
-                            </Text>
-                          )}
-                        </Stack>
-                      </Grid>
+                      {honor.year}
+                    </Text>
+                    <Box
+                      position={"relative"}
+                      w={"full"}
+                      flex={1}
+                      display={{ base: "none", md: "block" }}
+                    >
+                      <Box position={"absolute"} left={"50%"} top={0} bottom={0} w={"1px"} bg={railColor} />
+                      <Box
+                        position={"absolute"}
+                        left={"calc(50% - 4px)"}
+                        top={0}
+                        boxSize={"8px"}
+                        borderRadius={"full"}
+                        bg={dotColor}
+                      />
                     </Box>
-                  ))}
-                </Stack>
-              </Stack>
+                  </Stack>
+
+                  <Stack spacing={{ base: 1.5, md: 2 }} flex={1}>
+                    <Flex wrap={"wrap"} align={"center"} gap={2}>
+                      <Text
+                        fontWeight={"semibold"}
+                        fontSize={{ base: "md", md: "lg" }}
+                        lineHeight={1.45}
+                        color={useColorModeValue("gray.700", "gray.100")}
+                      >
+                        {honor.title}
+                      </Text>
+                      <Badge
+                        borderRadius={"full"}
+                        px={3}
+                        py={1}
+                        fontSize={"0.72rem"}
+                        color={mutedText}
+                        bg={useColorModeValue("gray.100", "whiteAlpha.100")}
+                        border={"1px solid"}
+                        borderColor={borderColor}
+                      >
+                        {group}
+                      </Badge>
+                    </Flex>
+                    <Text color={useColorModeValue("gray.700", "gray.200")} fontSize={{ base: "sm", md: "md" }}>
+                      {honor.issuer}
+                    </Text>
+                    {honor.details && (
+                      <Text color={mutedText} fontSize={{ base: "sm", md: "md" }}>
+                        {honor.details}
+                      </Text>
+                    )}
+                  </Stack>
+                </Flex>
+              </Box>
             );
           })}
         </Stack>
@@ -171,31 +164,6 @@ export const Honors = () => {
     </Flex>
   );
 };
-
-const SectionMetric = ({
-  label,
-  value,
-}: {
-  label: string;
-  value: number;
-}) => (
-  <Stack
-    direction={"column"}
-    spacing={0.5}
-    p={{ base: 2.5, md: 3 }}
-    minH={METRIC_MIN_H}
-    border={"1px solid"}
-    borderColor={useColorModeValue("gray.200", "whiteAlpha.200")}
-    borderRadius={"lg"}
-  >
-    <Text fontSize={{ base: "xs", md: "sm" }} color={useColorModeValue("gray.600", "gray.300")}>
-      {label}
-    </Text>
-    <Heading as={"h3"} fontSize={{ base: "lg", md: "2xl" }}>
-      {value}
-    </Heading>
-  </Stack>
-);
 
 const classifyHonor = (title: string): HonorGroup => {
   const lower = title.toLowerCase();
@@ -207,5 +175,14 @@ const classifyHonor = (title: string): HonorGroup => {
   }
   return "Award/Honor";
 };
+
+const StatItem = ({ label, value }: { label: string; value: number }) => (
+  <Flex align={"center"} gap={1.5}>
+    <Text as={"span"} fontWeight={"semibold"} color={useColorModeValue("gray.700", "gray.100")}>
+      {value}
+    </Text>
+    <Text as={"span"}>{label}</Text>
+  </Flex>
+);
 
 export default Honors;

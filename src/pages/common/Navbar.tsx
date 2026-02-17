@@ -18,8 +18,10 @@ import {
 import { motion } from "framer-motion";
 import ReactGA from "react-ga4";
 import {
+  FaAward,
   FaBook,
   FaBriefcase,
+  FaBullhorn,
   FaHamburger,
   FaHome,
   FaMailBulk,
@@ -256,6 +258,8 @@ const options = [
   { name: "Education", href: "education", icon: FaSchool },
   { name: "Experience", href: "experience", icon: FaBriefcase },
   { name: "Publications", href: "publications", icon: FaBook },
+  { name: "Talks", href: "talks", icon: FaBullhorn },
+  { name: "Honors", href: "honors", icon: FaAward },
   { name: "Contact", href: "contact", icon: FaMailBulk },
 ];
 

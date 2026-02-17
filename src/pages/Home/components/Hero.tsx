@@ -98,7 +98,7 @@ export const Hero = () => {
         </SimpleGrid>
         <SimpleGrid
           w={"full"}
-          columns={{ base: 1, sm: 2, md: 2, lg: 4 }}
+          columns={{ base: 1, sm: 2, md: 2, lg: 5 }}
           spacing={3}
         >
           {me.social.map((social) => (

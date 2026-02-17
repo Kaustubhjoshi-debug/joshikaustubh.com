@@ -15,6 +15,8 @@ export interface IMe {
   education: IEducation[];
   experience: IExperience[];
   publications: IPublication[];
+  talks: ITalk[];
+  honors: IHonor[];
   projects: IProject[];
   skills: ISkill[];
   social: ISocial[];
@@ -47,6 +49,20 @@ interface IPublication {
   pmid?: string;
   url?: string;
   status: "Published" | "In Press" | "Under Review" | "Preprint" | "In Preparation";
+}
+
+interface ITalk {
+  date: string;
+  venue: string;
+  role: "Invited" | "Oral" | "Poster";
+  title: string;
+}
+
+interface IHonor {
+  year: string;
+  title: string;
+  issuer: string;
+  details?: string;
 }
 
 interface IProject {

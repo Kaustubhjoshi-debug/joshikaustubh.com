@@ -15,7 +15,7 @@ import {
   FaWaveSquare,
 } from "react-icons/fa";
 import { MdScience } from "react-icons/md";
-import { SiGooglescholar, SiResearchgate } from "react-icons/si";
+import { SiGooglescholar, SiOrcid, SiResearchgate } from "react-icons/si";
 import { TbCell, TbMicroscope } from "react-icons/tb";
 import { IMe, ITheme } from "./me.interface";
 
@@ -167,6 +167,54 @@ export const me = {
       status: "In Preparation",
     },
   ],
+  talks: [
+    {
+      date: "2025",
+      venue: "Translational Tissue Engineering Center Annual Symposium, Johns Hopkins Medicine",
+      role: "Poster",
+      title: "A brain organoid-based platform to target H3K27 gliomas.",
+    },
+    {
+      date: "2024",
+      venue: "University of Maryland Graduate Symposium",
+      role: "Poster",
+      title:
+        "Cross-validating uptake-mediated clearance in plated and suspended rat and human hepatocytes.",
+    },
+    {
+      date: "2024",
+      venue: "GlaxoSmithKline Automation Days",
+      role: "Oral",
+      title:
+        "Performance assessment-adjustment cycle to ensure precise liquid delivery during high-throughput screening.",
+    },
+    {
+      date: "2025",
+      venue:
+        "Albert H. Owens Auditorium, Sidney Kimmel Comprehensive Cancer Center, Johns Hopkins Medicine",
+      role: "Invited",
+      title: "Brain organoid-based platform to target H3K27 gliomas.",
+    },
+  ],
+  honors: [
+    {
+      year: "2026",
+      title: "Cockrell Graduate Fellowship",
+      issuer: "Cockrell School of Engineering, The University of Texas at Austin",
+      details: "Awarded a highly competitive graduate fellowship.",
+    },
+    {
+      year: "2025",
+      title: "Sigma Xi Associate Membership Invitation",
+      issuer: "Sigma Xi, The Scientific Research Honor Society",
+    },
+    {
+      year: "2025",
+      title: "TTREC Rising Star Award for Research Excellence",
+      issuer: "Translational Tissue Research & Engineering Center, Johns Hopkins Medicine",
+      details: "Recognized for brain organoid-guided drug discovery in H3K27 gliomas.",
+    },
+  ],
   projects: [
     {
       name: "Assessing DMPK In Vitro Parameters",
@@ -301,6 +349,15 @@ export const me = {
       uri: "https://www.linkedin.com/in/kaustubh-joshipsar",
       hover: {
         bg: ["linkedin.500", "linkedin.700"],
+        color: "white",
+      },
+    },
+    {
+      name: "ORCID",
+      icon: SiOrcid,
+      uri: "",
+      hover: {
+        bg: ["green.500", "green.300"],
         color: "white",
       },
     },

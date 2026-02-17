@@ -21,7 +21,6 @@ import {
   FaBook,
   FaBriefcase,
   FaHamburger,
-  FaHardHat,
   FaHome,
   FaMailBulk,
   FaSchool,
@@ -257,7 +256,6 @@ const options = [
   { name: "Education", href: "education", icon: FaSchool },
   { name: "Experience", href: "experience", icon: FaBriefcase },
   { name: "Publications", href: "publications", icon: FaBook },
-  { name: "Projects", href: "projects", icon: FaHardHat },
   { name: "Contact", href: "contact", icon: FaMailBulk },
 ];
 

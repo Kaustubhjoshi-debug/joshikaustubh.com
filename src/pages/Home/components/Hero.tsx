@@ -62,15 +62,6 @@ export const Hero = () => {
           alignItems={"center"}
         >
           <Stack direction={"column"} spacing={4}>
-            <Text
-              fontSize={"sm"}
-              fontWeight={"semibold"}
-              letterSpacing={"0.12em"}
-              textTransform={"uppercase"}
-              color={useColorModeValue("brand.700", "brand.200")}
-            >
-              Research Portfolio
-            </Text>
             <Heading
               as={"h1"}
               size={{ base: "2xl", md: "3xl" }}

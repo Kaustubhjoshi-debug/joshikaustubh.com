@@ -54,7 +54,7 @@ export const me = {
     blue: "Pharma Sciences",
   },
   about:
-    "I am a Research Technologist at the Translational Tissue Engineering Center at Johns Hopkins Medicine, where I develop patient-derived iPSC and organoid platforms for CNS disease modeling and therapeutic screening. My training spans translational stem cell biology, electrophysiology, and RNA-seq sample preparation, with prior industry experience in discovery DMPK at GSK and bioanalytical method development at the University of Maryland. I focus on building reproducible, human-relevant preclinical systems that bridge mechanistic biology and drug development.",
+    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore (Dec 2024), and a Bachelor of Pharmacy (B. Pharm) in Pharmaceutical Sciences from D Y Patil University, Pune (June 2023). My training spans translational stem cell biology, electrophysiology, RNA-seq sample preparation, and discovery DMPK, with research experience across Johns Hopkins Medicine, GSK, and the University of Maryland. I maintain a list of my publications under the Publications section.",
   location: "Baltimore, MD",
   image: "/assets/kaustubh-joshi.jpg",
   education: [
@@ -186,20 +186,6 @@ export const me = {
         "Joshi K, Pantula A, Cheng K, Kathuria A",
       title:
         "Multi-region human brain organoids enable phenotypic screening for neurodegenerative therapies.",
-      status: "In Preparation",
-    },
-    {
-      authors:
-        "Joshi K, Pantula A, Cheng K, Kathuria A",
-      title:
-        "Modeling alpha-synuclein pathology propagation from nasal epithelium to brain in Parkinson disease using human iPSC-derived multi-chamber microfluidic systems.",
-      status: "In Preparation",
-    },
-    {
-      authors:
-        "Joshi K, Aravindhan K, Reilly M, Roethke T",
-      title:
-        "Quantifying uptake versus metabolism: mechanistic validation in plated and suspended hepatocytes across species.",
       status: "In Preparation",
     },
   ],

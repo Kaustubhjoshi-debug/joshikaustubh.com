@@ -9,7 +9,6 @@ const About = lazy(() => import("./components/About"));
 const Education = lazy(() => import("./components/Education"));
 const Experience = lazy(() => import("./components/Experience"));
 const Publications = lazy(() => import("./components/Publications"));
-const Projects = lazy(() => import("./components/Projects"));
 const Footer = lazy(() => import("../common/Footer"));
 const Contact = lazy(() => import("./components/Contact"));
 
@@ -32,7 +31,6 @@ export const Home = () => {
         <Education />
         <Experience />
         <Publications />
-        <Projects />
         <Contact />
         <Footer />
       </Flex>

@@ -103,6 +103,28 @@ export const me = {
       ],
     },
   ],
+  professionalService: [
+    {
+      company: "Analytical Biochemistry, Elsevier",
+      location: "Remote",
+      position: "Peer Reviewer",
+      duration: "Nov 2025 - Present",
+      bullets: [
+        "Invited reviewer assessing manuscript rigor, data quality, and methodological validity for publication decisions.",
+        "Provide structured editorial recommendations and constructive feedback to strengthen reporting quality.",
+      ],
+    },
+    {
+      company: "International Society for Stem Cell Research (ISSCR)",
+      location: "Remote",
+      position: "Affiliate Reviewer",
+      duration: "June 2025 - Present",
+      bullets: [
+        "Reviewed 20+ abstracts for AI and Digital Biology programming using confidential, criteria-based evaluations.",
+        "Supported scientific-program engagement through concise session previews and community-facing dissemination.",
+      ],
+    },
+  ],
   publications: [
     {
       authors:

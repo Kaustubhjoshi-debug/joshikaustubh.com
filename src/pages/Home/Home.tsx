@@ -8,6 +8,7 @@ const Hero = lazy(() => import("./components/Hero"));
 const About = lazy(() => import("./components/About"));
 const Education = lazy(() => import("./components/Education"));
 const Experience = lazy(() => import("./components/Experience"));
+const Service = lazy(() => import("./components/Service"));
 const Publications = lazy(() => import("./components/Publications"));
 const Talks = lazy(() => import("./components/Talks"));
 const Honors = lazy(() => import("./components/Honors"));
@@ -32,6 +33,7 @@ export const Home = () => {
         <About />
         <Education />
         <Experience />
+        <Service />
         <Publications />
         <Talks />
         <Honors />

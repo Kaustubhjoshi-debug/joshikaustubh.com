@@ -14,6 +14,7 @@ export interface IMe {
   image: string;
   education: IEducation[];
   experience: IExperience[];
+  professionalService: IExperience[];
   publications: IPublication[];
   talks: ITalk[];
   honors: IHonor[];

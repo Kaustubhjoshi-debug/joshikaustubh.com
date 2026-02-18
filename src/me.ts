@@ -48,7 +48,7 @@ export const me = {
       school: "The University of Texas at Austin",
       graduation: "Starting Aug 2026",
       awards: [
-        "Awarded the highly competitive $24,000 Cockrell Graduate Fellowship to pursue my research.",
+        "Awarded the highly competitive $24,000 Cockrell Graduate Fellowship, in addition to standard graduate stipend support, to pursue my research.",
         "Invited to Sigma Xi, The Scientific Research Honor Society, as an Associate Member.",
       ],
     },
@@ -184,7 +184,8 @@ export const me = {
       year: "2026",
       title: "Cockrell Graduate Fellowship",
       issuer: "Cockrell School of Engineering, The University of Texas at Austin",
-      details: "Awarded a highly competitive $24,000 fellowship to pursue my research.",
+      details:
+        "Awarded a highly competitive $24,000 fellowship, in addition to standard graduate stipend support, to pursue my research.",
     },
     {
       year: "2025",

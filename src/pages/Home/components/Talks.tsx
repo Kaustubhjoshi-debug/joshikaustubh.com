@@ -10,6 +10,8 @@ import {
 } from "@chakra-ui/react";
 import { me } from "../../../me";
 
+const DESKTOP_COLUMNS = "112px 112px 1.4fr 1fr";
+
 export const Talks = () => {
   const sortedTalks = [...me.talks].sort(
     (a, b) => Number(b.date.replace(/\D/g, "")) - Number(a.date.replace(/\D/g, ""))
@@ -69,7 +71,8 @@ export const Talks = () => {
         >
           <Grid
             display={{ base: "none", md: "grid" }}
-            templateColumns={"112px 112px 1.4fr 1fr"}
+            templateColumns={DESKTOP_COLUMNS}
+            gap={{ md: 4 }}
             px={5}
             py={3}
             borderBottom={"1px solid"}
@@ -85,7 +88,7 @@ export const Talks = () => {
           {sortedTalks.map((talk, index) => (
             <Grid
               key={`${talk.title}-${talk.date}-${talk.venue}`}
-              templateColumns={{ base: "1fr", md: "112px 112px 1.4fr 1fr" }}
+              templateColumns={{ base: "1fr", md: DESKTOP_COLUMNS }}
               gap={{ base: 2.5, md: 4 }}
               px={{ base: 4, md: 5 }}
               py={{ base: 4, md: 4.5 }}

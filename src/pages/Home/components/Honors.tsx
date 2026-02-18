@@ -39,10 +39,10 @@ export const Honors = () => {
       justify={"center"}
       direction={"column"}
       px={4}
-      py={{ base: 8, md: 12 }}
+      py={{ base: 6, md: 10 }}
       tabIndex={-1}
     >
-      <Stack w={"full"} maxW={"1040px"} spacing={{ base: 5, md: 8 }}>
+      <Stack w={"full"} maxW={"1040px"} spacing={{ base: 4, md: 6 }}>
         <Stack spacing={2}>
           <Text
             fontSize={{ base: "xs", md: "sm" }}
@@ -83,8 +83,8 @@ export const Honors = () => {
               <Box
                 key={`${honor.title}-${honor.year}`}
                 px={{ base: 4, md: 5 }}
-                py={{ base: 4, md: 5 }}
-                minH={{ base: "auto", md: "132px" }}
+                py={{ base: 3.5, md: 4.5 }}
+                minH={{ base: "auto", md: "118px" }}
                 borderBottom={isLast ? "none" : "1px solid"}
                 borderColor={borderColor}
               >

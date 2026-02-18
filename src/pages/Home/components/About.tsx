@@ -126,19 +126,19 @@ export const About = () => {
         align={"center"}
         justify={"center"}
         px={4}
-        py={{ base: 8, md: 12 }}
+        py={{ base: 6, md: 10 }}
         tabIndex={-1}
       >
         <Stack
           w={"full"}
           maxW={"980px"}
-          spacing={6}
+          spacing={5}
           border={"1px"}
           borderColor={useColorModeValue("brand.200", "brand.700")}
           borderRadius={"2xl"}
           bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
           backdropFilter={"blur(6px)"}
-          p={{ base: 6, md: 10 }}
+          p={{ base: 5, md: 8 }}
         >
           <Stack tabIndex={0} spacing={3}>
             <Text

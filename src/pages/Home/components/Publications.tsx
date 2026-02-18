@@ -66,10 +66,10 @@ export const Publications = () => {
       justify={"center"}
       direction={"column"}
       px={4}
-      py={{ base: 8, md: 12 }}
+      py={{ base: 6, md: 10 }}
       tabIndex={-1}
     >
-      <Stack w={"full"} maxW={"1040px"} spacing={{ base: 5, md: 8 }}>
+      <Stack w={"full"} maxW={"1040px"} spacing={{ base: 4, md: 6 }}>
         <Stack spacing={2}>
           <Text
             fontSize={{ base: "xs", md: "sm" }}
@@ -94,7 +94,7 @@ export const Publications = () => {
           </Flex>
         </Stack>
 
-        <Stack direction={"column"} spacing={{ base: 5, md: 6 }}>
+        <Stack direction={"column"} spacing={{ base: 4, md: 5 }}>
           {groupOrder.map((group) => {
             const publications = indexedPublications.filter((publication) =>
               group.statuses.includes(publication.status)
@@ -183,8 +183,8 @@ const PublicationRow = ({
   return (
     <Box
       px={{ base: 4, md: 5 }}
-      py={{ base: 4, md: 5 }}
-      minH={{ base: "auto", md: "128px" }}
+      py={{ base: 3.5, md: 4.5 }}
+      minH={{ base: "auto", md: "116px" }}
       borderBottom={isLast ? "none" : "1px solid"}
       borderColor={borderColor}
     >

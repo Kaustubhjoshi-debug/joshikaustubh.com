@@ -20,7 +20,7 @@ export const Service = () => {
       maxW={"container.xl"}
       w={"full"}
       px={4}
-      py={{ base: 5, md: 8 }}
+      py={{ base: 6, md: 10 }}
       tabIndex={-1}
     >
       <Box w={"full"} maxW={"1040px"}>
@@ -37,13 +37,13 @@ export const Service = () => {
           Professional Service
         </Heading>
 
-        <Stack direction={"column"} spacing={3} mt={4}>
+        <Stack direction={"column"} spacing={4} mt={5}>
           {me.professionalService.map((entry, index) => (
             <Stack
               key={`${entry.company}-${entry.position}-${index}`}
               direction={"column"}
               spacing={2}
-              p={{ base: 3.5, md: 4.5 }}
+              p={{ base: 4, md: 5 }}
               border={"1px"}
               borderColor={borderColor}
               borderRadius={"xl"}

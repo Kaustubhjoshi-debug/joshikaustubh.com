@@ -33,10 +33,10 @@ export const Talks = () => {
       justify={"center"}
       direction={"column"}
       px={4}
-      py={{ base: 5, md: 8 }}
+      py={{ base: 6, md: 10 }}
       tabIndex={-1}
     >
-      <Stack w={"full"} maxW={"1040px"} spacing={{ base: 3, md: 5 }}>
+      <Stack w={"full"} maxW={"1040px"} spacing={{ base: 4, md: 6 }}>
         <Stack spacing={2}>
           <Text
             fontSize={{ base: "xs", md: "sm" }}
@@ -91,8 +91,8 @@ export const Talks = () => {
               templateColumns={{ base: "1fr", md: DESKTOP_COLUMNS }}
               gap={{ base: 2.5, md: 4 }}
               px={{ base: 4, md: 5 }}
-              py={{ base: 3, md: 3.5 }}
-              minH={{ base: "auto", md: "96px" }}
+              py={{ base: 3.5, md: 4 }}
+              minH={{ base: "auto", md: "104px" }}
               alignItems={"start"}
               borderBottom={index === sortedTalks.length - 1 ? "none" : "1px solid"}
               borderColor={borderColor}

@@ -68,7 +68,10 @@ export const Talks = () => {
 
         <Box border={"1px solid"} borderColor={borderColor} borderRadius={"xl"} overflow={"hidden"}>
           <TableContainer display={{ base: "none", md: "block" }} m={0}>
-            <Table variant={"simple"} sx={{ tableLayout: "fixed", borderCollapse: "separate", borderSpacing: 0 }}>
+            <Table
+              variant={"simple"}
+              sx={{ tableLayout: "fixed", borderCollapse: "separate", borderSpacing: 0 }}
+            >
               <colgroup>
                 <col style={{ width: "112px" }} />
                 <col style={{ width: "132px" }} />
@@ -77,16 +80,70 @@ export const Talks = () => {
               </colgroup>
               <Thead bg={useColorModeValue("blackAlpha.50", "whiteAlpha.50")}>
                 <Tr>
-                  <Th sx={tableHeaderCellStyles(borderColor, mutedText)}>Year</Th>
-                  <Th sx={tableHeaderCellStyles(borderColor, mutedText)}>Role</Th>
-                  <Th sx={tableHeaderCellStyles(borderColor, mutedText)}>Talk Title</Th>
-                  <Th sx={tableHeaderCellStyles(borderColor, mutedText)}>Venue</Th>
+                  <Th
+                    px={5}
+                    py={3}
+                    fontSize={"xs"}
+                    fontWeight={"semibold"}
+                    textTransform={"uppercase"}
+                    letterSpacing={"0.08em"}
+                    color={mutedText}
+                    borderBottom={"1px solid"}
+                    borderColor={borderColor}
+                  >
+                    Year
+                  </Th>
+                  <Th
+                    px={5}
+                    py={3}
+                    fontSize={"xs"}
+                    fontWeight={"semibold"}
+                    textTransform={"uppercase"}
+                    letterSpacing={"0.08em"}
+                    color={mutedText}
+                    borderBottom={"1px solid"}
+                    borderColor={borderColor}
+                  >
+                    Role
+                  </Th>
+                  <Th
+                    px={5}
+                    py={3}
+                    fontSize={"xs"}
+                    fontWeight={"semibold"}
+                    textTransform={"uppercase"}
+                    letterSpacing={"0.08em"}
+                    color={mutedText}
+                    borderBottom={"1px solid"}
+                    borderColor={borderColor}
+                  >
+                    Talk Title
+                  </Th>
+                  <Th
+                    px={5}
+                    py={3}
+                    fontSize={"xs"}
+                    fontWeight={"semibold"}
+                    textTransform={"uppercase"}
+                    letterSpacing={"0.08em"}
+                    color={mutedText}
+                    borderBottom={"1px solid"}
+                    borderColor={borderColor}
+                  >
+                    Venue
+                  </Th>
                 </Tr>
               </Thead>
               <Tbody>
-                {sortedTalks.map((talk) => (
-                  <Tr key={`${talk.title}-${talk.date}-${talk.venue}`} _last={{ td: { borderBottom: "none" } }}>
-                    <Td sx={tableBodyCellStyles(borderColor)}>
+                {sortedTalks.map((talk, index) => (
+                  <Tr key={`${talk.title}-${talk.date}-${talk.venue}`}>
+                    <Td
+                      px={5}
+                      py={4.5}
+                      borderBottom={index === sortedTalks.length - 1 ? "none" : "1px solid"}
+                      borderColor={borderColor}
+                      verticalAlign={"top"}
+                    >
                       <Text
                         fontSize={"sm"}
                         fontWeight={"semibold"}
@@ -97,15 +154,38 @@ export const Talks = () => {
                         {talk.date}
                       </Text>
                     </Td>
-                    <Td sx={tableBodyCellStyles(borderColor)}>
+                    <Td
+                      px={5}
+                      py={4.5}
+                      borderBottom={index === sortedTalks.length - 1 ? "none" : "1px solid"}
+                      borderColor={borderColor}
+                      verticalAlign={"top"}
+                    >
                       <RoleBadge role={talk.role} />
                     </Td>
-                    <Td sx={tableBodyCellStyles(borderColor)}>
-                      <Text fontSize={"md"} fontWeight={"semibold"} color={useColorModeValue("gray.700", "gray.100")} lineHeight={1.5}>
+                    <Td
+                      px={5}
+                      py={4.5}
+                      borderBottom={index === sortedTalks.length - 1 ? "none" : "1px solid"}
+                      borderColor={borderColor}
+                      verticalAlign={"top"}
+                    >
+                      <Text
+                        fontSize={"md"}
+                        fontWeight={"semibold"}
+                        color={useColorModeValue("gray.700", "gray.100")}
+                        lineHeight={1.5}
+                      >
                         {talk.title}
                       </Text>
                     </Td>
-                    <Td sx={tableBodyCellStyles(borderColor)}>
+                    <Td
+                      px={5}
+                      py={4.5}
+                      borderBottom={index === sortedTalks.length - 1 ? "none" : "1px solid"}
+                      borderColor={borderColor}
+                      verticalAlign={"top"}
+                    >
                       <Text fontSize={"md"} color={useColorModeValue("gray.700", "gray.200")} lineHeight={1.55}>
                         {talk.venue}
                       </Text>
@@ -152,26 +232,6 @@ export const Talks = () => {
     </Flex>
   );
 };
-
-const tableHeaderCellStyles = (borderColor: string, mutedText: string) => ({
-  px: 5,
-  py: 3,
-  fontSize: "xs",
-  fontWeight: "semibold",
-  textTransform: "uppercase",
-  letterSpacing: "0.08em",
-  color: mutedText,
-  borderBottom: "1px solid",
-  borderColor,
-});
-
-const tableBodyCellStyles = (borderColor: string) => ({
-  px: 5,
-  py: 4.5,
-  borderBottom: "1px solid",
-  borderColor,
-  verticalAlign: "top",
-});
 
 const RowLabel = ({
   label,

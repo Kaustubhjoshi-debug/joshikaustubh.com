@@ -120,8 +120,8 @@ export const me = {
       position: "Affiliate Reviewer",
       duration: "June 2025 - Present",
       bullets: [
-        "Reviewed 20+ abstracts for AI and Digital Biology programming using confidential, criteria-based evaluations.",
-        "Supported scientific-program engagement through concise session previews and community-facing dissemination.",
+        "Served as an invited reviewer for ISSCR scientific programming, evaluating abstracts for originality, methodological rigor, and translational relevance.",
+        "Delivered structured, criteria-based scores and written feedback while adhering to confidentiality, conflict-of-interest, and deadline standards.",
       ],
     },
   ],

@@ -19,7 +19,7 @@ export const Contact = () => {
       direction={"column"}
       maxW={"container.xl"}
       px={4}
-      py={{ base: 6, md: 10 }}
+      py={{ base: 5, md: 8 }}
       tabIndex={-1}
     >
       <Box w={"full"} maxW={"980px"}>
@@ -39,13 +39,13 @@ export const Contact = () => {
       <Stack
         w={"full"}
         maxW={"980px"}
-        mt={5}
+        mt={4}
         border={"1px"}
         borderColor={useColorModeValue("brand.200", "brand.700")}
         borderRadius={"2xl"}
         bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
         backdropFilter={"blur(6px)"}
-        p={{ base: 4, md: 5 }}
+        p={{ base: 3.5, md: 4.5 }}
       >
         <Text fontSize={{ base: "md", md: "lg" }}>
           I welcome research collaborations and speaking invitations at the intersection of translational neuroscience, aging biology, and bone cancers.

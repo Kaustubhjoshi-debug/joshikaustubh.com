@@ -17,7 +17,7 @@ export const Footer = () => {
         justify={"center"}
         direction={"column"}
         spacing={3}
-        py={{ base: 6, md: 8 }}
+        py={{ base: 5, md: 7 }}
       >
         <BrandedDivider />
         <Text

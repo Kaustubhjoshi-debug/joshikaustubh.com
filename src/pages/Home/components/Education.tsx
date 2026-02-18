@@ -21,7 +21,7 @@ export const Education = () => {
       maxW={"container.xl"}
       w={"full"}
       px={4}
-      py={{ base: 6, md: 10 }}
+      py={{ base: 5, md: 8 }}
       tabIndex={-1}
     >
       <Box w={"full"} maxW={"980px"}>
@@ -37,7 +37,7 @@ export const Education = () => {
         <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }}>
           Education
         </Heading>
-        <Stack direction={"column"} spacing={4} mt={5}>
+        <Stack direction={"column"} spacing={3} mt={4}>
           {me.education.map((education) => (
             <SingleEducation key={education.school} {...education} />
           ))}
@@ -92,7 +92,7 @@ const SingleEducation = ({
         borderRadius={"2xl"}
         bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
         backdropFilter={"blur(6px)"}
-        p={{ base: 4, md: 5 }}
+        p={{ base: 3.5, md: 4.5 }}
         spacing={2}
       >
         <Text

@@ -30,8 +30,8 @@ export const Hero = () => {
       zIndex={1}
       px={4}
       py={{
-        base: 6,
-        md: 8,
+        base: 5,
+        md: 7,
       }}
       as={motion.div}
       initial="hidden"
@@ -48,15 +48,15 @@ export const Hero = () => {
         border={"1px"}
         borderColor={useColorModeValue("brand.200", "whiteAlpha.300")}
         p={{
-          base: 6,
-          md: 12,
+          base: 5,
+          md: 9,
         }}
         justify={"space-between"}
-        spacing={{ base: 8, md: 10 }}
+        spacing={{ base: 6, md: 8 }}
       >
         <SimpleGrid
           columns={{ base: 1, md: 2 }}
-          spacing={{ base: 8, md: 10 }}
+          spacing={{ base: 6, md: 8 }}
           alignItems={"center"}
         >
           <Stack direction={"column"} spacing={4}>

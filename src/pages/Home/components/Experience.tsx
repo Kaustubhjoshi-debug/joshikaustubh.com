@@ -25,7 +25,7 @@ export const Experience = () => {
       justify={"center"}
       direction={"column"}
       px={4}
-      py={{ base: 6, md: 10 }}
+      py={{ base: 5, md: 8 }}
       tabIndex={-1}
     >
       <Box w={"full"} maxW={"1100px"}>
@@ -42,7 +42,7 @@ export const Experience = () => {
         <Heading as={"h2"} fontSize={{ base: "2xl", md: "3xl" }} px={{ base: 0, md: 2 }}>
           Experience
         </Heading>
-        <Box position={"relative"} mt={5}>
+        <Box position={"relative"} mt={4}>
           <Box
             position={"absolute"}
             left={{ base: "14px", md: "218px" }}
@@ -51,7 +51,7 @@ export const Experience = () => {
             width={"2px"}
             bg={lineColor}
           />
-          <Stack direction={"column"} spacing={5}>
+          <Stack direction={"column"} spacing={4}>
             {me.experience.map((experience, index) => (
               <SingleExperience
                 {...experience}
@@ -159,13 +159,13 @@ const SingleExperience = ({
         ml={{ base: 8, md: 0 }}
         direction={"column"}
         justify={"center"}
-        p={{ base: 4, md: 5 }}
+        p={{ base: 3.5, md: 4.5 }}
         borderRadius={"2xl"}
         border={"1px"}
         borderColor={useColorModeValue("brand.200", "brand.700")}
         bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
         backdropFilter={"blur(6px)"}
-        spacing={2.5}
+        spacing={2}
         tabIndex={0}
       >
         <Stack spacing={0.5}>

@@ -66,10 +66,10 @@ export const Publications = () => {
       justify={"center"}
       direction={"column"}
       px={4}
-      py={{ base: 6, md: 10 }}
+      py={{ base: 5, md: 8 }}
       tabIndex={-1}
     >
-      <Stack w={"full"} maxW={"1040px"} spacing={{ base: 4, md: 6 }}>
+      <Stack w={"full"} maxW={"1040px"} spacing={{ base: 3, md: 5 }}>
         <Stack spacing={2}>
           <Text
             fontSize={{ base: "xs", md: "sm" }}
@@ -94,7 +94,7 @@ export const Publications = () => {
           </Flex>
         </Stack>
 
-        <Stack direction={"column"} spacing={{ base: 4, md: 5 }}>
+        <Stack direction={"column"} spacing={{ base: 3, md: 4 }}>
           {groupOrder.map((group) => {
             const publications = indexedPublications.filter((publication) =>
               group.statuses.includes(publication.status)
@@ -105,7 +105,7 @@ export const Publications = () => {
             }
 
             return (
-              <Stack key={group.heading} spacing={{ base: 3, md: 4 }}>
+              <Stack key={group.heading} spacing={{ base: 2.5, md: 3 }}>
                 <Flex align={"center"} justify={"space-between"} gap={3} wrap={"wrap"}>
                   <Heading as={"h3"} fontSize={{ base: "xl", md: "2xl" }} maxW={"760px"}>
                     {group.heading}
@@ -183,8 +183,8 @@ const PublicationRow = ({
   return (
     <Box
       px={{ base: 4, md: 5 }}
-      py={{ base: 3.5, md: 4.5 }}
-      minH={{ base: "auto", md: "116px" }}
+      py={{ base: 3, md: 4 }}
+      minH={{ base: "auto", md: "104px" }}
       borderBottom={isLast ? "none" : "1px solid"}
       borderColor={borderColor}
     >

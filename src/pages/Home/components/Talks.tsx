@@ -5,14 +5,7 @@ import {
   Grid,
   Heading,
   Stack,
-  Table,
-  TableContainer,
-  Tbody,
-  Td,
   Text,
-  Th,
-  Thead,
-  Tr,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { me } from "../../../me";
@@ -66,117 +59,77 @@ export const Talks = () => {
           </Flex>
         </Stack>
 
-        <Box border={"1px solid"} borderColor={borderColor} borderRadius={"xl"} overflow={"hidden"}>
-          <TableContainer display={{ base: "none", md: "block" }} m={0}>
-            <Table variant={"simple"} sx={{ tableLayout: "fixed", borderCollapse: "separate", borderSpacing: 0 }}>
-              <colgroup>
-                <col style={{ width: "112px" }} />
-                <col style={{ width: "132px" }} />
-                <col style={{ width: "44%" }} />
-                <col />
-              </colgroup>
-              <Thead bg={useColorModeValue("blackAlpha.50", "whiteAlpha.50")}>
-                <Tr>
-                  <Th sx={tableHeaderCellStyles(borderColor, mutedText)}>Year</Th>
-                  <Th sx={tableHeaderCellStyles(borderColor, mutedText)}>Role</Th>
-                  <Th sx={tableHeaderCellStyles(borderColor, mutedText)}>Talk Title</Th>
-                  <Th sx={tableHeaderCellStyles(borderColor, mutedText)}>Venue</Th>
-                </Tr>
-              </Thead>
-              <Tbody>
-                {sortedTalks.map((talk) => (
-                  <Tr key={`${talk.title}-${talk.date}-${talk.venue}`} _last={{ td: { borderBottom: "none" } }}>
-                    <Td sx={tableBodyCellStyles(borderColor)}>
-                      <Text
-                        fontSize={"sm"}
-                        fontWeight={"semibold"}
-                        textTransform={"uppercase"}
-                        letterSpacing={"0.06em"}
-                        color={mutedText}
-                      >
-                        {talk.date}
-                      </Text>
-                    </Td>
-                    <Td sx={tableBodyCellStyles(borderColor)}>
-                      <RoleBadge role={talk.role} />
-                    </Td>
-                    <Td sx={tableBodyCellStyles(borderColor)}>
-                      <Text
-                        fontSize={"md"}
-                        fontWeight={"semibold"}
-                        color={useColorModeValue("gray.700", "gray.100")}
-                        lineHeight={1.5}
-                      >
-                        {talk.title}
-                      </Text>
-                    </Td>
-                    <Td sx={tableBodyCellStyles(borderColor)}>
-                      <Text fontSize={"md"} color={useColorModeValue("gray.700", "gray.200")} lineHeight={1.55}>
-                        {talk.venue}
-                      </Text>
-                    </Td>
-                  </Tr>
-                ))}
-              </Tbody>
-            </Table>
-          </TableContainer>
+        <Stack
+          direction={"column"}
+          spacing={0}
+          border={"1px solid"}
+          borderColor={borderColor}
+          borderRadius={"xl"}
+          overflow={"hidden"}
+        >
+          <Grid
+            display={{ base: "none", md: "grid" }}
+            templateColumns={"112px 112px 1.4fr 1fr"}
+            px={5}
+            py={3}
+            borderBottom={"1px solid"}
+            borderColor={borderColor}
+            bg={useColorModeValue("blackAlpha.50", "whiteAlpha.50")}
+          >
+            <HeaderLabel>Year</HeaderLabel>
+            <HeaderLabel>Role</HeaderLabel>
+            <HeaderLabel>Talk Title</HeaderLabel>
+            <HeaderLabel>Venue</HeaderLabel>
+          </Grid>
 
-          <Stack display={{ base: "flex", md: "none" }} direction={"column"} spacing={0}>
-            {sortedTalks.map((talk, index) => (
-              <Grid
-                key={`${talk.title}-${talk.date}-${talk.venue}-mobile`}
-                templateColumns={"1fr"}
-                gap={2.5}
-                px={4}
-                py={4}
-                borderBottom={index === sortedTalks.length - 1 ? "none" : "1px solid"}
-                borderColor={borderColor}
-              >
-                <RowLabel label={"Year"} value={talk.date} />
-                <Box>
-                  <Text
-                    display={"inline"}
-                    mr={2}
-                    fontSize={"xs"}
-                    fontWeight={"semibold"}
-                    textTransform={"uppercase"}
-                    letterSpacing={"0.06em"}
-                    color={mutedText}
-                  >
-                    Role
-                  </Text>
-                  <RoleBadge role={talk.role} />
-                </Box>
-                <RowLabel label={"Talk Title"} value={talk.title} isStrong />
-                <RowLabel label={"Venue"} value={talk.venue} />
-              </Grid>
-            ))}
-          </Stack>
-        </Box>
+          {sortedTalks.map((talk, index) => (
+            <Grid
+              key={`${talk.title}-${talk.date}-${talk.venue}`}
+              templateColumns={{ base: "1fr", md: "112px 112px 1.4fr 1fr" }}
+              gap={{ base: 2.5, md: 4 }}
+              px={{ base: 4, md: 5 }}
+              py={{ base: 4, md: 4.5 }}
+              minH={{ base: "auto", md: "116px" }}
+              alignItems={"start"}
+              borderBottom={index === sortedTalks.length - 1 ? "none" : "1px solid"}
+              borderColor={borderColor}
+            >
+              <RowLabel label={"Year"} value={talk.date} />
+              <Box>
+                <Text
+                  display={{ base: "inline", md: "none" }}
+                  mr={2}
+                  fontSize={"xs"}
+                  fontWeight={"semibold"}
+                  textTransform={"uppercase"}
+                  letterSpacing={"0.06em"}
+                  color={mutedText}
+                >
+                  Role
+                </Text>
+                <RoleBadge role={talk.role} />
+              </Box>
+              <RowLabel label={"Talk Title"} value={talk.title} isStrong />
+              <RowLabel label={"Venue"} value={talk.venue} />
+            </Grid>
+          ))}
+        </Stack>
       </Stack>
     </Flex>
   );
 };
 
-const tableHeaderCellStyles = (borderColor: string, mutedText: string) => ({
-  px: 5,
-  py: 3,
-  fontSize: "xs",
-  fontWeight: "semibold",
-  textTransform: "uppercase",
-  letterSpacing: "0.08em",
-  color: mutedText,
-  borderBottom: "1px solid",
-  borderColor,
-});
-
-const tableBodyCellStyles = (borderColor: string) => ({
-  px: 5,
-  py: 4.5,
-  borderBottom: "1px solid",
-  borderColor,
-  verticalAlign: "top",
-});
+const HeaderLabel = ({ children }: { children: string }) => (
+  <Text
+    fontSize={"xs"}
+    fontWeight={"semibold"}
+    textTransform={"uppercase"}
+    letterSpacing={"0.08em"}
+    color={useColorModeValue("gray.600", "gray.300")}
+  >
+    {children}
+  </Text>
+);
 
 const RowLabel = ({
   label,

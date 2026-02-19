@@ -38,7 +38,7 @@ export const me = {
     blue: "Bone & Aging Biology",
   },
   about:
-    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore. My work sits at the intersection of living model engineering and translational drug development, where I turn complex biological questions into reproducible experimental systems for discovery and decision-making. I bring research experience from Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy, and I maintain a list of my publications. I also like to explore visual arts, language, and philosophy!",
+    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore. My work focuses on living model engineering and translational drug development. I design reproducible experimental systems that convert complex biological questions into actionable discovery decisions. I have research experience across Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy. A complete list of my publications is available in the publications section. I also like to explore visual arts, language, and philosophy!",
   location: "Baltimore, MD",
   image: "/assets/kaustubh-joshi-optimized.jpg",
   education: [

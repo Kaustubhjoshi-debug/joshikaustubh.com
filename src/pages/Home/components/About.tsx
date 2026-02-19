@@ -44,7 +44,7 @@ const aboutLinks: ReadonlyArray<AboutLink> = [
     href: "https://www.hopkinsmedicine.org/",
   },
   {
-    text: "GlaxoSmithKline",
+    text: "GSK",
     href: "https://www.gsk.com/",
   },
   {

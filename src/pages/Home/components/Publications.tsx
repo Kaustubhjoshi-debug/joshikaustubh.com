@@ -18,6 +18,8 @@ type PublicationStatus =
   | "Preprint"
   | "In Preparation";
 
+const AUTHOR_HIGHLIGHT_PATTERN = /\b(Joshi\s*K\.?|K\.?\s*Joshi|Kaustubh\s+Joshi)\b/gi;
+
 const groupOrder: {
   heading: string;
   description: string;
@@ -179,6 +181,7 @@ const PublicationRow = ({
   const hasEvidenceLink = Boolean(doi || pmid || url);
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.200");
   const mutedText = useColorModeValue("gray.600", "gray.300");
+  const highlightColor = useColorModeValue("brand.700", "brand.200");
 
   return (
     <Box
@@ -211,7 +214,7 @@ const PublicationRow = ({
             fontSize={{ base: "sm", md: "md" }}
             color={useColorModeValue("gray.700", "gray.200")}
           >
-            {authors}.
+            {renderAuthorsWithHighlight(authors, highlightColor)}.
           </Text>
           {(journal || year || details) && (
             <Text color={mutedText} fontSize={{ base: "xs", md: "sm" }}>
@@ -268,6 +271,31 @@ const PublicationRow = ({
     </Box>
   );
 };
+
+const renderAuthorsWithHighlight = (authors: string, highlightColor: string) =>
+  authors.split(AUTHOR_HIGHLIGHT_PATTERN).map((segment, index) => {
+    if (!segment) {
+      return null;
+    }
+
+    if (isHighlightedAuthorSegment(segment)) {
+      return (
+        <Text
+          as={"span"}
+          key={`highlight-${segment}-${index}`}
+          fontWeight={"semibold"}
+          color={highlightColor}
+        >
+          {segment}
+        </Text>
+      );
+    }
+
+    return <Text as={"span"} key={`plain-${segment}-${index}`}>{segment}</Text>;
+  });
+
+const isHighlightedAuthorSegment = (segment: string) =>
+  /^(Joshi\s*K\.?|K\.?\s*Joshi|Kaustubh\s+Joshi)$/i.test(segment.trim());
 
 const StatusBadge = ({ status }: { status: PublicationStatus }) => (
   <Badge

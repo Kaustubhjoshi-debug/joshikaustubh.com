@@ -81,7 +81,7 @@ export const me = {
     {
       company: "Discovery DMPK In Vitro, GSK",
       location: "Collegeville, PA",
-      position: "Research Associate Co-op",
+      position: "Scientific Researcher",
       duration: "June 2024 - April 2025",
       bullets: [
         "Built and cross-validated transporter-mediated hepatic uptake assays in suspension and plateable hepatocytes, generating uptake-clearance datasets that strengthened in vitro to in vivo translation confidence.",

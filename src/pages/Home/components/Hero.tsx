@@ -1,6 +1,5 @@
 import {
   Badge,
-  Box,
   chakra,
   Heading,
   Icon,
@@ -113,57 +112,21 @@ export const Hero = () => {
               {me.tagline}
             </Text>
           </Stack>
-          <Box
-            position={"relative"}
-            justifySelf={{ base: "center", md: "end" }}
+          <Image
+            rounded={"2xl"}
             w={{ base: "220px", md: "280px" }}
             h={{ base: "294px", md: "374px" }}
-          >
-            <Box
-              position={"absolute"}
-              inset={"-10px"}
-              border={"2px dashed"}
-              borderColor={useColorModeValue("brand.300", "brand.500")}
-              borderRadius={"2xl"}
-              transform={"rotate(-2deg)"}
-              zIndex={0}
-            />
-            <Image
-              position={"relative"}
-              zIndex={1}
-              rounded={"2xl"}
-              w={"full"}
-              h={"full"}
-              src={me.image}
-              loading={"eager"}
-              decoding={"async"}
-              border={"1px"}
-              borderColor={useColorModeValue("brand.200", "brand.500")}
-              objectFit={"cover"}
-              objectPosition={"center top"}
-              alt={"Profile picture"}
-              boxShadow={useColorModeValue("xl", "dark-lg")}
-            />
-            <Badge
-              position={"absolute"}
-              zIndex={2}
-              top={"-12px"}
-              right={"-16px"}
-              transform={"rotate(8deg)"}
-              px={3}
-              py={1.5}
-              borderRadius={"md"}
-              border={"1px solid"}
-              borderColor={useColorModeValue("brand.300", "brand.600")}
-              bg={useColorModeValue("white", "blackAlpha.700")}
-              color={useColorModeValue("brand.800", "brand.100")}
-              fontSize={"0.7rem"}
-              letterSpacing={"0.05em"}
-              textTransform={"uppercase"}
-            >
-              Kireev Lab
-            </Badge>
-          </Box>
+            src={me.image}
+            loading={"eager"}
+            decoding={"async"}
+            border={"1px"}
+            borderColor={useColorModeValue("brand.200", "brand.500")}
+            objectFit={"cover"}
+            objectPosition={"center top"}
+            alt={"Profile picture"}
+            justifySelf={{ base: "center", md: "end" }}
+            boxShadow={useColorModeValue("xl", "dark-lg")}
+          />
         </SimpleGrid>
         <SimpleGrid
           w={"full"}

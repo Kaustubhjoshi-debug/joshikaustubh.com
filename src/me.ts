@@ -30,12 +30,12 @@ export const me = {
     "Active in peer review and scientific mentoring through Elsevier, ISSCR, and Johns Hopkins research communities.",
     "Proficient in stem cell culture, organoid engineering, transcriptomics prep, electrophysiology, and advanced bioanalytics.",
   ],
-  subtitle: "Bioelectronics and Neuroengineering",
+  subtitle: "Soft Circuits, Living Systems, and Neural Signals",
   tagline:
-    "Incoming PhD student at University of Massachusetts Amherst in the Kireev Lab, working at the interface of bioelectronics, living model engineering, and translational biomedical discovery.",
+    "Incoming PhD student at University of Massachusetts Amherst in the Kireev Lab, building flexible bioelectronic interfaces and 2D-material systems for next-generation biomedical sensing and modulation.",
   bigHeading: {
-    black: "Bioelectronics",
-    blue: "2D Materials",
+    black: "Wiring Biology",
+    blue: "with 2D Materials",
   },
   about:
     "My name is Kaustubh Joshi, and I am an incoming PhD student at University of Massachusetts Amherst under Dmitry Kireev in the Kireev Lab. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore. My work focuses on living model engineering and translational drug development. I design reproducible experimental systems that convert complex biological questions into actionable discovery decisions. I have research experience across Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy. A complete list of my papers is available in the publications section. I also like to explore visual arts, language, and philosophy!",

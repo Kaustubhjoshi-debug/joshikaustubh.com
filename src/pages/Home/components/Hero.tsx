@@ -1,4 +1,6 @@
 import {
+  Badge,
+  Box,
   chakra,
   Heading,
   Icon,
@@ -15,6 +17,13 @@ import { IconType } from "react-icons";
 import { me } from "../../../me";
 
 export const Hero = () => {
+  const heroTags = [
+    "UMass Amherst",
+    "Kireev Lab",
+    "2D Bioelectronics",
+    "Neural Interfaces",
+  ];
+
   const variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
@@ -70,10 +79,32 @@ export const Hero = () => {
             <Heading
               as={"h2"}
               fontSize={{ base: "xl", md: "2xl" }}
-              color={useColorModeValue("brand.700", "brand.200")}
+              bgGradient={useColorModeValue(
+                "linear(to-r, brand.700, cyan.500)",
+                "linear(to-r, brand.200, cyan.200)"
+              )}
+              bgClip={"text"}
+              letterSpacing={"0.01em"}
             >
               {me.subtitle}
             </Heading>
+            <Stack direction={"row"} wrap={"wrap"} spacing={2}>
+              {heroTags.map((tag) => (
+                <Badge
+                  key={tag}
+                  borderRadius={"full"}
+                  px={3}
+                  py={1}
+                  fontSize={"0.72rem"}
+                  border={"1px solid"}
+                  borderColor={useColorModeValue("brand.300", "brand.600")}
+                  bg={useColorModeValue("brand.50", "whiteAlpha.100")}
+                  color={useColorModeValue("brand.700", "brand.100")}
+                >
+                  {tag}
+                </Badge>
+              ))}
+            </Stack>
             <Text
               fontSize={{ base: "lg", md: "xl" }}
               color={useColorModeValue("brand.800", "brand.100")}
@@ -82,21 +113,57 @@ export const Hero = () => {
               {me.tagline}
             </Text>
           </Stack>
-          <Image
-            rounded={"2xl"}
+          <Box
+            position={"relative"}
+            justifySelf={{ base: "center", md: "end" }}
             w={{ base: "220px", md: "280px" }}
             h={{ base: "294px", md: "374px" }}
-            src={me.image}
-            loading={"eager"}
-            decoding={"async"}
-            border={"1px"}
-            borderColor={useColorModeValue("brand.200", "brand.500")}
-            objectFit={"cover"}
-            objectPosition={"center top"}
-            alt={"Profile picture"}
-            justifySelf={{ base: "center", md: "end" }}
-            boxShadow={useColorModeValue("xl", "dark-lg")}
-          />
+          >
+            <Box
+              position={"absolute"}
+              inset={"-10px"}
+              border={"2px dashed"}
+              borderColor={useColorModeValue("brand.300", "brand.500")}
+              borderRadius={"2xl"}
+              transform={"rotate(-2deg)"}
+              zIndex={0}
+            />
+            <Image
+              position={"relative"}
+              zIndex={1}
+              rounded={"2xl"}
+              w={"full"}
+              h={"full"}
+              src={me.image}
+              loading={"eager"}
+              decoding={"async"}
+              border={"1px"}
+              borderColor={useColorModeValue("brand.200", "brand.500")}
+              objectFit={"cover"}
+              objectPosition={"center top"}
+              alt={"Profile picture"}
+              boxShadow={useColorModeValue("xl", "dark-lg")}
+            />
+            <Badge
+              position={"absolute"}
+              zIndex={2}
+              top={"-12px"}
+              right={"-16px"}
+              transform={"rotate(8deg)"}
+              px={3}
+              py={1.5}
+              borderRadius={"md"}
+              border={"1px solid"}
+              borderColor={useColorModeValue("brand.300", "brand.600")}
+              bg={useColorModeValue("white", "blackAlpha.700")}
+              color={useColorModeValue("brand.800", "brand.100")}
+              fontSize={"0.7rem"}
+              letterSpacing={"0.05em"}
+              textTransform={"uppercase"}
+            >
+              Kireev Lab
+            </Badge>
+          </Box>
         </SimpleGrid>
         <SimpleGrid
           w={"full"}

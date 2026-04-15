@@ -32,13 +32,13 @@ export const me = {
   ],
   subtitle: "Bioelectronics, 2D Materials, and Neural Interfaces",
   tagline:
-    "Incoming PhD student at University of Massachusetts Amherst in the Kireev Lab, building flexible bioelectronic interfaces and 2D-material systems for next-generation biomedical sensing and modulation.",
+    "Incoming PhD student at University of Massachusetts Amherst in the Kireev Lab, focused on developing rigorous bioengineering approaches for translational neuroscience, cardiac engineering, aging biology, and cancer biology.",
   bigHeading: {
-    black: "Bioelectronics",
-    blue: "2D Materials",
+    black: "Translational",
+    blue: "Bioengineering",
   },
   about:
-    "My name is Kaustubh Joshi, and I am an incoming PhD student at University of Massachusetts Amherst under Dmitry Kireev in the Kireev Lab. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore. My work focuses on living model engineering and translational drug development. I design reproducible experimental systems that convert complex biological questions into actionable discovery decisions. I have research experience across Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy. A complete list of my papers is available in the publications section. I also like to explore visual arts, language, and philosophy!",
+    "My name is Kaustubh Joshi, and I am an incoming PhD student in Biomedical Engineering at University of Massachusetts Amherst, where I will work with Dmitry Kireev in the Kireev Lab. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore, and my work centers on building reproducible living-model platforms that turn complex biological questions into decision-ready translational insights. Across Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy, I have worked at the interface of model development, assay rigor, and drug discovery strategy. A complete list of my papers is available in the publications section, and outside the lab I enjoy exploring visual arts, language, and philosophy.",
   location: "Amherst, MA",
   image: "/assets/kaustubh-joshi-optimized.jpg",
   education: [

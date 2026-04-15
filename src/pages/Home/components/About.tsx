@@ -20,6 +20,10 @@ type AboutLink = {
 
 const aboutLinks: ReadonlyArray<AboutLink> = [
   {
+    text: "Biomedical Engineering",
+    href: "https://www.umass.edu/engineering/biomedical-engineering",
+  },
+  {
     text: "University of Massachusetts Amherst",
     href: "https://www.umass.edu/",
   },

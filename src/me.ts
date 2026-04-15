@@ -23,7 +23,7 @@ export const me = {
   // Facts are optional
   facts: [
     "Research Technologist at Johns Hopkins Medicine building multi-region human organoid and assembloid models.",
-    "Incoming PhD student in Mechanical Engineering (Regenerative Medicine and Mechanobiology) at The University of Texas at Austin, starting August 2026.",
+    "Incoming PhD student at University of Massachusetts Amherst, joining the Kireev Lab (2D Bioelectronics Lab) in Fall 2026.",
     "Completed an M.S. in Pharmaceutical Sciences at the University of Maryland School of Pharmacy.",
     "Experienced across discovery DMPK, organoid disease modeling, and translational preclinical assay development.",
     "Contributor to multi-institution collaborations spanning academia, industry, and U.S. government research groups.",
@@ -32,23 +32,22 @@ export const me = {
   ],
   subtitle: "Bridging Bone Biology and Neuroscience",
   tagline:
-    "Pursuing musculoskeletal tissue engineering through 3D biomanufacturing and mechanobiology, with research interests in bone biology, aging biology, and bone cancers as an incoming PhD student at UT Austin.",
+    "Incoming PhD student at University of Massachusetts Amherst in the Kireev Lab, working at the interface of bioelectronics, living model engineering, and translational biomedical discovery.",
   bigHeading: {
     black: "Engineering",
     blue: "Bone & Aging Biology",
   },
   about:
-    "My name is Kaustubh Joshi, and I am a PhD student in the Department of Mechanical Engineering at The University of Texas at Austin under Maryam Tilton. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore. My work focuses on living model engineering and translational drug development. I design reproducible experimental systems that convert complex biological questions into actionable discovery decisions. I have research experience across Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy. A complete list of my papers is available in the publications section. I also like to explore visual arts, language, and philosophy!",
-  location: "Baltimore, MD",
+    "My name is Kaustubh Joshi, and I am an incoming PhD student at University of Massachusetts Amherst under Dmitry Kireev in the Kireev Lab. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore. My work focuses on living model engineering and translational drug development. I design reproducible experimental systems that convert complex biological questions into actionable discovery decisions. I have research experience across Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy. A complete list of my papers is available in the publications section. I also like to explore visual arts, language, and philosophy!",
+  location: "Amherst, MA",
   image: "/assets/kaustubh-joshi-optimized.jpg",
   education: [
     {
       degree: "Doctor of Philosophy (Ph.D)",
-      major: "Mechanical Engineering (Regenerative Medicine and Mechanobiology)",
-      school: "The University of Texas at Austin",
-      graduation: "Starting Aug 2026",
+      major: "Biomedical Engineering (Bioelectronics and 2D Materials)",
+      school: "University of Massachusetts Amherst",
+      graduation: "Starting Fall 2026",
       awards: [
-        "Awarded the highly competitive $24,000 Cockrell Graduate Fellowship, in addition to standard graduate stipend support, to pursue my research.",
         "Invited to Sigma Xi, The Scientific Research Honor Society, as an Associate Member.",
       ],
     },
@@ -204,10 +203,9 @@ export const me = {
   honors: [
     {
       year: "2026",
-      title: "Cockrell Graduate Fellowship",
+      title: "Cockrell Graduate Fellowship Offer",
       issuer: "Cockrell School of Engineering, The University of Texas at Austin",
-      details:
-        "Awarded a highly competitive $24,000 fellowship, in addition to standard graduate stipend support, to pursue my research.",
+      details: "Received a highly competitive $24,000 fellowship offer.",
     },
     {
       year: "2025",

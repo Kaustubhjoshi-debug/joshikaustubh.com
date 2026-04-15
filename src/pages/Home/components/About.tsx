@@ -20,16 +20,16 @@ type AboutLink = {
 
 const aboutLinks: ReadonlyArray<AboutLink> = [
   {
-    text: "Department of Mechanical Engineering",
-    href: "https://www.me.utexas.edu/",
+    text: "University of Massachusetts Amherst",
+    href: "https://www.umass.edu/",
   },
   {
-    text: "The University of Texas at Austin",
-    href: "https://www.utexas.edu/",
+    text: "Dmitry Kireev",
+    href: "https://www.umass.edu/engineering/about/directory/dmitry-kireev",
   },
   {
-    text: "Maryam Tilton",
-    href: "https://www.me.utexas.edu/people/faculty-directory/tilton",
+    text: "Kireev Lab",
+    href: "https://kireevlab.com/",
   },
   {
     text: "University of Maryland, Baltimore",

@@ -48,6 +48,7 @@ export const me = {
       school: "University of Massachusetts Amherst",
       graduation: "Starting Fall 2026",
       awards: [
+        "Awarded a First-Year Biomedical Engineering Fellowship at University of Massachusetts Amherst.",
         "Invited to Sigma Xi, The Scientific Research Honor Society, as an Associate Member.",
       ],
     },
@@ -203,9 +204,9 @@ export const me = {
   honors: [
     {
       year: "2026",
-      title: "Cockrell Graduate Fellowship Offer",
-      issuer: "Cockrell School of Engineering, The University of Texas at Austin",
-      details: "Received a highly competitive $24,000 fellowship offer.",
+      title: "First-Year Biomedical Engineering Fellowship",
+      issuer: "University of Massachusetts Amherst",
+      details: "Awarded to support first-year PhD training and research.",
     },
     {
       year: "2025",

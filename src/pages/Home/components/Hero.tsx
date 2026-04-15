@@ -1,6 +1,7 @@
 import {
   Badge,
   chakra,
+  Grid,
   Heading,
   Icon,
   Image,
@@ -62,12 +63,13 @@ export const Hero = () => {
         justify={"space-between"}
         spacing={{ base: 8, md: 10 }}
       >
-        <SimpleGrid
-          columns={{ base: 1, md: 2 }}
-          spacing={{ base: 8, md: 10 }}
+        <Grid
+          templateColumns={{ base: "1fr", md: "minmax(0, 1.45fr) minmax(260px, 0.55fr)" }}
+          columnGap={{ base: 0, md: 10 }}
+          rowGap={{ base: 8, md: 10 }}
           alignItems={"center"}
         >
-          <Stack direction={"column"} spacing={4}>
+          <Stack direction={"column"} spacing={4} w={"full"}>
             <Heading
               as={"h1"}
               size={{ base: "2xl", md: "3xl" }}
@@ -127,7 +129,7 @@ export const Hero = () => {
             justifySelf={{ base: "center", md: "end" }}
             boxShadow={useColorModeValue("xl", "dark-lg")}
           />
-        </SimpleGrid>
+        </Grid>
         <SimpleGrid
           w={"full"}
           columns={{ base: 1, sm: 2, md: 2, lg: 5 }}

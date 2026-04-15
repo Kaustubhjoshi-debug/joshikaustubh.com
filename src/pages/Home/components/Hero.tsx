@@ -17,10 +17,10 @@ import { me } from "../../../me";
 
 export const Hero = () => {
   const heroTags = [
-    "UMass Amherst",
-    "Kireev Lab",
-    "2D Bioelectronics",
-    "Neural Interfaces",
+    "Translational Neuroscience",
+    "Cardiac Engineering",
+    "Aging Biology",
+    "Cancer Biology",
   ];
 
   const variants = {

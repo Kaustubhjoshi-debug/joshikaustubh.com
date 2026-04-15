@@ -38,7 +38,7 @@ export const me = {
     blue: "Bioengineering",
   },
   about:
-    "My name is Kaustubh Joshi, and I am an incoming PhD student in Biomedical Engineering at University of Massachusetts Amherst, where I will work with Dmitry Kireev in the Kireev Lab. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore, and my work centers on building reproducible living-model platforms that turn complex biological questions into decision-ready translational insights. Across Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy, I have worked at the interface of model development, assay rigor, and drug discovery strategy. A complete list of my papers is available in the publications section, and outside the lab I enjoy exploring visual arts, language, and philosophy.",
+    "My name is Kaustubh Joshi, and I am an incoming PhD student in Biomedical Engineering at University of Massachusetts Amherst, where I will work with Dmitry Kireev in the Kireev Lab. I completed a Master of Science (MS) in Pharmaceutical Sciences from the University of Maryland, Baltimore, and my work centers on building reproducible living-model platforms that turn complex biological questions into decision-ready translational insights. Across Johns Hopkins Medicine, GSK, and the University of Maryland School of Pharmacy, I have contributed to model development, assay design, and translational drug discovery workflows. A complete list of my papers is available in the publications section, and outside the lab I enjoy exploring visual arts, language, and philosophy.",
   location: "Amherst, MA",
   image: "/assets/kaustubh-joshi-optimized.jpg",
   education: [

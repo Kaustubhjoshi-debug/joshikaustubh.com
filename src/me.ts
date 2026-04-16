@@ -48,7 +48,7 @@ export const me = {
       school: "University of Massachusetts Amherst",
       graduation: "Starting Fall 2026",
       awards: [
-        "Awarded a First-Year Biomedical Engineering Fellowship at University of Massachusetts Amherst.",
+        "Awarded a First-Year Biomedical Engineering Fellowship.",
         "Invited to Sigma Xi, The Scientific Research Honor Society, as an Associate Member.",
       ],
     },

@@ -262,7 +262,7 @@ export const me = {
     {
       name: "Curriculum Vitae",
       icon: FaNewspaper,
-      uri: "",
+      uri: "/assets/kaustubh-joshi-cv.pdf",
       hover: {
         bg: ["brand.500", "brand.700"],
         color: "white",
